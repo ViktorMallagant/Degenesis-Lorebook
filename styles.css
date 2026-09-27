@@ -1029,3 +1029,22 @@ body.sidebar-open .hero-copy {
   .potential-list { grid-column: 1; grid-row: 1; }
   .potential-detail { grid-column: 1; grid-row: 2; }
 }
+
+/* Hierarchy level labels: float above the top rank without a stem */
+.rank-node .rank-level {
+  position: absolute;
+  left: 50%;
+  top: -31px;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 1;
+}
+.rank-node .rank-level::after,
+.rank-node .rank-level::before {
+  display: none !important;
+  content: none !important;
+}
