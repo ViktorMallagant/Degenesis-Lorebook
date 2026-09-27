@@ -1019,3 +1019,13 @@ body.sidebar-open .hero-copy {
     grid-row: 2;
   }
 }
+
+/* Potential browser: selector on the left */
+.potential-list { grid-column: 1; grid-row: 1; }
+.potential-detail { grid-column: 2; grid-row: 1; }
+.potential-browser { grid-template-columns: 250px minmax(0, 1fr); }
+@media (max-width: 760px) {
+  .potential-browser { grid-template-columns: 1fr; }
+  .potential-list { grid-column: 1; grid-row: 1; }
+  .potential-detail { grid-column: 1; grid-row: 2; }
+}
