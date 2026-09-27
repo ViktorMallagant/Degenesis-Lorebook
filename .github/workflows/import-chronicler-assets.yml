@@ -1,0 +1,43 @@
+name: Import Chronicler artwork
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-chronicler-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+      - name: Download artwork
+        run: |
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUe0Kf-5ySeUveBsU4Q9_250Bt7U9maJzJoIJu_5-TXJEK-ZmiwLtMJbgdyNOvX-gEaVDmsMc0cRLCbX53CLkBcSpgxVpEk0qGI-0b3eMRwLhg9nG-BZCRjUIcmxp71o8GLM12znBdTsUkAWCDt_Zw6cXtSanchdp7Y_DwoC1_P6Q-9nRnY=s2048?key=RIO-c-YF93eYp2PwbyrWog" -o /tmp/chronicler-main.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfQHTcgnjdYEoDMdL8BJa-aMu-QPFWm50-zFzd81fHMvNK2CtLfYn8BiYrkz_TarZ2TiCVsz1AGIrkUFJcfO946ckC2lplvZ7n4wne9_bevdBymbvOIzdztyPjqSix3oV81uEfP9CNSQqwBqETistq1UZT6rD3DF_vQaoiPZsPiq_D-tGw=s2048?key=RIO-c-YF93eYp2PwbyrWog" -o /tmp/chronicler-shutter.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfdWS8cLSRzAhIyKtDWxuUnIabZN1Rz-F2q29OJbykifRFGoI_qCtpsNFJvUaKqKUsVoYDfrhsVG7hCPyvIuZktMlBDFP84VrmcjMbNw6G_BiTQAHZIhkbY1EYirod9n8bd6iLqJAQ_4VWuz5AZhOMtvQ6EG0WFbq8SOizlfgj4_uET2Yc=s2048?key=RIO-c-YF93eYp2PwbyrWog" -o /tmp/streamer-glove.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdYrDpvaNLPs7YQtSzyDy9CNmdiZQ6RgSo_R_5L27v5xFf1tuQhTZ44A3gDpGtCIHw1MZmfA8kfNNSJDJzWYHBBlH-c-s_63GSKPjVgAwnUjYUQsq0-gCLoXK8HZfyJHGwLWYGdjQbQuVGXq8pz7jKNgUmY_Ag4SfUrIqzOCwHckLItHig=s2048?key=RIO-c-YF93eYp2PwbyrWog" -o /tmp/draft-printer.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUc7pb9i4LBeuRVuGfHFubOM6Wq-S6xPhsBnQAST5F04rqweVXHGpU8ac2mZfQwf4qQLOtqXuEP_8vN8QFaUz1HYflF3A_Xxz5p5JUD6IrkANs4LkbuyHx1WS8thTos26DThfmQPdO19i_WTbNZPhG7jcHcCMB5Kvg_pw0fWZ1cVJ8AC=s2048?key=RIO-c-YF93eYp2PwbyrWog" -o /tmp/shocker.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUd03F09Ws8Whg1s1DAgB_Sl8bp_kQQyvPkJ_NkncCqmYOHx-qZKx-eDe5XSfRfuUlCC9lewmU5MUVstT9DdexTxlwSFKuKd84NGZXSoRxKLY9Phfg3EzBhl5lGPVkB1_ktQNwRoJGV0r4U8bisKbjLSA6XhqOOHlzz9m0pxakygzsp4=s2048?key=RIO-c-YF93eYp2PwbyrWog" -o /tmp/chroniclers-logo.png
+      - name: Convert and commit
+        run: |
+          cwebp -quiet -q 86 -alpha_q 100 /tmp/chronicler-main.png -o assets/chronicler-main.webp
+          cwebp -quiet -q 86 -alpha_q 100 /tmp/chronicler-shutter.png -o assets/chronicler-shutter.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/streamer-glove.png -o assets/streamer-glove.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/draft-printer.png -o assets/draft-printer.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/shocker.png -o assets/shocker.webp
+          cwebp -quiet -lossless /tmp/chroniclers-logo.png -o assets/chroniclers-logo.webp
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/chronicler-main.webp assets/chronicler-shutter.webp assets/streamer-glove.webp assets/draft-printer.webp assets/shocker.webp assets/chroniclers-logo.webp
+          git rm .github/workflows/import-chronicler-assets.yml
+          git commit -m "Add Chronicler artwork"
+          git push
