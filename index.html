@@ -7,7 +7,7 @@
   <meta name="description" content="An Anabaptist reference for Degenesis.">
   <title>Anabaptists | Degenesis: Alpha - Lorebook</title>
   <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
-  <link rel="stylesheet" href="styles.css?v=20260927-3">
+  <link rel="stylesheet" href="styles.css?v=20260927-4">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -74,8 +74,8 @@
         <div class="quick-facts" aria-label="Anabaptist summary">
           <article>
             <h2>Leaders</h2>
+            <p class="leader-count">8 Baptists</p>
             <ul>
-              <li>8 Baptists</li>
               <li>Altair</li>
               <li>Amos</li>
               <li>Nuntius</li>
@@ -208,7 +208,7 @@
             <path d="M425 90 H465 M425 270 H465" />
             <path d="M645 90 H665 V270 H685 M665 90 H685 M645 270 H685" />
             <path d="M865 90 H905 M865 270 H905" />
-            <path d="M1085 270 H1100" />
+            <path d="M1085 270 H1125" />
           </svg>
 
           <button class="rank-node" data-rank="touched" style="left:10px;top:155px"><span class="rank-level">1</span>Touched</button>
@@ -234,7 +234,10 @@
           <h2>Potentials</h2>
         </div>
       </div>
-      <div id="potential-grid" class="potential-grid"></div>
+      <div class="potential-browser">
+        <div id="potential-detail" class="potential-detail" aria-live="polite"></div>
+        <div id="potential-list" class="potential-list" aria-label="Potential selection"></div>
+      </div>
     </section>
 
     <section class="content-section equipment-section" id="equipment">
@@ -254,6 +257,6 @@
     <p>Degenesis Lorebook · Anabaptists</p>
   </footer>
 
-  <script src="app.js?v=20260927-3"></script>
+  <script src="app.js?v=20260927-4"></script>
 </body>
 </html>
