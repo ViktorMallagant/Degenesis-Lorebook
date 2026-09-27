@@ -2,18 +2,19 @@
 .apoc-hierarchy-canvas {
   position: relative;
   width: 1500px;
-  height: 760px;
+  height: 1160px;
   margin: 0 auto;
 }
 .apoc-rank-lines {
   position: absolute;
   inset: 0;
   width: 1500px;
-  height: 760px;
+  height: 1160px;
   overflow: visible;
   fill: none;
   stroke: rgba(255,255,255,0.50);
   stroke-linecap: square;
+  stroke-linejoin: miter;
   stroke-width: 2;
   vector-effect: non-scaling-stroke;
 }
@@ -25,7 +26,7 @@
 }
 .apoc-tier {
   position: absolute;
-  top: 2px;
+  top: 20px;
   z-index: 4;
   display: grid;
   width: 34px;
@@ -40,9 +41,8 @@
   font-weight: 700;
 }
 .apoc-tier.tier-one { left: 86px; }
-.apoc-tier.tier-two { left: 490px; }
-.apoc-tier.tier-three { left: 825px; }
-.apoc-tier.tier-x { left: 1145px; }
+.apoc-tier.tier-two { left: 535px; }
+.apoc-tier.tier-three { left: 880px; }
 
 .apoc-track-label {
   position: absolute;
@@ -56,35 +56,25 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-.apoc-track-label.europe { top: 112px; }
-.apoc-track-label.mediterranean { top: 410px; }
-.apoc-track-label.africa { top: 585px; }
+.apoc-track-label.europe { top: 195px; }
+.apoc-track-label.mediterranean { top: 555px; }
+.apoc-track-label.africa { top: 815px; }
 
+.phoenix-tier {
+  left: 880px;
+  top: 995px;
+}
 .phoenix-node {
   border-color: rgba(194, 53, 53, 0.72);
 }
 .phoenix-node::before {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  content: "FALLEN LEADER";
-  color: var(--red-bright);
-  font-family: var(--heading-font);
-  font-size: 0.56rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  white-space: nowrap;
-  transform: translateX(-50%);
+  content: none;
 }
 
 @media (max-width: 760px) {
-  .apoc-hierarchy-canvas {
-    margin-left: 0;
-  }
+  .apoc-hierarchy-canvas { margin-left: 0; }
 }
 
 /* Apocalyptic images */
 .apocalyptic-page .briefing-art img,
-.apocalyptic-page .hero-figure {
-  image-rendering: auto;
-}
+.apocalyptic-page .hero-figure { image-rendering: auto; }
