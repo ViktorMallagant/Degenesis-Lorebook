@@ -1,0 +1,35 @@
+name: Import landing page artwork
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-landing-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+      - name: Download artwork
+        run: |
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfupY2nsaAMpvlyzvgjABLto5gA3P6CG8CddFWwYAfz0wmKMD4i8tbDx8mnXdfnk-xcCUZIzI0-ngQW2pXXIzhdZ6XaPTaaHowdDkrP0sK6U1mHIjAkIrHIA7hy48MUN_6ZVMIhFS6M8fUFEIkDVCa8Zy7-UCtSLkDX9MvTt1PUiMZ1QT4=s2048?key=F6H4uNC_UgehWkyyH4N5YA" -o /tmp/landing-backdrop.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUevC3qYE2TvvMMjwIIwMzJLOpLRccgCxIEfCXlEO4VTfrRWjv6C3JR6LiwBPX-w7Zd5QlaDeS-t27fWuAl-hlNwRdciroDnJZYa46IBT923JCltDKk6gexp1G-18LzgV7jrDSPsUotXk3LsXpzUYHmcGgWxY06Snb7yPavVC46l5GImHoY=s2048?key=F6H4uNC_UgehWkyyH4N5YA" -o /tmp/degenesis-logo.png
+      - name: Convert and commit
+        run: |
+          cwebp -quiet -q 84 /tmp/landing-backdrop.png -o assets/landing-backdrop.webp
+          cwebp -quiet -lossless /tmp/degenesis-logo.png -o assets/degenesis-logo.webp
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/landing-backdrop.webp assets/degenesis-logo.webp
+          git rm .github/workflows/import-landing-assets.yml
+          git commit -m "Add landing page artwork"
+          git push
