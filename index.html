@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#121212">
   <meta name="description" content="An Anabaptist reference for Degenesis.">
-  <title>Anabaptists | Degenesis Lorebook</title>
+  <title>Anabaptists | Degenesis: Alpha - Lorebook</title>
   <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
   <link rel="stylesheet" href="styles.css?v=20260927">
 </head>
@@ -13,10 +13,10 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Degenesis Lorebook home">
+    <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="true" aria-controls="lorebook-sidebar">
       <span class="brand-mark" aria-hidden="true"></span>
-      <span>DEGENESIS LOREBOOK</span>
-    </a>
+      <span>DEGENESIS: ALPHA - LOREBOOK</span>
+    </button>
     <nav class="section-nav" aria-label="Page sections">
       <a href="#briefing">Briefing</a>
       <a href="#hierarchy">Hierarchy</a>
@@ -24,6 +24,41 @@
       <a href="#equipment">Equipment</a>
     </nav>
   </header>
+
+  <aside class="lorebook-sidebar" id="lorebook-sidebar" aria-label="Lorebook navigation">
+    <div class="sidebar-inner">
+      <details open>
+        <summary>Cultures</summary>
+        <nav aria-label="Cultures">
+          <a href="#" aria-disabled="true">Africa</a>
+          <a href="#" aria-disabled="true">Borca</a>
+          <a href="#" aria-disabled="true">Balkhan</a>
+          <a href="#" aria-disabled="true">Franka</a>
+          <a href="#" aria-disabled="true">Hybrispania</a>
+          <a href="#" aria-disabled="true">Pollen</a>
+          <a href="#" aria-disabled="true">Purgare</a>
+        </nav>
+      </details>
+      <details open>
+        <summary>Cults</summary>
+        <nav aria-label="Cults">
+          <a class="active" href="#top">Anabaptists</a>
+          <a href="#" aria-disabled="true">Anubians</a>
+          <a href="#" aria-disabled="true">Apocalyptics</a>
+          <a href="#" aria-disabled="true">Chroniclers</a>
+          <a href="#" aria-disabled="true">Clanners</a>
+          <a href="#" aria-disabled="true">Hellvetics</a>
+          <a href="#" aria-disabled="true">Jehammedans</a>
+          <a href="#" aria-disabled="true">Judges</a>
+          <a href="#" aria-disabled="true">Neolibyans</a>
+          <a href="#" aria-disabled="true">Palers</a>
+          <a href="#" aria-disabled="true">Scrappers</a>
+          <a href="#" aria-disabled="true">Spitalians</a>
+        </nav>
+      </details>
+    </div>
+  </aside>
+  <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
 
   <main id="main-content">
     <section class="hero" id="top">
@@ -57,8 +92,8 @@
           </article>
           <article>
             <h2>Creation Skill Bonuses</h2>
+            <p class="quick-fact-subtitle"><em>+1 to maximum skill level</em></p>
             <ul>
-              <li>(+1 to maximum skill level)</li>
               <li>(AGI) Mobility</li>
               <li>(BOD) Force</li>
               <li>(BOD) Melee</li>
@@ -76,7 +111,6 @@
 
     <section class="content-section briefing-section" id="briefing">
       <div class="section-heading">
-        <p class="section-number">01</p>
         <div>
           <p class="eyebrow">THE CULT</p>
           <h2>Briefing</h2>
@@ -151,14 +185,13 @@
 
         <aside class="briefing-art">
           <img src="assets/anabaptist-ascetic.webp" alt="An Anabaptist Ascetic">
-          <p>ASCETIC</p>
+          <p>EMISSARY</p>
         </aside>
       </div>
     </section>
 
     <section class="content-section hierarchy-section" id="hierarchy">
       <div class="section-heading">
-        <p class="section-number">02</p>
         <div>
           <p class="eyebrow">THE PATH OF THE SEED</p>
           <h2>Hierarchy &amp; Ranks</h2>
@@ -172,7 +205,7 @@
           <svg class="rank-lines" viewBox="0 0 1260 360" role="img" aria-label="Lines connecting the Anabaptist ranks">
             <path d="M190 180 H225 V90 H245 M225 180 V270 H245" />
             <path d="M425 90 H465 M425 270 H465" />
-            <path d="M645 90 H680 V270 H685 M680 90 H685" />
+            <path d="M645 90 H680 V270 H685 M680 90 H685 M645 270 H685" />
             <path d="M865 90 H905 M865 270 H905" />
             <path d="M1085 270 H1100" />
           </svg>
@@ -195,7 +228,6 @@
 
     <section class="content-section potentials-section" id="potentials">
       <div class="section-heading">
-        <p class="section-number">03</p>
         <div>
           <p class="eyebrow">GIFTS OF THE PNEUMA</p>
           <h2>Potentials</h2>
@@ -206,7 +238,6 @@
 
     <section class="content-section equipment-section" id="equipment">
       <div class="section-heading">
-        <p class="section-number">04</p>
         <div>
           <p class="eyebrow">TOOLS OF PARADISE</p>
           <h2>Unique Equipment</h2>
