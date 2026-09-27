@@ -198,3 +198,260 @@ const ranks={
     ]
   }
 };
+const potentials=[
+  {
+    "title": "I. Dead End",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers"
+      ],
+      [
+        "Effect",
+        "Shutters never fight fair. They use ambushes, tricks, and deception. Only when they have their enemies cornered, when they are sure of their prey, do they unleash an efficient and lethal attack."
+      ],
+      [
+        "Rules",
+        "If there is no way out for the victim of a Shutter, the Shutter gains a bonus on Attack rolls and both Passive and Active Defense equal to his Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "II. Multiply",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Shutter, PSY+Deception 6"
+      ],
+      [
+        "Effect",
+        "I am Legion. Some Shutters wear their undercover identities like a second skin. They establish lavish backgrounds and histories for their fake lives and can go unnoticed even while impersonating members of other Cults."
+      ],
+      [
+        "Rules",
+        "With this Potential, a Chronicler can develop a number of established disguises equal to his Potential level. He switches roles so expertly that he adds +1D per Potential level on all rolls of CHA+Conduct and PSY+Deception while acting as one of his fake identities."
+      ]
+    ]
+  },
+  {
+    "title": "III. Back Door",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Shutter, PSY+Deception 6"
+      ],
+      [
+        "Effect",
+        "Shutters and Fuses develop certain survival strategies to get through their missions alive. One of the best is not to raise suspicions at all, instead swimming alone as an inconspicuous impulse in the data stream."
+      ],
+      [
+        "Rules",
+        "Back Door gives the character +1D per Potential level to PSY+Cunning or PSY+Deception rolls when he attempts to infiltrate a community in disguise and needs to get away unscathed."
+      ]
+    ]
+  },
+  {
+    "title": "IV. Download",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers"
+      ],
+      [
+        "Effect",
+        "Humans are machines, running on electrical signals and controlled by a wet, fleshy circuit board in their skull. In a similar way to influencing a program’s actions with the correct sequence of inputs and impulses, humans can be influenced with the correct sequence of pressures and shocks. When the primitive human mind feels hopelessly trapped, it will do anything to avoid further harm, even blurting out its deepest secrets."
+      ],
+      [
+        "Rules",
+        "This method of questioning gives the Chronicler +1D and (1) Trigger on PSY+Domination per Potential level when the target of their questions has no way to escape."
+      ]
+    ]
+  },
+  {
+    "title": "V. Upload",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers"
+      ],
+      [
+        "Effect",
+        "Key stimuli lead to a Download, so an Upload should also be possible. Binding the subject has not always proven beneficial to this task."
+      ],
+      [
+        "Rules",
+        "Paradigmas and Needles use a combination of superstition, fear, and occasional electric shocks to plant a suggestion in their subject’s conscious mind.\n\nChroniclers with the Upload Potential get Triggers equal to their Potential level whenever they try to influence someone via CHA or PSY (for example by PSY+Domination, CHA+Leadership, or CHA+Seduction). Upload can be combined with Download."
+      ]
+    ]
+  },
+  {
+    "title": "VI. Tesla",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers"
+      ],
+      [
+        "Effect",
+        "Electric shocks are a heart-balm. They prove that the suit is working and charged. The Chronicler is in perfect control of his modules, energizing them with a gesture of his finger, offering parts of his body to the enemy that will hit them with blinding flashes of electricity."
+      ],
+      [
+        "Rules",
+        "The Chronicler adds (1) Trigger per Potential level to AGI+Mobility when using the Discharge module offensively. They also gain +1D per Potential level to Melee Active Defense while the module is charged."
+      ]
+    ]
+  },
+  {
+    "title": "VII. Nova",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Primal"
+      ],
+      [
+        "Effect",
+        "The Chronicler is an exploding star, screaming, flaming, surrounded by an accretion disk made of smoke; beams of searing light thick as fingers burst from him, blinding the righteous and chasing away the superstitious."
+      ],
+      [
+        "Rules",
+        "In battle, the Chronicler charges into the middle of his enemies and ignites all his defense modules with an Action roll on INT+Engineering (5). Every Potential Level reduces the Difficulty by (1). If there are at least (2) enemies in melee distance, his comrades are not affected by this Action. If the roll fails, the Chronicler only activates (1) randomly chosen component, and his own group suffers the same penalties as the enemy."
+      ]
+    ]
+  },
+  {
+    "title": "VIII. Fractal Memory",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Focus"
+      ],
+      [
+        "Effect",
+        "The Chronicler’s memory is like a map with landmarks and complex coastlines. His knowledge is splayed out on the map according to intricate mathematical rules, fractal patterns swirling in his mind."
+      ],
+      [
+        "Rules",
+        "On all Action rolls using INT, he adds Triggers equal to his Potential level. This Potential is permanently active."
+      ]
+    ]
+  },
+  {
+    "title": "IX. Situational Analysis",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Paradigma, INT+Focus 10, PSY+Cunning 8"
+      ],
+      [
+        "Effect",
+        "A Paradigma’s brain functions like a bygone supercomputer. Algorithms determine possibilities for event manipulation. The Paradigma constantly analyzes the near future. He calculates the moves of his opponents and deploys counter-measures."
+      ],
+      [
+        "Rules",
+        "Before any form of combat ensues, the Paradigma rolls PSY+Cunning (3). For every Trigger on his roll, his Passive Defense rises by (1) for (3) Rounds per Potential level to a maximum of (9) Rounds at level 3. Once Situational Analysis reaches its maximum, the Paradigma can keep spending (1) Ego Point per Combat Round to keep up the Passive Defense until he can escape."
+      ]
+    ]
+  },
+  {
+    "title": "X. Nervous Breakdown",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, INT+Medicine 6, INT+Science 6"
+      ],
+      [
+        "Effect",
+        "Electricity penetrates enemies and burns their flesh. Some Chroniclers embrace its power in combat or use it for torture. They know how to channel electricity through the human body and direct it to cause critical amounts of damage."
+      ],
+      [
+        "Rules",
+        "Advanced knowledge of the nervous system and a knack for battle turn non-violent weaponry into tools of precision in the hands of the Chronicler. The Dazed Quality of any electrical weapon used is raised by (1) per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "XI. Mind of the Machine",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Focus, PSY+Willpower 8"
+      ],
+      [
+        "Effect",
+        "Those who can turn off their emotions and summon the logic of the machine, can shield their minds against the influences of the outside world. Chroniclers who have interacted with the Stream for too long are masters of their own emotional state, and can turn off human values such as compassion, morals, or guilt with a flick of their finger."
+      ],
+      [
+        "Rules",
+        "Emotions serve no purpose when trying to influence the character. When anything but cold logic is applied to pressure the Chronicler, he may add +1D per Potential level to any Mental Defense roll, along with (1) Success per Potential level to any relevant INT+Focus rolls that require a complete shutdown of his emotional state."
+      ]
+    ]
+  },
+  {
+    "title": "XII. Y2K",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, INT+Artifact Lore 8, INT+Engineering 8"
+      ],
+      [
+        "Effect",
+        "Electronics, computers, and artifacts all have expiration dates or weak spots. Knowing their frequencies and their core functionality, Chroniclers can make these Bygone objects break down, jam, or malfunction in a critical moment."
+      ],
+      [
+        "Rules",
+        "Whether a Chronicler is hacking into a security system or trying to jam radio frequencies before a message is sent, time is of the essence. To successfully hijack electronics, the Chronicler rolls INT+Engineering. If he rolls at least (4) Triggers the character bypasses the security and the Action requires only (1) Combat Round to complete. The number of Triggers required is reduced by (1) for each point in the Potential beyond level 1."
+      ]
+    ]
+  },
+  {
+    "title": "XIII. Child of the Stream",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, INT+Artifact Lore 10, Secrets 4"
+      ],
+      [
+        "Effect",
+        "If you stare into the abyss for too long, the abyss stares back at you. Chroniclers who have been raised within the Stream reap the knowledge they’ve been bestowed with and wield it in profound fashion. They are the living witnesses of the Bygone era."
+      ],
+      [
+        "Rules",
+        "Fed with limitless data from a time long past, the Chronicler feels as if he doesn’t belong in this world. His knowledge of pre-Eshaton history and lore is an ocean without boundaries. The character adds +1D per Potential level to any of his INT rolls. Every Trigger he collects on such a roll goes into a separate pool. For every (10) Triggers collected the Chronicler receives (1) Experience point. However, being a stranger to the world he lives in, he receives a penalty of 1D per Potential level on all rolls involving CHA."
+      ]
+    ]
+  },
+  {
+    "title": "XIV. Defragment",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Focus, INT+Science 8"
+      ],
+      [
+        "Effect",
+        "All code is but a sum of all its parts. If the composition can be understood, the code can be cracked. Chroniclers specialize in this form of analysis. They’re capable of bypassing even the most complex security system, or solving seemingly impossible riddles."
+      ],
+      [
+        "Rules",
+        "When putting his mind to it, the Chronicler is able to untangle the most complex problems. He adds +1D per Potential level to any roll meant to unravel a mystery, solve a puzzle or mathematical equation. Once per Potential level in a given month, he may also roll INT+Science (4). If he succeeds, he receives a flash of genius giving him a clue to a previously unsolved riddle."
+      ]
+    ]
+  },
+  {
+    "title": "XV. White Noise",
+    "fields": [
+      [
+        "Prerequisite",
+        "Chroniclers, Primal"
+      ],
+      [
+        "Effect",
+        "A nasty but effective way of reducing an opponent’s concentration is to overload their senses during combat. Some Chroniclers do so by discharging and overriding all their modules at once as a last resort. What follows is a screeching impulse of white noise and static energy that causes a painful itching in the ears and makes everyones hairs stand on end. The noise is so high pitched that it can even penetrate protective earplugs and throw enemies off balance."
+      ],
+      [
+        "Rules",
+        "The Chronicler overrides all of his modules at once into his sonic weapon, creating a discharge like a banshee’s shriek. For every (4) levels of sonic Damage, such as that dealt by a Vocoder or Cascader, a victim of White Noise additionally receives -1D to all rolls for (1) Combat Round. The amount of Damage required to induce the penalty is reduced by (1) for each point in the Potential beyond level 1."
+      ]
+    ]
+  }
+];
