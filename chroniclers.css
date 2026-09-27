@@ -1,0 +1,67 @@
+/* Chronicler hierarchy */
+.chronicler-hierarchy-canvas {
+  position: relative;
+  width: 1320px;
+  height: 590px;
+  margin: 0 auto;
+}
+.chronicler-rank-lines {
+  position: absolute;
+  inset: 0;
+  width: 1320px;
+  height: 590px;
+  overflow: visible;
+  fill: none;
+  stroke: rgba(255,255,255,0.50);
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.chronicler-rank-lines .isolated-line {
+  stroke: rgba(207,52,52,0.76);
+}
+.chronicler-rank-node {
+  width: 165px;
+  min-height: 50px;
+  padding: 0.72rem 0.9rem;
+}
+.chronicler-tier {
+  position: absolute;
+  top: 2px;
+  z-index: 4;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 50%;
+  color: #fff;
+  background: #050505;
+  font-family: var(--heading-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.chronicler-tier.tier-1 { left: 86px; }
+.chronicler-tier.tier-2 { left: 326px; }
+.chronicler-tier.tier-3 { left: 566px; }
+.chronicler-tier.tier-4 { left: 806px; }
+.chronicler-tier.tier-5 { left: 1046px; }
+.chronicler-tier.zero-tier {
+  left: 806px;
+  top: 398px;
+  border-color: rgba(207,52,52,0.72);
+}
+.chronicler-tier.needle-tier {
+  left: 1046px;
+  top: 398px;
+  border-color: rgba(207,52,52,0.72);
+}
+.isolated-rank {
+  border-color: rgba(207,52,52,0.62);
+}
+@media (max-width: 760px) {
+  .chronicler-hierarchy-canvas { margin-left: 0; }
+}
+.chronicler-page .briefing-art img,
+.chronicler-page .hero-figure { image-rendering: auto; }
