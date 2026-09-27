@@ -328,15 +328,37 @@ function renderRank(rankId) {
   });
 }
 
+function renderPotential(index) {
+  const potential = potentials[index];
+  const detail = document.querySelector("#potential-detail");
+  detail.innerHTML = `
+    <p class="rank-kicker">SELECTED POTENTIAL</p>
+    <h3>${escapeHtml(potential.title)}</h3>
+    <dl class="entry-fields">
+      ${potential.fields.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${renderText(value)}</dd></div>`).join("")}
+    </dl>
+  `;
+
+  document.querySelectorAll(".potential-select").forEach((button, buttonIndex) => {
+    const selected = buttonIndex === index;
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+}
+
 function renderPotentials() {
-  document.querySelector("#potential-grid").innerHTML = potentials.map((potential) => `
-    <article class="reference-card potential-card">
-      <h3>${escapeHtml(potential.title)}</h3>
-      <dl class="entry-fields">
-        ${potential.fields.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${renderText(value)}</dd></div>`).join("")}
-      </dl>
-    </article>
+  const list = document.querySelector("#potential-list");
+  list.innerHTML = potentials.map((potential, index) => `
+    <button class="potential-select" type="button" data-potential-index="${index}">
+      ${escapeHtml(potential.title)}
+    </button>
   `).join("");
+
+  list.querySelectorAll(".potential-select").forEach((button) => {
+    button.addEventListener("click", () => renderPotential(Number(button.dataset.potentialIndex)));
+  });
+
+  renderPotential(0);
 }
 
 function renderEquipment() {
