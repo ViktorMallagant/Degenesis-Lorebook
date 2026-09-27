@@ -1,0 +1,51 @@
+name: Import Anubian high-resolution assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-anubian-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install WebP tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+
+      - name: Download original Anubian artwork
+        env:
+          HERO_URL: "https://oaisdmntprcentralus.blob.core.windows.net/files/00000000-76e8-81f5-9779-f734c6b43491/raw?se=2026-09-27T18%3A56%3A07Z&sp=r&sv=2026-02-06&sr=b&scid=e5bd9723-1dc4-42ff-a642-6d050ea0bd19&skoid=a1be202a-6464-476c-a496-723317c4a4db&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-27T11%3A56%3A45Z&ske=2026-09-28T11%3A56%3A45Z&sks=b&skv=2026-02-06&sig=PEZceR7aLXU9TMWiR9bqfYrhHVE5tLALz9OrDI0uyoo%3D"
+          SICKLE_URL: "https://oaisdmntprcentralus.blob.core.windows.net/files/00000000-c994-81f5-a78d-7f4c2566f5f2/raw?se=2026-09-27T18%3A56%3A37Z&sp=r&sv=2026-02-06&sr=b&scid=e5bd9723-1dc4-42ff-a642-6d050ea0bd19&skoid=a1be202a-6464-476c-a496-723317c4a4db&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-26T21%3A28%3A14Z&ske=2026-09-27T21%3A28%3A14Z&sks=b&skv=2026-02-06&sig=I/iRNC3%2BTxfcYwUdk%2BOW2d3KjLvPwcRB11AK2qH%2BXqE%3D"
+          AMMIT_URL: "https://oaisdmntprcentralus.blob.core.windows.net/files/00000000-8e10-81f5-8ccb-0b505a2187c6/raw?se=2026-09-27T18%3A56%3A37Z&sp=r&sv=2026-02-06&sr=b&scid=e5bd9723-1dc4-42ff-a642-6d050ea0bd19&skoid=a1be202a-6464-476c-a496-723317c4a4db&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-27T08%3A44%3A48Z&ske=2026-09-28T08%3A44%3A48Z&sks=b&skv=2026-02-06&sig=ttM9qUXb%2B0uC2UP3HCNian2r6IwcRCNiVKVJjMr8M3g%3D"
+        run: |
+          curl -fL "$HERO_URL" -o /tmp/anubian-hero.png
+          curl -fL "$SICKLE_URL" -o /tmp/anubian-sickle.png
+          curl -fL "$AMMIT_URL" -o /tmp/ammit-sickle.png
+
+      - name: Convert originals to full-resolution WebP
+        run: |
+          cwebp -quiet -q 82 -alpha_q 100 /tmp/anubian-hero.png -o assets/anubian-hero.webp
+          cwebp -quiet -q 82 -alpha_q 100 /tmp/anubian-sickle.png -o assets/anubian-sickle.webp
+          cwebp -quiet -q 82 -alpha_q 100 /tmp/ammit-sickle.png -o assets/ammit-sickle.webp
+          file assets/anubian-hero.webp assets/anubian-sickle.webp assets/ammit-sickle.webp
+          ls -lh assets/anubian-hero.webp assets/anubian-sickle.webp assets/ammit-sickle.webp
+
+      - name: Commit high-resolution assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/anubian-hero.webp assets/anubian-sickle.webp assets/ammit-sickle.webp
+          git rm .github/workflows/import-anubian-assets.yml
+          git commit -m "Replace Anubian assets with high-resolution WebP"
+          git push
