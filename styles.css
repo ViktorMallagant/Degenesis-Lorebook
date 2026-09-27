@@ -1061,3 +1061,28 @@ body.sidebar-open .hero-copy {
   background: var(--paper);
   line-height: 1;
 }
+
+
+/* Sidebar home link */
+.sidebar-home {
+  display: grid;
+  padding: 0 0 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+.sidebar-home a {
+  padding: 0.65rem 0.7rem;
+  border-left: 2px solid transparent;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sidebar-home a.active,
+.sidebar-home a:hover,
+.sidebar-home a:focus-visible {
+  border-left-color: var(--red-bright);
+  color: #fff;
+  background: rgba(182, 42, 42, 0.12);
+}
