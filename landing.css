@@ -281,9 +281,10 @@
 }
 .entry-links strong {
   font-family: var(--heading-font);
-  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 
@@ -314,6 +315,9 @@
 @media (max-width: 900px) {
   .landing-header .section-nav {
     display: none;
+  }
+  .entry-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .landing-logo {
     width: min(94vw, 900px);
