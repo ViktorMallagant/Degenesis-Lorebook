@@ -455,3 +455,580 @@ const potentials=[
     ]
   }
 ];
+const equipmentGroups=[
+  {
+    "title": "Technology",
+    "items": [
+      {
+        "title": "Draft Printer",
+        "image": "assets/draft-printer.webp",
+        "alt": "Draft Printer",
+        "description": "The numerical keyboard is faded, the amber numbers blink on the display. The Chronicler enters his code, confirms it with the number sign, and adds more numbers: the amount on the Draft. Another number sign, and the machine spits out a piece of printed thermo paper with a whir: a Chronicler Draft.\n\nDraft printers are money-printing machines. They have the power to unbalance Europe’s economy, so they come with a maximum amount. Only a Fragment in the Cluster can reset the internal counter and reactivate the printer.",
+        "fields": [
+          [
+            "Specialty",
+            "A Draft Printer gives its Chronicler 50 CD x Resources per month."
+          ],
+          [
+            "Effect",
+            "Per month: 50 CD x Resources"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "4000"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Stream Drones",
+        "description": "Stream drones circle the Fragment like planets orbiting a sun. Buzzing propeller gyroscopes lift them up, where oculars focus on contrasts and then send the stabilized images onto a palm-sized display on the Chronicler’s arm.\n\nA Chronicler with active Stream drones cannot be surprised. His visual perception rises by +1D per drone to a maximum of +4D—when using more drones, even a Fragment gets confused. The display is the center of the world for the drones: all positions are calculated in relation to this center. If the Chronicler gestures or moves, they take up formation and try to keep their position. A drone is controlled via the display and cannot travel further than (10) m away from it. Should this happen, it slowly sinks to the ground and waits for the display to come closer again. It has Armor (3) and Structure (2).",
+        "fields": [
+          [
+            "Effect",
+            "INS+Perception +1D, maximum (4) drones, (10)m"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "19000"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
+      },
+      {
+        "title": "Portable Uplink",
+        "description": "Even in the wasteland, Paradigmas do not want to be without the wisdom of the Cluster. With the help of a radio terminal, they contact the nearest Alcove, can send and receive messages, and can look for ancient knowledge in the Static Stream. However, the transmission performance is limited; usually, the Paradigma has to climb a mountain or hang a cord antenna between treetops.",
+        "fields": [
+          [
+            "Specialty",
+            "With a little effort, +2D to Legends and +1D to Engineering. Calls for help cost (1) Renown and lead to a Shutter being sent. Depending on the distance, it can take days for the Shutter to arrive."
+          ],
+          [
+            "Effect",
+            "Throw antenna and establish Uplink: INT+Legends +2D, INT+Engineering +1D, Call Shutter (Costs (1) Renown)"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "3500"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
+      },
+      {
+        "title": "Tracker",
+        "description": "Fuses, and sometimes other Chroniclers too, are injected with transponders so they can later be located with a tracker. A tracker does not give directions, though; it just blinks faster the closer it gets to its target.",
+        "fields": [
+          [
+            "Specialty",
+            "Trackers have a maximum range of (100) m."
+          ],
+          [
+            "Effect",
+            "Detects transponders, range (100) m"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "4400"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Weapons",
+    "items": [
+      {
+        "title": "Streamer Glove",
+        "image": "assets/streamer-glove.webp",
+        "alt": "Streamer Glove",
+        "description": "Like the Draft Printer, the Streamer Glove has become a symbol of the Cult. A Chronicler’s raised little finger brings respect since everybody fears the painful discharges from the fingertip. This is essentially an insulated plastic glove with an electrode on the little finger. An E-Cube on the wrist fuels the device.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "+2D"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "-"
+          ],
+          [
+            "Magazine",
+            "30"
+          ],
+          [
+            "Qualities",
+            "Dazed (5)"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "1"
+          ],
+          [
+            "Value",
+            "4200"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Shocker",
+        "image": "assets/shocker.webp",
+        "alt": "Shocker",
+        "description": "Chroniclers stay out of battles. If that is not possible, a Streamer Glove usually isn’t enough to subdue an opponent. This is why Chroniclers in dangerous regions often carry its bigger brother: the Shocker. The weapon is about as long as an arm and has two E-Cubes that discharge into the enemy’s body when the Chronicler presses a button. Then the smell of roasted meat wafts across the area...",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "-"
+          ],
+          [
+            "Magazine",
+            "16"
+          ],
+          [
+            "Qualities",
+            "Dazed (8)"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "1"
+          ],
+          [
+            "Value",
+            "2400"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Vocoder",
+        "description": "The Vocoder is a part of the Chroniclers’ intimidation tactics. The device modulates sound and distorts, overmodulates, and amplifies a voice: it sounds machinelike and clanging. The microphone is integrated into the mouth area of the leather mask, modulator and speaker are attached to the chest. The volume of the Vocoder can be smoothly raised from silent whisper to an infernal din that you can hear from many kilometers away. Via additional dials, a delay can be added, the frequency can be changed, and a screaming feedback can be produced. Properly used, the Vocoder is the Chroniclers’ most effective weapon. Within the Cluster, the voice distorters are not used.",
+        "fields": [
+          [
+            "Specialty",
+            "A Vocoder is powered by E-Cubes. However, the energy use is minimal, so a Vocoder could drone on for days without pause. As long as a Chronicler regularly enters Clusters or Alcoves to recharge his Vocoder, his electronic voice should always be there for him."
+          ],
+          [
+            "Caliber",
+            "E-Cube"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "10"
+          ],
+          [
+            "Damage",
+            "1+T Ego"
+          ],
+          [
+            "Magazine",
+            "-"
+          ],
+          [
+            "Qualities",
+            "Thunder Strike; Area Damage (45°)"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "1500"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      },
+      {
+        "title": "Cascader",
+        "description": "A Vocoder at full pitch is painful, but linked to a Cascader, a rod with amplifier blocks and speakers, a reedy voice turns into the roaring rage of a god. Mountainsides tremble, avalanches rush down and thunder into the valley, waves form on bodies of water, and dust dances on huts. The sonic pressure ruptures eardrums, knocks people to the floor, and drives them across the ground. Ribs break; veins rupture.",
+        "fields": [
+          [
+            "Specialty",
+            "Cascaders are area weapons that cannot tell friend from foe. They cause heavy Trauma Damage in a 45° cone."
+          ],
+          [
+            "Caliber",
+            "4x E-Cube"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "10"
+          ],
+          [
+            "Damage",
+            "1+T Trauma"
+          ],
+          [
+            "Magazine",
+            "8"
+          ],
+          [
+            "Qualities",
+            "Thunder Strike; Area Damage (45°)"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "6000"
+          ],
+          [
+            "Resources",
+            "5"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Armor",
+    "items": [
+      {
+        "title": "Chronicler Suit",
+        "description": "A Chronicler Suit is laden with technology. Cables run from E-Cube blocks to the velcroes on the back, the arms, and the legs. Sensors register movement and convey it to a microcontroller under the Vocoder. With the help of well-rehearsed, programmed sets of movements, impulses can be sent through the cables to the links. This way, the Chronicler controls the various modules that can be linked to his suit.",
+        "fields": [
+          [
+            "Specialty",
+            "A Chronicler Suit is always equipped with shimmering applications. The Chroniclers call them glitter. They look impressive and make more than a few Clanners shrink back: the Chronicler gets +1D to his first try at social interaction (Quality “First Impression”)."
+          ],
+          [
+            "Armor Rating",
+            "2"
+          ],
+          [
+            "Qualities",
+            "First Impression (+1D)"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "300"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Suit Modules",
+        "description": "There are numerous modules for Chronicler Suits (listed below). To activate a module that has been installed, the Chronicler rolls INT+Engineering (1). In combat, this counts as an Action. Every additional module installed makes using them harder because the movements have to be differentiated. Per module, the Difficulty rises by (+1), so if the Chronicler has not only installed the Source module, but also Fumor and Dome of Rays, any activation has a Difficulty of (3).\n\nMost modules can also be augmented with the help of upgrades, level 1-3. Per level, the Resource value rises by (1). Therefore, the level 3 Fumor module would cost (4) Resources.",
+        "fields": [
+          [
+            "Rules",
+            "Activate installed module: INT+Engineering (1). Every additional installed module raises the activation Difficulty by (+1). Most modules can be upgraded from level 1-3; per level, the Resource value rises by (1)."
+          ]
+        ]
+      },
+      {
+        "title": "Source",
+        "description": "The central module is the “Source”, an energy storage block made of interlinked E-Cubes worn at the belt. The upgrade level determines the number of module levels it can supply with energy at the same time. The maximum level is 3, but nothing can stop a Chronicler from carrying several Sources, although the energy blocks are pretty heavy.",
+        "fields": [
+          [
+            "Effect",
+            "Level determines the maximum of the total module Levels that can be fueled"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "5000 x Level"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Fumor",
+        "description": "Thick grey smoke billows from slits in the suit and engulfs the Chronicler: per level, he gets (+1) to Passive Defense for 2 Combat Rounds. The level also determines the number of smoke charges: at level 1, the Chronicler can activate his Fumor only once before having to recharge the module in an Alcove. The Fumor needs an electric impulse to ignite, so it depends on a Source.",
+        "fields": [
+          [
+            "Effect",
+            "Passive Defense for (2) Rounds (+1) x Level, Level determines the number of charges"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "2500 x Level"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Dome of Rays",
+        "description": "In this advanced version of glitter, laser beams shoot from the pauldron and make the Chronicler shimmer like a god: per level, he gets +1D to all social interactions. Superstitious Clanners might panic and run—or throw themselves into the dust at the Chronicler’s feet.",
+        "fields": [
+          [
+            "Effect",
+            "Superstition: social interaction +1D x Level"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "1000 x Level"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Greenlight",
+        "description": "Green laser light bursts from the suit, changing its color and pulsating. Those who look into it feel nauseous, their eyes seem to itch, and a tickling in the skull explodes into a screaming headache. The Chronicler can direct the beams: usually, the laser emitters are mounted on the shoulders and chest and cover a cone of a little more than 45 degrees right in front of him. Those who look into the beams without wearing polarized glasses suffer a general penalty of -1D per Greenlight level for (2) Combat Rounds (the rest of the one they were hit by the light and the next one). After use, the module must cool down for (3) Combat Rounds.",
+        "fields": [
+          [
+            "Effect",
+            "45° cone: target gets general (+2) Difficulty, (2) Rounds; Cool down (3) Rounds"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "4000 x Level"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Discharge",
+        "description": "Metal filaments lead out of the suit to arms, shoulders, and torso. The Source applies a potential of several thousand volts that discharges as flashes when touched and shocks the attacker. The Chronicler becomes a weapon when going into battle: if he’s attacked, the enemy suffers Ego Damage equaling the module level. However, Insulated armor offers complete protection.\n\nThe Chronicler can also attack by jumping an opponent actively with AGI+Mobility, provoking a discharge. After a discharge, the module must recharge for (2) Combat Rounds. In rain or snow, the module is dangerous for the Chronicler: he could shock himself to death. It needs to be deactivated when it’s wet outside.",
+        "fields": [
+          [
+            "Effect",
+            "Defense: enemy takes (1) Ego Damage per Level, needs to recharge (2) Rounds"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "1000 x Level"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Screamer",
+        "description": "Pressure-sensitive sensors are spread all over the body. When touched, they sound a high-frequency screaming noise as an alarm. If the Chronicler was asleep, he is awake now. If a pickpocket has triggered the alarm, he must successfully roll PSY+Faith/Willpower (4) or flee in panic.\n\nScreamers cannot be upgraded: they remain at level 1.",
+        "fields": [
+          [
+            "Effect",
+            "Chases away pickpockets with high-frequency scream"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "500"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Freon",
+        "description": "Cold gas streams from the cartridge through a hose along the arm to the palm. The gas causes severe frostbite, but it only penetrates up to Armor rating (4). The Chronicler has to combine the activation roll with AGI+Projectiles, with a Handling bonus of +2D against the Passive or Active Defense of the target. The ray has a range of (3) m, and those who are hit suffer 1D Damage per module level, no matter what armor they wear. The level also determines the number of freon bursts. The cartridge can be recharged in Alcoves or Dispensers. A Chronicler cannot have more than two freon modules installed: one for the right hand and one for the left.",
+        "fields": [
+          [
+            "Effect",
+            "Attack: Activation + AGI+Projectiles, +2D Handling. Ignores armor, Damage 1D x Level"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "2000 x Level"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      }
+    ]
+  }
+];
