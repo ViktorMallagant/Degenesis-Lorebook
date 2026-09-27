@@ -1048,3 +1048,16 @@ body.sidebar-open .hero-copy {
   display: none !important;
   content: none !important;
 }
+
+/* Restore circular hierarchy level badges without connector stems */
+.rank-node .rank-level {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--red-bright);
+  border-radius: 50%;
+  background: var(--paper);
+  line-height: 1;
+}
