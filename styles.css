@@ -947,3 +947,75 @@ body.sidebar-open .hero-copy {
     margin-right: 0;
   }
 }
+
+
+/* Leaders and compact potential browser */
+.leader-count {
+  margin: 0.15rem 0 0.35rem;
+  color: var(--ink);
+  font-family: var(--heading-font);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.potential-browser {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.potential-detail {
+  min-height: 320px;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.025);
+}
+.potential-detail h3 {
+  margin: 0 0 1rem;
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.potential-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.potential-select {
+  width: 100%;
+  padding: 0.72rem 0.8rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  color: var(--muted);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--heading-font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+.potential-select:hover {
+  color: var(--ink);
+  background: rgba(255,255,255,0.035);
+}
+.potential-select.is-selected {
+  border-left-color: var(--red-bright);
+  color: #fff;
+  background: rgba(182,42,42,0.12);
+}
+@media (max-width: 760px) {
+  .potential-browser {
+    grid-template-columns: 1fr;
+  }
+  .potential-list {
+    grid-row: 1;
+  }
+  .potential-detail {
+    grid-row: 2;
+  }
+}
