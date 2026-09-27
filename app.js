@@ -228,7 +228,7 @@ const equipmentGroups = [
       },
       {
         title: "War Flail",
-        image: "assets/war-flail.webp",
+        image: "assets/War-Flail.gif",
         alt: "War Flail",
         description: "These are unique to Antibaptists and have the same quality found above in addition to what is listed.",
         fields: [
@@ -239,7 +239,7 @@ const equipmentGroups = [
       },
       {
         title: "Bidenhander",
-        image: "assets/bidenhander.webp",
+        image: "assets/Bidenhander.gif",
         alt: "Bidenhander",
         description: "While a hoe in the fist might conjure up the spirit of Rebus and warm the soul, the Orgiastics rather rely on 7 feet of forged and sharpened steel. Their Bidenhanders are enormous and hard to wield, absurd weapons for an absurd war. Some Bidenhanders have spring mechanics in the heft that make a hidden knife jump forth.",
         fields: [
@@ -250,7 +250,7 @@ const equipmentGroups = [
       },
       {
         title: "Spitfire",
-        image: "assets/spitfire.webp",
+        image: "assets/Spitfire.gif",
         alt: "Spitfire",
         description: "Spore clouds and the plagues of the Aberrant cannot be fought with a sword. A burst of fire from a Spitfire, though, reduces them all to just ashes in the wind. The Ascetics may baptize the dry soil with water, but the Orgiastics baptize their enemies with fire.",
         fields: [
