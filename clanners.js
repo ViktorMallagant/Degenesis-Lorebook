@@ -783,3 +783,34 @@ const equipmentGroups=[
     ]
   }
 ];
+const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;');
+const fmt=v=>esc(v).replaceAll('\n\n','<br><br>').replaceAll('\n','<br>');
+function renderRank(id){
+  const r=ranks[id],d=document.querySelector('#rank-detail');
+  d.innerHTML='<p class="rank-kicker">SELECTED RANK</p><h3>'+esc(r.title)+'</h3><p>'+fmt(r.description)+'</p><dl class="entry-fields">'+r.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join('')+'</dl>';
+  document.querySelectorAll('.rank-node').forEach(b=>{const s=b.dataset.rank===id;b.classList.toggle('is-selected',s);b.setAttribute('aria-pressed',String(s));});
+}
+function renderPotential(i){
+  const p=potentials[i];
+  document.querySelector('#potential-detail').innerHTML='<p class="rank-kicker">SELECTED POTENTIAL</p><h3>'+esc(p.title)+'</h3><dl class="entry-fields">'+p.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join('')+'</dl>';
+  document.querySelectorAll('.potential-select').forEach((b,j)=>b.classList.toggle('is-selected',i===j));
+}
+function renderPotentials(){
+  const l=document.querySelector('#potential-list');
+  l.innerHTML=potentials.map((p,i)=>'<button class="potential-select" data-potential-index="'+i+'">'+esc(p.title)+'</button>').join('');
+  l.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>renderPotential(+b.dataset.potentialIndex)));
+  renderPotential(0);
+}
+function renderEquipment(){
+  document.querySelector('#equipment-groups').innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?'open':'')+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.image?'<div class="equipment-art"><img src="'+x.image+'" alt="'+esc(x.alt)+'"></div>':'')+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':'')+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join('')+'</dl></article>').join('')+'</div></div></details>').join('');
+}
+document.querySelectorAll('.rank-node').forEach(b=>b.addEventListener('click',()=>renderRank(b.dataset.rank)));
+renderRank('scout');
+renderPotentials();
+renderEquipment();
+const navToggle=document.querySelector('#lorebook-nav-toggle'),sidebarScrim=document.querySelector('#sidebar-scrim');
+const setSidebar=o=>{document.body.classList.toggle('sidebar-open',o);navToggle?.setAttribute('aria-expanded',String(o));};
+setSidebar(matchMedia('(min-width: 761px)').matches);
+navToggle?.addEventListener('click',()=>setSidebar(!document.body.classList.contains('sidebar-open')));
+sidebarScrim?.addEventListener('click',()=>setSidebar(false));
+document.querySelectorAll('.lorebook-sidebar a[aria-disabled="true"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
