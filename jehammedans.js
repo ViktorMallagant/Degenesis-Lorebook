@@ -378,3 +378,260 @@ const ranks={
     ]
   }
 };
+const potentials=[
+  {
+    "title": "I. Ire of Jehammed",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Faith"
+      ],
+      [
+        "Effect",
+        "The enemy insults the word of Jehammed, even in the face of his creation. Clad in faith, the warrior’s soul boils until finally his fury breaks its chains and engulfs the enemy.\n\nWhen Jehammedans face blasphemous enemies like Psychonauts, Apocalyptics, Anabaptists, or outlaws and have to watch these creatures stand tall against their group’s attack, their fury grows."
+      ],
+      [
+        "Rules",
+        "The Jehammedan counts all attacks by their enemy in a battle, if the enemy attacks a friend the attack counts twice. When the count reaches (10), the Jehammedan explodes into a rage. For the rest of the battle, he adds +1D per Potential level to his Attack rolls, and for each successful attack he makes himself, he gains (1) Ego Point."
+      ]
+    ]
+  },
+  {
+    "title": "II. Fleece of Aries",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Arianoi"
+      ],
+      [
+        "Effect",
+        "In the darkest hours of the Cult, those who are not afraid of a far greater darkness call for Aries the Ram. The Jehammedan sinks into meditation, drapes the black fleece around his shoulders, kneels, and cowers until the skin completely covers him. Something crawls into his mind, and pushes rationality away. He leaps to his feet with a feral growl, ready to fight."
+      ],
+      [
+        "Rules",
+        "The breath of Aries has touched his soul, and the goat has birthed a wolf. The ritual takes about 15 minutes, and when it ends the Jehammedan has become an embodiment of Aries. For (1) hour, all his Charisma Skills drop to (0). However, the maximum number of Ego Points that can be spent each Combat Round is increased by (1) per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "III. Call of Jehammed",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans"
+      ],
+      [
+        "Effect",
+        "The Anabaptists only yell when attacking, mindless like a bear, reduced to the simplest emotions. The prayers erupting from the Jehammedans, in contrast, are carefully crafted aphorisms embracing life, touching the heart and keeping the beast at bay. Born of a majestic voice, they can determine the tides of battle."
+      ],
+      [
+        "Rules",
+        "The caller needs (1) Combat Round to call to his friends and companions and instill them with the spirit of Jehammed: he rolls CHA+Arts and adds +1D per Potential level. The Difficulty depends on the threat the party faces: if victory is certain, it is (2); if the battle is almost lost, the caller must roll against a Difficulty of (6). The Game Master decides the Difficulty. If the Jehammedan’s roll is successful, he breaks all psychic manipulation by the enemy. If he rolls any Triggers, they are added as bonus dice to his group’s Mental Defense. This bonus drops by (1) per Combat Round until it is used up."
+      ]
+    ]
+  },
+  {
+    "title": "IV. Iconide’s Curse",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Iconide or Oracle"
+      ],
+      [
+        "Effect",
+        "The Iconide’s voice is thunder and lightning. He speaks divine wisdom, and every thought he utters is worthy of Jehammed himself. The lowly people stumbling along off the track tremble under the power of his voice and his spiritual transcendence. There is a truly blessed man among them.\n\nIf he calls down god’s wrath onto his creation, even an Anabaptist doubts his calling and lowers his weapon, his faith struck by anxiousness and insecurity."
+      ],
+      [
+        "Rules",
+        "The Iconides Curse is a mental attack on a group of human enemies. Animals, Psychonauts, and AMSUMOs are immune. The Iconide attacks his enemies’ psyche with a roll on PSY+Faith/Willpower +1D per Potential level. They may make a Mental Defense roll. If they fail, they get -1D per Trigger to all Action rolls. This penalty is reduced by -1D per Combat Round."
+      ]
+    ]
+  },
+  {
+    "title": "V. Iconide’s Blessing",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Iconide or Oracle"
+      ],
+      [
+        "Effect",
+        "The stars are right, the Saraeli’s moon blood has not flown, hours ago a messenger brought news of an important victory in the East, this is going to be a fortuitous day. When should the Iconides fulfill their destiny, if not now?"
+      ],
+      [
+        "Rules",
+        "The Iconide interprets an important event as an omen and can bless all Icons brought to him that day. For this day, any Icons he crafts have their effects increased by +1D per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "VI. Oracle",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Oracle"
+      ],
+      [
+        "Effect",
+        "Cloud formations, the form of entrails, or the throw of bone dice are all signs of truths and futures that only the chosen ones can perceive. The Oracle sees the signs when they present themselves.\n\nThe Oracle knows how to cater to her audience. After all the necessary theatrics, she describes the future and hints at a potential outcome. The audience will leave with lifted hearts and do everything in their power to make this future come true."
+      ],
+      [
+        "Rules",
+        "If a member of the audience is confronted with a situation the Oracle described within a month, they add +1D per Potential level to an Action bringing them closer to the goal the Oracle mentioned. The Oracle can make one prophecy per day."
+      ]
+    ]
+  },
+  {
+    "title": "VII. Compassion",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Iconide or Oracle, PSY+Faith 10"
+      ],
+      [
+        "Effect",
+        "Iconides are Jehammed’s pillars of unshakable trust. They are surrounded by an aura of sanctity that shields them from worldly dangers. Regardless of belief, whoever raises their hand against an Iconide raises their hand against a man of God."
+      ],
+      [
+        "Rules",
+        "Anyone who lays their hand on the Jehammedan must roll Mental Defense (4). Each Potential level after the first adds (1) to the Difficulty. If unsuccessful, the attacker loses the Potential level x2 in Ego Points due to this unbearable act of sacrilege. The attacker will be plagued by a guilty conscience for weeks to come."
+      ]
+    ]
+  },
+  {
+    "title": "VIII. Throes of the Wolf",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Arianoi, Primal, PSY+Faith 10"
+      ],
+      [
+        "Effect",
+        "The Arianoi is a wolf in sheep’s clothing. As an avenger of Aries he is unstoppable in his wrath. Once pushed over the edge he claws and bites at everything that moves until his lust for revenge is satisfied."
+      ],
+      [
+        "Rules",
+        "The Arianoi sacrifices (1) Ego Point to activate the Potential. If he does Damage with his first Attack roll, the invested Ego Points count as extra dice for a second attack within the same Combat Round. This can be used once per combat per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "IX. Brother’s Keeper",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Shepherd, PSY+Faith 10"
+      ],
+      [
+        "Effect",
+        "A Shepherd protects his herd from dangers and he deflects the attacks of the wolves that come to kill his sheep. No harm may be done to his brothers and sisters and he fights with the will of the Last Prophet to defend his kin."
+      ],
+      [
+        "Rules",
+        "Protecting his herd is the holiest task of the Shepherd. He will not fail. As an Action, the Shepherd may transfer his own Ego Points to a loved one in dire need. The maximum amount of points given at once is equal to the Potential level x2."
+      ]
+    ]
+  },
+  {
+    "title": "X. Black Sheep",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Delilah"
+      ],
+      [
+        "Effect",
+        "Black Sheep are poison to their community, a stain in the religious dogma of their very Cult. Where they stride, bad omens follow and discord blooms."
+      ],
+      [
+        "Rules",
+        "Delilah’s represent a collapse of moral value. Their very existence taints the fragile framework of a society. As such, they appear immune to indoctrination and suggestion. The Delilah adds (1) Trigger per Potential level to her Mental Defense rolls against any kind of influence. If she spends (1) Ego Point per comrade, she can extend this bonus to them before they roll for Mental Defense. Expending (3) Ego Points, she may even heal (1) point of PSY lost due to mental illness or corruption with an INS+Empathy roll against a Difficulty of (4)."
+      ]
+    ]
+  },
+  {
+    "title": "XI. Weal and Woe",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Faith"
+      ],
+      [
+        "Effect",
+        "The blessings of life come at a price. The Jehammedan casts his fate into the hands of God, so he may bring him through another day. In turn he must repay his creator with a piece of himself."
+      ],
+      [
+        "Rules",
+        "This Potential can be activated even when at (0) Ego. The character sacrifices (1) permanent point of his maximum Trauma in exchange for fully restoring his Ego Points. The character ignores all Trauma penalties for a number of Combat Rounds equal to the Potential level. Furthermore, the character adds +1D per Potential level to Initiative rolls for the rest of the fight."
+      ]
+    ]
+  },
+  {
+    "title": "XII. Sacrifice",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Isaaki"
+      ],
+      [
+        "Effect",
+        "It is an Isaaki’s birthright to become the ultimate sacrifice. He is chosen to oppose all forces that threaten the tribe, even if he has to pay for it with his life. With death looming over his head, he knows that everything depends on him, and him alone."
+      ],
+      [
+        "Rules",
+        "The more powerful his foes, the more dedicated the Isaaki is. The lamb will not let itself be slaughtered without a fight. Against overwhelming odds, the character gains (1) point of Passive Defense and Armor per Potential level. He also adds (1) Trigger per Potential level to all Mental Defense rolls."
+      ]
+    ]
+  },
+  {
+    "title": "XIII. Ram’s Offspring",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans"
+      ],
+      [
+        "Effect",
+        "Some Jehammedans are born under a divine auspice. They have been sent by Aries himself, to protect the tribe and pass judgement on its enemies. In the tradition of the Jehammedans, those who are declared Ram’s offspring are considered a divine gift."
+      ],
+      [
+        "Rules",
+        "When dealing with his own Cult, the Jehammedan adds +1D per Potential level to his PSY and CHA related rolls. Additionally, each time he acquires a new level of Ram’s Offspring, his Allies and Authority Backgrounds rise up to at least his Potential level and cannot be lowered below it."
+      ]
+    ]
+  },
+  {
+    "title": "XIV. Fatalist",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Faith"
+      ],
+      [
+        "Effect",
+        "A faithful Jehammedan imposes God’s will upon the world. His devotion is an example and others follow his endeavors without doubt."
+      ],
+      [
+        "Rules",
+        "Before taking chances with a difficult endeavor, the Jehammedan loses himself in a prayer for (4) Combat Rounds. At the end of his prayer he may use a Combination of PSY+Faith and whichever Skill he was going to use and adds +1D per Potential level to the roll. The prayer may be shortened to (3) Rounds at level 2 and (2) Rounds at Potential level 3."
+      ]
+    ]
+  },
+  {
+    "title": "XV. Divine Intervention",
+    "fields": [
+      [
+        "Prerequisite",
+        "Jehammedans, Faith"
+      ],
+      [
+        "Effect",
+        "A hand guided by faith strikes with the precision of God and splits the heathen apart. Those who stand in the way of the Jehammedan are struck with misfortune and disarray."
+      ],
+      [
+        "Rules",
+        "The faithful calls forth the mighty wrath of Jehammed himself upon his enemies. He rolls PSY+Faith and adds +1D per Potential level against the opponent’s Mental Defense. For the remainder of the fight, those who failed to defend will count their 2’s as 1’s on their rolls. The Jehammedan regains (1) Ego Point per Potential level for every Botch rolled by an enemy during the altercation."
+      ]
+    ]
+  }
+];
