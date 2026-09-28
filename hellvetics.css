@@ -1,14 +1,14 @@
 /* Hellvetic hierarchy */
 .hellvetic-hierarchy-canvas {
   position: relative;
-  width: 1620px;
+  width: 1475px;
   height: 820px;
   margin: 0 auto;
 }
 .hellvetic-rank-lines {
   position: absolute;
   inset: 0;
-  width: 1620px;
+  width: 1475px;
   height: 820px;
   overflow: visible;
   fill: none;
@@ -29,4 +29,11 @@
 }
 @media (max-width: 760px) {
   .hellvetic-hierarchy-canvas { margin-left: 0; }
+}
+
+@media (min-width: 761px) {
+  .hellvetic-page .quick-facts {
+    grid-template-columns: 1.12fr 0.94fr 0.94fr;
+    max-width: 960px;
+  }
 }
