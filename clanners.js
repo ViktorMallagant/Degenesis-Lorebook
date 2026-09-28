@@ -144,3 +144,260 @@ const ranks={
     ]
   }
 };
+const potentials=[
+  {
+    "title": "I. Forgotten by Death",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Romano"
+      ],
+      [
+        "Effect",
+        "Blessed by luck or detested by hell. Whatever the reason, no matter what fate throws at the Clanner, they seem to be able to dance their way along the knife edge of danger. Bullets whistle past their ears, knives cut the air a millimeter from their skin, and still they manage to escape with a barely a scratch."
+      ],
+      [
+        "Rules",
+        "If the character is in danger of getting Trauma he could have avoided with a successful Action roll, he gets a second chance. Once per day he can reroll such an Action roll for (1) Ego Point – with a bonus of +1D per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "II. Lombardi Blood",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Lombardi"
+      ],
+      [
+        "Effect",
+        "Clan Lombardi has been around much longer than the upstart Anabaptist Cult. From an early age the children of the Clan learn just who the original rulers of the land were, even as the Anabaptists swarm their ancestral homes and spread their foul influence."
+      ],
+      [
+        "Rules",
+        "A Lombardi gets +1D per Potential level to his Mental Defense against Anabaptist influences. This bonus increases to +2D per Potential level against missionary efforts."
+      ]
+    ]
+  },
+  {
+    "title": "III. Martyrdom",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Flayers"
+      ],
+      [
+        "Effect",
+        "Most Flayers couldn’t hope to stand up to their enemies physically, but even as his enemies rain blows down upon him the crowd starts to take notice. The Flayer reaches out to the onlookers, his aura, devotion, and capacity to withstand suffering inspiring the people, whipping them into a mob as the Flayer whips his own flesh."
+      ],
+      [
+        "Rules",
+        "Should the Flayer be attacked or beaten, he gets +1D per Potential level to a Mental Attack with INS+Empathy. If he succeeds, he projects his suffering onto the onlookers and enrages them. Women throw chamber pots against the attackers, men grab their pitchforks. The worse the Flayer's injuries and the more Triggers he rolls, the more violent the reaction of the populace."
+      ]
+    ]
+  },
+  {
+    "title": "IV. Brotherhood",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Resistance"
+      ],
+      [
+        "Effect",
+        "The Resistance fighters are loyal to a cause greater than the individual, greater even than the brothers and sisters they fight beside; they are in a war for the very soul of their country. This loyalty inspires great feats of heroism: as the militia charges towards yet another swarm of Drones, bullets crossing the space between the two fronts, they are joined as one in worship of the only cause that matters to them."
+      ],
+      [
+        "Rules",
+        "As a Resistance fighter charges across an open space towards his enemy, side by side with his comrades in arms, he adds +1D per Potential level to all Attack rolls made during the assault. The bonus ends as the enemy closes into close quarters, the brotherhood descending into a mad frenzy of melee."
+      ]
+    ]
+  },
+  {
+    "title": "V. Friend of the Lion",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Touloni"
+      ],
+      [
+        "Effect",
+        "The Touloni have been living amongst Lions for years, and they have begun to learn the tricks of the trade. The complex interplay of numbers, the words weaving together as they tumble from the African’s mouth, all of it is hard to deal with, but with enough time and practice even the oldest Crows learn some new tricks."
+      ],
+      [
+        "Rules",
+        "With Friend of the Lion, a character gets +1D per Potential level to CHA+Negotiation and PSY+Cunning to spot a poor deal and subtly twist it into a good one, smiling all the while."
+      ]
+    ]
+  },
+  {
+    "title": "VI. Blood Call",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Sanglier, Faith"
+      ],
+      [
+        "Effect",
+        "Before any battle, the legionnaires of the Sanglier family slit their palms, pouring the blood out into a bowl filled with some Petro. The fluid mixes together into a deep black pool, and is then burned to obtain the blessing of the Cerveaux."
+      ],
+      [
+        "Rules",
+        "If a Sanglier sacrifices his blood to the Cerveaux before a battle, taking (1) Flesh Wound of Damage, he gains a bonus equal to his Potential level to his Passive Defense until the end of the combat."
+      ]
+    ]
+  },
+  {
+    "title": "VII. Lance Thrust",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Bordenoir, Focus"
+      ],
+      [
+        "Effect",
+        "There are always stories of fishermen out at sea being attacked by the most fearsome predators of the deep, sharks leaping from the water to bite the throats from anyone caught unaware. Of course, any good fisherman knows how to kill a Tiger Shark, thrusting a knife into the brain with a quick, precise movement to leave it floating dead in the water. The fishers of Clan Bordenoir are very good fishermen..."
+      ],
+      [
+        "Rules",
+        "The Bordenoir exhibit lethal precision in melee, targeting their enemy’s most vulnerable areas. Characters with this Potential add +1D per Potential level to Aimed Attack rolls in close combat."
+      ]
+    ]
+  },
+  {
+    "title": "VIII. Bloodthirsty",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Pictons, Ate Star Food, INS+Primal 8"
+      ],
+      [
+        "Effect",
+        "The blade of the bone knife flashes, blood splattering on the ground. To the Picton, the blood shines with an ethereal light, burning like a red sun on the ground. He looks at his blade, sees the red glow along its edge, and flies into a rage. He needs to spill more!"
+      ],
+      [
+        "Rules",
+        "If any of the Picton’s attacks causes Damage, he immediately recovers (1) Ego Point. The Picton can use this Point in the next Combat Round for his Initiative, even if it would exceed the normal maximum of (3).\n\nFor every Potential level, he gets (1) additional Ego Point above his Ego pool maximum. This is a side effect of Argyre‘s star food, a hormone cocktail he feeds to his Pictons, making it easier to train them."
+      ]
+    ]
+  },
+  {
+    "title": "IX. Premonition",
+    "fields": [
+      [
+        "Prerequisite",
+        "Stukov Nomads"
+      ],
+      [
+        "Effect",
+        "The Stukov Nomads have kept the desert safe from intruders for many decades now. They have learned that most outsiders come to plunder. They excel at reading their body language and guessing their next moves."
+      ],
+      [
+        "Rules",
+        "Stukov Nomads do not mingle with outsiders. Instead they spend a lot of time studying them from a safe spot in the desert. Guessing their whereabouts begins as a child’s game and ends with combat. When a fight erupts, the Nomad may add +1D per Potential level to a PSY+Cunning roll against an opponent’s Mental Defense. If the Nomad wins, the target must immediately announce their next Action. No matter what happens, the target has to follow what they announced through."
+      ]
+    ]
+  },
+  {
+    "title": "X. Mother of All Virtues",
+    "fields": [
+      [
+        "Prerequisite",
+        "Vigilantes"
+      ],
+      [
+        "Effect",
+        "In the barren and deformed lands of Western Purgare only Vigilantes dare to tread openly. They hunt for the Incarnates who have infested their homelands. To stand firm against one of those horrors is considered the mother of all virtues."
+      ],
+      [
+        "Rules",
+        "Fighting an Incarnate is all about living another day. The Vigilantes knows when to pick his fight. When facing a Psychokinetic, he adds +1D per Potential level to his INS+Perception and Attack rolls. If he had at least (1) day to prepare the battleground, the bonus is increased to (1) Success per Potential level instead."
+      ]
+    ]
+  },
+  {
+    "title": "XI. Former Glory",
+    "fields": [
+      [
+        "Prerequisite",
+        "Exalters"
+      ],
+      [
+        "Effect",
+        "Cultrin and the rise of Exalt may seem like a distant memory to some. To others, it is a birthright. The old traditions survived with the Exalters who fled and spread among the many cities of the Protectorate. Cultrin’s doctrine lives on..."
+      ],
+      [
+        "Rules",
+        "It takes tremendous willpower to stay true to Exalt’s ideals, a hundred years after its fall. Is it the only reason for the extraordinary resilience of the Exalters’ mind? The character adds +1D per Potential level to his Mental Defense rolls. If the attack is based on memetics, he adds (1) Trigger per Potential level instead."
+      ]
+    ]
+  },
+  {
+    "title": "XII. Trial by Fire",
+    "fields": [
+      [
+        "Prerequisite",
+        "Storskis"
+      ],
+      [
+        "Effect",
+        "Coal, fire, steam and boiling heat. The body covered in burn marks and black soot. Storskis live for the power of their engines and they embrace the fire that keeps those machines running."
+      ],
+      [
+        "Rules",
+        "Shoveling coal for hours in the heat of a furnace turns the skin into a crust of leather. Storskis additionally coat their bodies with protective lubricants, a habit that makes them incredibly resistant to fire. A Storski may have a natural Fire Resistant Quality with a rating of the Potential level x2. If armor with the same Quality is worn on top, both ratings are added together."
+      ]
+    ]
+  },
+  {
+    "title": "XIII. Stoney Calm",
+    "fields": [
+      [
+        "Prerequisite",
+        "Clanners, Britoni, Focus"
+      ],
+      [
+        "Effect",
+        "Wisdom is embedded in his bones and his gaze is one of eternal serenity. During negotiations and arguments, the Britoni’s calm fills the room, taking the wind out of the sails of flying tempers and pouring oil on troubled waters."
+      ],
+      [
+        "Rules",
+        "For every point in the Potential, the character adds +1D to all rolls using CHA+Conduct or CHA+Expression to mediate a conflict between arguing parties, or to convince them to look at the situation from his viewpoint."
+      ]
+    ]
+  },
+  {
+    "title": "XIV. Toxicity",
+    "fields": [
+      [
+        "Prerequisite",
+        "Phosphorites"
+      ],
+      [
+        "Effect",
+        "Phosphorites have been over-exposed to the biohazards of their territory for an eternity. The genetic composition of the Clan has shifted towards immunity to countless toxins and chemical agents found in the wastelands."
+      ],
+      [
+        "Rules",
+        "When a Phosphorite is exposed to chemicals, the Potency is lowered by the Potential level. When administered a chemical without Potency, the character adds +1D per Potential level to a BOD+Toughness roll against the Tech Level of the agent. If he succeeds, the chemical has no effect. However, the chemical immunity also leads to the Phosphorite being immune to most vaccines and medicines."
+      ]
+    ]
+  },
+  {
+    "title": "XV. Rigor Mortis",
+    "fields": [
+      [
+        "Prerequisite",
+        "Cockroaches"
+      ],
+      [
+        "Effect",
+        "Cockroaches are the true masters of the wasteland. They have ruled the far reaches of Northern Borca for hundreds of years. Beaten and driven from their realm, they have returned to reclaim what once belonged to them. This time they know how to hide in plain sight."
+      ],
+      [
+        "Rules",
+        "The Cockroach freezes his movements to become one with the surroundings. His body, covered in soot and dirt, blends with the background. He adds (1) Success per Potential level to his AGI+Stealth rolls for the purpose of hiding. This bonus may be used in order to pass for a corpse, rolling a Combination of AGI+Stealth and PSY+Deception and adding (1) Success to each component per Potential level."
+      ]
+    ]
+  }
+];
