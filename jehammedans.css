@@ -1,14 +1,14 @@
 /* Jehammedan page */
 .jehammedan-hierarchy-canvas {
   position: relative;
-  width: 1540px;
+  width: 1420px;
   height: 900px;
   margin: 0 auto;
 }
 .jehammedan-rank-lines {
   position: absolute;
   inset: 0;
-  width: 1540px;
+  width: 1420px;
   height: 900px;
   overflow: visible;
   fill: none;
