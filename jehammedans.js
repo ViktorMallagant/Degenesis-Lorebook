@@ -635,3 +635,566 @@ const potentials=[
     ]
   }
 ];
+const equipmentGroups=[
+  {
+    "title": "Talismans",
+    "items": [
+      {
+        "title": "Icons",
+        "description": "An Iconide fights with God for his tribe’s fate. For days, he bargains: every flick of the wrist, every sentence is traditional and chosen carefully. After days of austerity and prayer, the Iconide leaves his rooms. He is weakened, but happy, for God has listened to his prayers, has given the tribe a symbol of his goodwill: an Icon. A broken, reddish horn, a Scourger helmet riddled with bullet holes, or another strange bauble, the Icon is religiously charged. Its wearer becomes the executioner of God’s will.",
+        "fields": [
+          [
+            "Specialty",
+            "Icons are always tied to a deed or mission. If the wearer is confronted with the respective situation, he gets +2D to all Actions until the deed is done. The Icon is considered holy now and is brought back into the bosom of the community."
+          ],
+          [
+            "Effect",
+            "Tied to a foreseen Action: +2D to all related Action rolls"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Value",
+            "200"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Jehammed's Teachings",
+        "description": "The scrolls with Jehammed’s teachings are kept in brass tubes and only taken out and opened on holy days. The breath of God touches those who are allowed to take a look at the script.",
+        "fields": [
+          [
+            "Specialty",
+            "The owner gets +2D to all social interactions inside the Cult."
+          ],
+          [
+            "Effect",
+            "+2D to social interactions within the Cult"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Value",
+            "2000"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Jehammed's Will / Aries's Blessing",
+        "description": "Allegedly, the scrolls in the golden tubes reveal Jehammed’s true goals and intents. Jehammed wrote this testament behind closed doors and kept its contents secret even in the last days. “Jehammed’s Will” is handed down from Prophet to Prophet, but no one has ever been able to decipher the texts. Interestingly, the Arianoi call the same tubes \"Aries’ Blessing\". They claim that in them, Aries opened up and explained himself to humankind.",
+        "fields": [
+          [
+            "Specialty",
+            "The owner gets +2D to all social interactions inside the Cult."
+          ],
+          [
+            "Effect",
+            "+4D to social interactions within the Cult"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Value",
+            "6000"
+          ],
+          [
+            "Resources",
+            "5"
+          ]
+        ]
+      },
+      {
+        "title": "Seal Stone",
+        "description": "Small burnt clay discs imprinted with the word “Jehammed” keep popping up. According to legend, the prophet himself imprinted them, though they are probably forgeries. Still, the seal stones cater to the need for closeness to the divine and are held in high regard in spite of all doubts.",
+        "fields": [
+          [
+            "Specialty",
+            "+1 Authority."
+          ],
+          [
+            "Effect",
+            "Authority (+1)"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Value",
+            "300"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Jehammed's Star",
+        "description": "When a Saraeli gives birth to an Isaaki, the Abrami of her tribe, crying tears of joy, gives her Jehammed’s Star, a piece of gold sheet on a braided cord. It confirms that she has fulfilled Jehammed’s expectations.",
+        "fields": [
+          [
+            "Specialty",
+            "+2 Renown."
+          ],
+          [
+            "Effect",
+            "Saraeli: Renown (+2)"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Value",
+            "90"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Weapons",
+    "items": [
+      {
+        "title": "Scimitar",
+        "placeholder": "SCIMITAR ARTWORK PLACEHOLDER",
+        "description": "The Scimitar, considered a traditional weapon, is preferred amongst Jehammedans. Ismaeli carry poorly balanced and simple steel sabers. The Isaaki, however, may wield artfully adorned Damascene sabers worth a fortune.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "6+F/3"
+          ],
+          [
+            "Magazine",
+            "-"
+          ],
+          [
+            "Qualities",
+            "-"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Slots",
+            "1"
+          ],
+          [
+            "Value",
+            "600"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Ram Staff",
+        "description": "The ram staff is a symbol for the strength and single-mindedness of the Cult. On the day before a great battle, the Iconide hands it over to the Isaaki who will lead the Swords of Jehammed to death or victory.",
+        "fields": [
+          [
+            "Specialty",
+            "Jehammedans rally to the staff in battle and feel inspired: in a (20) meter radius, they get +1D to their Attack rolls (“Standard” Quality)."
+          ],
+          [
+            "Handling",
+            "-2D"
+          ],
+          [
+            "Distance",
+            "2"
+          ],
+          [
+            "Damage",
+            "F/3"
+          ],
+          [
+            "Magazine",
+            "-"
+          ],
+          [
+            "Qualities",
+            "Blunt, Standard (Attacks +1D)"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Slots",
+            "1"
+          ],
+          [
+            "Value",
+            "3300"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Riding Pick",
+        "placeholder": "RIDING PICK ARTWORK PLACEHOLDER",
+        "description": "",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "5+F/2"
+          ],
+          [
+            "Magazine",
+            "-"
+          ],
+          [
+            "Qualities",
+            "-"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "300"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Horn",
+        "description": "An unusual sword. It looks like an elongated horn and is razor-sharp, hard as a diamond, pure white, and serrated. Only those who are close to Aries may wield this weapon.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "+1D"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "9+F/3"
+          ],
+          [
+            "Magazine",
+            "-"
+          ],
+          [
+            "Qualities",
+            "-"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "24000"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
+      },
+      {
+        "title": "Explosive Bottles",
+        "description": "In the Jehammedans’ explosive bottles there is a liquid made from bitumen and Petro. A twisted cloth is pushed into the bottleneck of the clay bottles like a wick. In combat, it is set on fire, and the bottle is thrown into the enemy ranks. The explosion is not enormous, but the flaming mixture clings like resin and cannot be washed off. Flames burn into the flesh: victims scream and roll on the floor while their despairing comrades look on helplessly. Explosive bottles are a cruel weapon. Those who use them must expect the most severe repercussions from the enemy.",
+        "fields": [
+          [
+            "Specialty",
+            "Explosive bottles deal Damage for several Rounds. Per Round, the Damage decreases by (1). If the victim tries to douse the flames with sand or dirt for (1) Combat Round, the Damage decreases by another point."
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "-"
+          ],
+          [
+            "Damage",
+            "6"
+          ],
+          [
+            "Magazine",
+            "1"
+          ],
+          [
+            "Qualities",
+            "Fire Hazardous, Explosive, Special"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "60"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Armor",
+    "items": [
+      {
+        "title": "Ram Helmet",
+        "description": "An Arianoi only wears the bulky ram helmet in combat.",
+        "fields": [
+          [
+            "Specialty",
+            "The sight of the ram skull on a human body shocks those who are weaker in will or of faith (“Terrifying” Quality)."
+          ],
+          [
+            "Armor Rating",
+            "1"
+          ],
+          [
+            "Qualities",
+            "Terrifying (3)"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "100"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      },
+      {
+        "title": "Black Fleece",
+        "description": "The fleece is liquid, darkest night, and its ram locks flutter as if they were in a storm—even if there is no wind at all. The Spitalians know this phenomenon; they have watched it in the Festering: a nanite swarm. How it clings to the fleece and why it doesn’t turn everything it touches to carbon corals they cannot explain, though.",
+        "fields": [
+          [
+            "Specialty",
+            "Just the sight of the nanite-drenched fleece terrifies people. They have to succeed at an Action roll on PSY+Faith/Willpower (5) or suffer a penalty of -2D when attacking the Arianoi (“Terrifying” Quality)."
+          ],
+          [
+            "Armor Rating",
+            "3"
+          ],
+          [
+            "Qualities",
+            "Fire Resistant (8), Insulated, Terrifying (5)"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "VI"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "16000"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Medical",
+    "items": [
+      {
+        "title": "Blood of Aries",
+        "description": "The Blood of Aries is served in ram skulls. Those who drink it feel the force of Aries, become one with him. Arianoi who leave the community to carry Aries’s will out into the world may fill the blood into field flasks.",
+        "fields": [
+          [
+            "Specialty",
+            "The Arianoi heals (1) Flesh Wound per hour, a Blood of Aries (rank 4), (1) per (10) minutes. But every day that the Jehammedan has to make do without the concoction, his Ego Point maximum drops by (1). If it reaches (0), his body is past the addiction, and the Ego Point maximum returns to normal, but he has lost his regeneration ability. A sip of Aries’s blood revives the Arianoi: the Ego Point maximum is reset to the old score, and the addiction returns."
+          ],
+          [
+            "Effect",
+            "Regeneration of (1) Flesh Wound per hour; (1) dose per day; Addictive"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "VI"
+          ],
+          [
+            "Value",
+            "3000"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
+      }
+    ]
+  }
+];
+
+const esc=v=>String(v).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+const fmt=v=>esc(v).replaceAll("\n\n","<br><br>").replaceAll("\n","<br>");
+function renderRank(id){
+  const r=ranks[id],d=document.querySelector("#rank-detail");
+  d.innerHTML='<p class="rank-kicker">SELECTED RANK</p><h3>'+esc(r.title)+'</h3><p>'+fmt(r.description)+'</p><dl class="entry-fields">'+r.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl>';
+  document.querySelectorAll(".rank-node").forEach(b=>{const s=b.dataset.rank===id;b.classList.toggle("is-selected",s);b.setAttribute("aria-pressed",String(s));});
+}
+function renderPotential(i){
+  const p=potentials[i];
+  document.querySelector("#potential-detail").innerHTML='<p class="rank-kicker">SELECTED POTENTIAL</p><h3>'+esc(p.title)+'</h3><dl class="entry-fields">'+p.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl>';
+  document.querySelectorAll(".potential-select").forEach((b,j)=>b.classList.toggle("is-selected",i===j));
+}
+function renderPotentials(){
+  const l=document.querySelector("#potential-list");
+  l.innerHTML=potentials.map((p,i)=>'<button class="potential-select" data-potential-index="'+i+'">'+esc(p.title)+'</button>').join("");
+  l.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>renderPotential(+b.dataset.potentialIndex)));
+  renderPotential(0);
+}
+function renderEquipment(){
+  document.querySelector("#equipment-groups").innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?"open":"")+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.placeholder?'<div class="equipment-art-placeholder asset-placeholder">'+esc(x.placeholder)+'</div>':"")+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':"")+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl></article>').join("")+'</div></div></details>').join("");
+}
+document.querySelectorAll(".rank-node").forEach(b=>b.addEventListener("click",()=>renderRank(b.dataset.rank)));
+renderRank("hagari");
+renderPotentials();
+renderEquipment();
+const navToggle=document.querySelector("#lorebook-nav-toggle"),sidebarScrim=document.querySelector("#sidebar-scrim");
+const setSidebar=o=>{document.body.classList.toggle("sidebar-open",o);navToggle?.setAttribute("aria-expanded",String(o));};
+setSidebar(matchMedia("(min-width: 761px)").matches);
+navToggle?.addEventListener("click",()=>setSidebar(!document.body.classList.contains("sidebar-open")));
+sidebarScrim?.addEventListener("click",()=>setSidebar(false));
+document.querySelectorAll('.lorebook-sidebar a[aria-disabled="true"]').forEach(a=>a.addEventListener("click",e=>e.preventDefault()));
+
