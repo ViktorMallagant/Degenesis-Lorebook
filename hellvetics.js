@@ -288,3 +288,260 @@ const ranks={
     ]
   }
 };
+const potentials=[
+  {
+    "title": "I. Assault",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "A Harness bursts into motion, breaks from cover, jumps over rocks, keeps getting faster, mud splashes under thundering boots. The Hellvetic screams, “After me!” Then he hits the enemy lines."
+      ],
+      [
+        "Rules",
+        "A Hellvetic leads his squads by example, charging into battle. If he manages to achieve (2) Triggers on an Attack Roll, all of his squadmates attacking after him in the same Round add +1D per Potential Level to their own Attack rolls. Only usable in the first Combat Round."
+      ]
+    ]
+  },
+  {
+    "title": "II. Forced March",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "Those who follow the Forced March Doctrine adapt their movements to better match the rigid construction of their armor, their bodies moving in sync with the steel joints of their Harness."
+      ],
+      [
+        "Rules",
+        "The encumbrance of the Harness decreases by (1) per Potential Level."
+      ]
+    ]
+  },
+  {
+    "title": "III. Shield Wall",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "From the strategic safeguard of the cantons to the tactical Shield Wall Doctrine, Hellvetics are the protectors of humanity.\n\nThose who commit to the Shield Wall Doctrine learn to obstruct attacks on others with their bodies and Harnesses. In combat, the Hellvetic can decide to guide attacks against a comrade towards himself."
+      ],
+      [
+        "Rules",
+        "The Hellvetic diverts an attack against a comrade within his movement distance, taking the blow himself. Against melee attacks, he must succeed on a PSY+Reaction (4) roll; for ranged combat attacks, the Difficulty rises to (6). He gets +1D on the roll per Potential level. If the Hellvetic is in melee with the Trailblazer’s bayonet mounted, he can use the Triggers from the roll to counterattack using his Trailblazer’s bayonet."
+      ]
+    ]
+  },
+  {
+    "title": "IV. Infiltration",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "Information wins wars. Hellvetics committed to the Infiltration Doctrine are trained to mingle with civilians, finding subversive ringleaders and rebellious firebrands. They get close to the important people, and slowly build up a dossier of information to send back to the Alpine Fortress."
+      ],
+      [
+        "Rules",
+        "The Hellvetic is a master of subversion and lies. He gains +1D per Potential level on all CHA or PSY rolls to deceive others, along with an additional (1) Network per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "V. Discipline",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, Focus"
+      ],
+      [
+        "Effect",
+        "A Hellvetic’s mental and physical strength are only partly the result of his character or his equipment. Iron discipline can forge even the most cowardly man into a textbook soldier. Some of these eventually go even further."
+      ],
+      [
+        "Rules",
+        "The Hellvetic can convert Triggers from any Attack or Defense rolls into Ego Points, up to a limit equal to the Potential Level."
+      ]
+    ]
+  },
+  {
+    "title": "VI. Morale",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "Any battle can be won if enough bodies are thrown against the enemy. Only when outnumbered does the Hellvetic soldier truly prove his worth."
+      ],
+      [
+        "Rules",
+        "Hellvetics gain +1D Mental Defense per Potential level when outnumbered."
+      ]
+    ]
+  },
+  {
+    "title": "VII. Recovery",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, PSY+Reaction 8"
+      ],
+      [
+        "Effect",
+        "Some Hellvetics specialize in getting wounded comrades off the battlefield before it’s too late. Behind the protection of their Tunnel Shields they race across an open field straight into the sniper fire, providing cover for their fellow soldiers and rescuing them from certain death."
+      ],
+      [
+        "Rules",
+        "After rolling initiative, a Hellvetic using a Tunnel Shield may conduct a retreating maneuver. He won’t be able to Attack during this Combat Round but his Passive Defense is raised by (1) per Potential level and he adds +1D to his Active Defense per Potential level. Furthermore, by sacrificing all his Actions for this Round, he may expand his Passive Defense bonus to (1) willing comrade per Potential level. The comrade must stay in close proximity of the Hellvetic bearing the Tunnel Shield, and also won’t be able to Attack during his turn."
+      ]
+    ]
+  },
+  {
+    "title": "VIII. Heavy Duty",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, Fortress Sentinel, AGI+Navigation 8, PSY+Reaction 8"
+      ],
+      [
+        "Effect",
+        "A Heavy Duty Harness is a masterpiece of technology. It is a walking fortress, that can turn into a devastating battle armor when worn by a skilled Hellvetic. Some Sentinels navigate Heavy Duty Harnesses with such precision that they can withstand a brawl with a renegade AMSUMO unit."
+      ],
+      [
+        "Rules",
+        "The Heavy Duty Harness fits like a second skin. While operating the bulky exoskeleton, the Hellvetic adds (1) Success per Potential level to any BOD roll. At Potential level 2 the Hellvetic is so skilled the penalty from using the Harness in close combat drops to -1D. At level 3 he uses the strength of the suit to its fullest extent, and the penalty is fully negated."
+      ]
+    ]
+  },
+  {
+    "title": "IX. Alpine Soul",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, BOD+Athletics 6, BOD+Stamina 6"
+      ],
+      [
+        "Effect",
+        "The life in the mountains of Hellvetica has enhanced the soldiers endurance, made him a sure-footed climber and alpine athlete. He feels no fatigue in high altitudes nor is he afraid of heights. Instead, he balances across cliffs and ridges without experiencing vertigo, and keeps his breath even in oxygen depleted environments. When he falls, he makes sure to land on his feet."
+      ],
+      [
+        "Rules",
+        "The Hellvetic has learned how to mitigate the perils of falling from great heights. Any falling Damage is reduced by (1) per Potential level. Additionally, in mountainous environments he adds +1D per Potential level to any BOD+Stamina and BOD+Athletics rolls."
+      ]
+    ]
+  },
+  {
+    "title": "X. Demolitions",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, Sapper, AGI+Crafting 6, INT+Science 6"
+      ],
+      [
+        "Effect",
+        "Sappers don’t just blow stuff up. They detonate their payloads with mathematical precision. With just enough time to plan ahead, they can collapse cliffs, cause landslides or chain reactions that level entire city districts."
+      ],
+      [
+        "Rules",
+        "When planting explosives of any kind, the Sapper may roll a Combination of AGI+Crafting and INT+Science against a Difficulty of (4). The Difficulty is lowered by (1) for each point in the Potential beyond level 1. He may increase the Damage of the bomb by (1) per Success, and (2) for every Trigger acquired in the Combination roll. Before the roll, however, he must choose if the blast radius will be impacted by the raised Damage as well. Additionally, the character adds +1D per Potential level when defusing explosive devices."
+      ]
+    ]
+  },
+  {
+    "title": "XI. Austerity",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "No other Cult can get so far with so little. Hellvetics are strict when it comes to their austerity. Some take the doctrine to the next level and impress their superiors by completing missions without abusing the limitations of their equipment. Such spartanic soldiers are awarded with great respect and can receive access to equipment that isn’t normally available to their rank."
+      ],
+      [
+        "Rules",
+        "Hierarchy isn’t everything. Austerity is. Once per month per Potential level, the Hellvetic may use Renown instead of Resources when asking the Alpine Fortress for a particular piece of equipment. The same rules for acquisition apply, except that if the equipment is lost or wasted the character suffers a loss of (1) Renown."
+      ]
+    ]
+  },
+  {
+    "title": "XII. Sentinel",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, Focus, AGI+Projectiles 8, INS+Perception 8"
+      ],
+      [
+        "Effect",
+        "The snipers of the Hellvetics are masterful sharpshooters. Clad in white and covered in snow they lay waiting out in the open, often hundreds of meters away from their target. Their breath goes shallow and their vision sharpens. With the pull of the trigger they end the lives of their prey with a single well-aimed shot."
+      ],
+      [
+        "Rules",
+        "If the target is unaware of his presence, the Hellvetic prepares for his kill-shot. Each consecutive Combat Round he spends taking aim undisturbed he must invest (1) Ego Point. For each Ego Point invested, he adds +2D to his AGI+Projectiles roll in order to hit the target. If someone intervenes or if he does something other than aiming before the gun is fired, the invested Ego Points and the bonus are lost. The character may never add more dice to the roll than his Potential level x2."
+      ]
+    ]
+  },
+  {
+    "title": "XIII. Hellvetic Honor",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "The Hellvetics are mercenaries. When they return from their missions, they bring back plenty of loot collected during their deployment in the field. Those who share their bounty with comrades and fellow soldiers gain the trust of the battalion."
+      ],
+      [
+        "Rules",
+        "In the Alpine fortress, combat isn’t the only source of glory. After a mission report, every time the Hellvetic gains (1) Resources, he may also choose to raise Authority, Renown or Allies. He also gains (1) point in the chosen Background. Background points added via Hellvetic Honor cannot be raised above (3) at level 1, (4) at level 2 and (5) at level 3."
+      ]
+    ]
+  },
+  {
+    "title": "XIV. No Man’s Land",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics"
+      ],
+      [
+        "Effect",
+        "Collecting intelligence in foreign territory is the key aspect of many Hellvetic Spotters. They need to find running water, stockpile food, navigate hostile environments, and make contact with natives to establish a supply network for themselves for the months to come."
+      ],
+      [
+        "Rules",
+        "A Spotter is never lost. Outside of the Territorial Regions, the character adds +1D per Potential level to any INS+Survival and INS+Orienteering rolls. Furthermore, every time he gains a level in No Man’s Land his Network Background is automatically raised by (1)."
+      ]
+    ]
+  },
+  {
+    "title": "XV. Dog of War",
+    "fields": [
+      [
+        "Prerequisite",
+        "Hellvetics, Rank 4, BOD+Toughness 10, BOD+Stamina 10, PSY+Faith/Willpower 10"
+      ],
+      [
+        "Effect",
+        "Some soldiers have been through hell and back. What they’ve seen with their own eyes stays with them forever. They’ve mastered their survival instincts and know how to escape death. Those who want to kill a dog of war better make sure he doesn’t come back to haunt them."
+      ],
+      [
+        "Rules",
+        "No matter how dreadful the situation, whether he is badly wounded or has exceeded his maximum Trauma, the old dog is not done for. Wisdom and Fate work together to grant the Hellvetic a furious comeback. By spending (10) unspent Experience points, the character recovers (1) Trauma per Potential level immediately."
+      ]
+    ]
+  }
+];
