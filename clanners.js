@@ -401,3 +401,385 @@ const potentials=[
     ]
   }
 ];
+const equipmentGroups=[
+  {
+    "title": "General Gear",
+    "items": [
+      {
+        "title": "Clan Tattoos",
+        "description": "",
+        "fields": [
+          [
+            "Effect",
+            "PSY+Faith/Willpower +1D"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Value",
+            "150"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      },
+      {
+        "title": "Body Paint",
+        "description": "Body painting is a tradition shared by many tribes. Whether it’s the Masai or the nomads from Pollen, all have traditional patterns and forms that they paint their skin with for combat, camouflage, or certain rites. That is why many Clanners carry a pouch with herbal and fungal paints.",
+        "fields": [
+          [
+            "Specialty",
+            "Camo paint gives +2D to AGI+Stealth; Traditional war paint strengthens PSY+Faith/Willpower by 2D."
+          ],
+          [
+            "Effect",
+            "War paint: PSY+Faith/Willpower +2D"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Value",
+            "30"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Weapons",
+    "items": [
+      {
+        "title": "Primitive Club",
+        "description": "Only civilization brings noteworthy forms of crafts. For many Clans, both are unknown. They take what they need from the ruins: choosing old pipes as clubs and tie bricks or sharpened metal sheets to the top with wire and leather strips. These weapons may be primitive, but they are still effective.\n\nOften, the Clans mark their weapons with their personal symbols. Some also tie the hair of enemies they’ve killed around the shafts or attach teeth and claws to it.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "2+F/2"
+          ],
+          [
+            "Qualities",
+            "Blunt"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "20"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Atlatl",
+        "description": "Like the primitive clubs, atlatls are simple weapons that are easy to make and exist in many varieties. These crude devices throw spears with a high initial acceleration. Their penetration and range are much higher in comparison with hand-thrown spears.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "-1D"
+          ],
+          [
+            "Distance",
+            "10 / 30"
+          ],
+          [
+            "Damage",
+            "3+F/2"
+          ],
+          [
+            "Magazine",
+            "1"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Slots",
+            "1"
+          ],
+          [
+            "Value",
+            "50"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Traps",
+        "description": "Hunting with spear and bow does not always bring enough prey to the campfire to feed the Clan. The Clans would not have survived if their hunters were not also expert trappers. But catching prey is not always at the center of trapping: sometimes wild beasts or the warriors of enemy Clans need to be stopped from approaching. Hunters and warriors often carry several traps tied to their bodies.\n\nTraps can be used to procure dinner or to keep away unwanted guests. Looking for food in general is covered by an Action roll on INS+Survival. The Difficulty depends on the region and its fertility. In Purgare’s slag deserts the trapper needs special bait and to know the right place if he wants to catch a rat (Difficulty 6), whereas in the jungles of Hybrispania it isn't hard to lure a little deer into a trap (Difficulty 2). A successful Action roll yields enough food for (1) day. Every Trigger adds another ration for (1) day.\n\nThe big advantage of the trap is that the hunter can set it and do something else for the rest of the day. A Scrapper specializing in lichen and roots needs over (4) hours per Action roll on INS+Survival.\n\nA trap has two ratings: the first tells you how well it is hidden. This rating can be raised with Triggers from a roll on AGI+Stealth (2). If the potential victim approaches, they can spot the trap in time with a successful roll on INS+Perception. The rating above determines the Difficulty. If the roll fails and the victim approaches the trap, it is sprung.\n\nThe second trap rating determines the Damage points the trap causes. Armor sometimes protects from trap Damage: the exceptions are stated in the trap descriptions. There might be additional rules specifying how the victim can free himself from the trap.\n\nBEAR TRAP\nTwo serrated yokes crash together with a bang, cutting through sinews and breaking bones. Bear traps are small, and the victim must step right into them, but they are easily hidden. Once they have snapped closed, the victim is lost.\n\nSPECIALTY: Only full body armor reduces the Damage: a Scourger’s flak jacket, however, offers no protection. To pry the bear trap open, a successful Action roll on BOD+Force (4) is necessary.\n\nPITFALL\nA pit dug in the ground, covered with sticks and fern or a tarp. Pitfalls are mainly used to capture prey alive.\n\nSPECIALTY: The Damage depends on the depth and potentially sharpened stakes jutting up from the ground.\n\nTRIPWIRE\nA taut piece of wire can make the enemy stumble, detonate explosives, or pull the trigger of a shotgun.\n\nSPECIALTY: The Damage depends on the explosives or the weapon. As taut tripwire without detonator, it makes the victim stumble and lose (1) Action.\n\nMINES\nMines can be filled with the same explosives and agents as grenades or cartridges.\n\nSPECIALTY: The Damage is identical to that of grenades, except with mines, the victim is at the center of the detonation and takes maximum Damage.",
+        "fields": [
+          [
+            "Trapping",
+            "AGI+Stealth (2); Triggers raise the trap’s Hidden rating"
+          ],
+          [
+            "Spot",
+            "INS+Perception against Hidden rating"
+          ],
+          [
+            "Getting Food",
+            "INS+Survival; daily rations: 1 + Trigger"
+          ],
+          [
+            "Pitfall",
+            "Hidden 2C; Special; Enc. -; Tech I; Value -"
+          ],
+          [
+            "Tripwire",
+            "Hidden 5C; Lose Action, potentially detonation; Enc. -; Tech II; Value 5"
+          ],
+          [
+            "Bear Trap",
+            "Hidden 4C; 8 Damage; Enc. 1; Tech II; Value 30"
+          ],
+          [
+            "Mine",
+            "Hidden 4C; Special; Enc. 1; Tech III; Value Special"
+          ]
+        ]
+      },
+      {
+        "title": "Iron Club of the Cockroach King",
+        "description": "The Cockroach Clan is infamous for its nightly forays. Its fighters, thirsty for blood, break from the ruins, disappearing back into their wrecked world by day. Their kings are different: bloated, colossal, the head barely reaching above the shoulders. The Cockroaches treat them like dangerous animals, caged, worshiped. The women are keen on being impregnated by them: strong children for the nest.\n\nIf one of these kings is released on an enemy, he drags a club, an iron beam coated in sharpened sheet-metal and wrapped in barbed wire. With it, he attacks the Judges’ horses and tears them to the ground. The warriors do the rest.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Handling",
+            "-3D"
+          ],
+          [
+            "Distance",
+            "2"
+          ],
+          [
+            "Damage",
+            "2+F"
+          ],
+          [
+            "Qualities",
+            "Blunt, Impact (3T)"
+          ],
+          [
+            "Encumbrance",
+            "5"
+          ],
+          [
+            "Tech",
+            "I"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "300"
+          ],
+          [
+            "Resources",
+            "Unique"
+          ]
+        ]
+      },
+      {
+        "title": "Pneumo Hammer",
+        "image": "assets/pneumo-hammer.webp",
+        "alt": "Pneumo Hammer",
+        "description": "The Mechans from the Ramein region once developed a pneumatic bolt gun using the papers left behind by their legendary founding father, the Mechanist. Years later, it became known as the Pneumo Hammer. Its bearers founded their own warrior caste: the Pneumancers. The weapon is heated with coal until the water in the boarding tank is hot enough to generate enough pressure. A valve system directs the steam to the barrels one after another, firing the bolts and reloading at the same time.",
+        "fields": [
+          [
+            "Specialty",
+            "Pneumo Hammers need a little over 5 minutes to reach their working temperature and become usable. They can also be used as bombs: if all the valves are closed, pressure and temperature rise until a thundering detonation tears apart the cast iron. The Damage of this steam explosion is (12)."
+          ],
+          [
+            "Caliber",
+            "Bolt / Coal"
+          ],
+          [
+            "Handling",
+            "-2D"
+          ],
+          [
+            "Distance",
+            "10 / 30"
+          ],
+          [
+            "Damage",
+            "10"
+          ],
+          [
+            "Magazine",
+            "12"
+          ],
+          [
+            "Qualities",
+            "Thunder Strike, Special"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "III"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "1500"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Armor",
+    "items": [
+      {
+        "title": "Druschinnik Silk Armor",
+        "description": "Wroclaw’s fine silk thread is turned into breastplates for the Piast’s bodyguards. Several layers of silk are stacked and stitched. The fabric is extremely resilient, deflecting arrows and knife blades.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Armor Rating",
+            "3"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "III"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "600"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Vehicles & Mounts",
+    "items": [
+      {
+        "title": "Mammoth",
+        "description": "Mammoths roam the tundra of Pollen and the forests of East Borca in vast herds led by experienced alpha females, while adult bulls often travel alone and can be extremely aggressive. The Garganti have developed an exceptional bond with these animals and can calm, train, and integrate them into their herds. When threatened, a mammoth herd tends to form a defensive line or circle and may charge if surrounded or panicked. As mounts they are immensely valuable, powerful, and trainable, with two training slots that can be used to improve robustness, movement, or learned maneuvers.",
+        "fields": [
+          [
+            "Max. Speed",
+            "2"
+          ],
+          [
+            "Acceleration",
+            "1"
+          ],
+          [
+            "Brake",
+            "1"
+          ],
+          [
+            "Armor",
+            "3"
+          ],
+          [
+            "Flesh Wounds",
+            "36"
+          ],
+          [
+            "Trauma",
+            "18"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "15000"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
+      }
+    ]
+  }
+];
