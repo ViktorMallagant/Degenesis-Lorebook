@@ -545,3 +545,677 @@ const potentials=[
     ]
   }
 ];
+const equipmentGroups=[
+  {
+    "title": "Technology",
+    "items": [
+      {
+        "title": "Binoculars",
+        "description": "All binoculars of the Hellvetic Army are taken from stored Bygone stock. They are part of the standard issue of any flank bunker and Spotter.",
+        "fields": [
+          [
+            "Specialty",
+            "+4D to INS+Perception when watching from afar."
+          ],
+          [
+            "Effect",
+            "When watching from afar: INS+Perception +4D"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "5200"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Radio Backpack",
+        "description": "The Radio Backpack expands the active range of a Hellvetic squad to over 200 km. The soldier can contact the high command even at long distances from the Alpine Fortress or communicate with other users.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Effect",
+            "Radio communication, range (200) km"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "6000"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Forager Uplink",
+        "description": "Foragers connect to the Alpine Fortress’s network with their handheld computers to order weapons and ammo. The uplink computer is a Bygone masterpiece tailor-made for military purposes: robust, long battery service life, the link to the central computer encrypted at the highest level. This makes the Chroniclers covet them. Maybe they could finally enter the digital core of the Alpine Fortress with a Forager Uplink.",
+        "fields": [
+          [
+            "Specialty",
+            "Raises the Resources for ammo, weapons, and food requisitioning to (6). Armor, vehicles, and add-ons are excluded."
+          ],
+          [
+            "Effect",
+            "Resources (6) for weapons, ammo, food"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "33000"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Pathfinder",
+        "description": "The Pathfinder is a navigation computer with a 10-inch monitor, built-in compass, and receiver module. The maps stored in it hail from Bygone times, but markers pointing to post-Eshaton cities have been added. Political changes, risk warnings, geographical specialties, or movement vectors can be added via small platelets: the Pathfinder milestones.\n\nUsually, high-ranking Hellvetics hand out these milestones to Pathfinder users in preparation for a mission beyond the reaches of the Alpine Fortress.",
+        "fields": [
+          [
+            "Specialty",
+            "A Pathfinder gives +4D to INS+Orienteering."
+          ],
+          [
+            "Effect",
+            "INS+Orienteering +4D"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "15000"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Transponder Bracelet",
+        "description": "The transmitter looks like a coiled cable. Spotters intertwine it with leather cords to camouflage it and wear it around their wrists or necks.\n\nFrom 20 paces away, a Pathfinder computer registers the transmitter signal and shows it as a small dot on the map. In this way, Hellvetics can identify Spotters who are disguised among the crowd, and spare them when attacking.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Effect",
+            "Bracelet detected by Pathfinder, range (20) m"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "580"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Weapons",
+    "items": [
+      {
+        "title": "Trailblazer",
+        "image": "assets/trailblazer.webp",
+        "alt": "Trailblazer",
+        "description": "The Trailblazer is a Sagur-11 assault rifle with three 5.45 mm barrels. The ammunition can come from a magazine, but also from a bandolier. The butt stock can be turned into a bayonet, a combat knife, or a rifle bipod.\n\nIn the Alpine Fortress, every weapon is regularly checked with the help of an interface to both control the ammunition use and cleaning cycles, and to correlate firing dates with mission dates.\n\nA Trailblazer can be modded without using up slots. The bayonet can be quickly pulled from the butt stock and mounted to one of the barrels. Then the Trailblazer can be used as a melee weapon, using the same profile as a Stiletto.\n\nThe same is true for the rifle bipod. It is also pulled from the butt stock, swung out, and snapped into place under the barrels. The rifle can now be supported, which leads to +2D Handling if prone. The rifle bipod changes the balance, which causes -2D to Handling for firing when standing.\n\nWhen a Hellvetic rises through the ranks, he can reallocate his Trailblazer's slots: every soldier has their Trailblazer custom fit to them in the Alpine Fortress.",
+        "fields": [
+          [
+            "Caliber",
+            "HF-full jacket"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "30 / 120"
+          ],
+          [
+            "Damage",
+            "11"
+          ],
+          [
+            "Magazine",
+            "35"
+          ],
+          [
+            "Qualities",
+            "Smooth Running (3T), Salvoes (3)"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "18000"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Stubbed Trailblazer",
+        "description": "The Special Detachment also uses a lighter, stubbed variety of Trailblazers. Their range is much shorter, but due to their construction, they are perfectly suited for special missions indoors. They can be used with one hand.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Caliber",
+            "HF-full jacket"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "15 / 60"
+          ],
+          [
+            "Damage",
+            "11"
+          ],
+          [
+            "Magazine",
+            "20"
+          ],
+          [
+            "Qualities",
+            "Smooth Running (2T)"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "14000"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Explosives",
+        "description": "The minerals and chemicals needed to produce explosives are mined from the mountain, delivered by Neolibyans, or ordered in the Protectorate. They are refined deep within the mountain. The Hellvetics arsenal is awe-inspiring. Spread over hundreds of bunkers in all Territorial Regions, it awaits the army of Sappers and Genies. In combat, the Hellvetics use mainly plastic explosives that can be easily mounted to targets and activated via timers or remote detonators. For tunneling, the Hellvetics use explosives in rods that are pressed into the rock with high thrust.",
+        "fields": [
+          [
+            "Specialty",
+            "Hellvetics can access any explosives and detonators they want with their Resources. For a Soldier, however, it is considered a waste to leave the Alpine Fortress with more than (2) charges of explosives. For Sappers, the limit is (4) charges."
+          ],
+          [
+            "Damage",
+            "16"
+          ],
+          [
+            "Magazine",
+            "1"
+          ],
+          [
+            "Qualities",
+            "Thunder Strike, Explosive"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "800"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ammunition",
+    "items": [
+      {
+        "title": "High-Frequency Full Metal",
+        "description": "The standard ammunition. Fired from all three barrels with a high rate of fire.",
+        "fields": [
+          [
+            "Trailblazer Damage",
+            "11"
+          ],
+          [
+            "Trailblazer Distance",
+            "30 / 120"
+          ],
+          [
+            "Stubbed Damage",
+            "11"
+          ],
+          [
+            "Stubbed Distance",
+            "15 / 60"
+          ]
+        ]
+      },
+      {
+        "title": "High-Frequency Hollow-Point",
+        "description": "Upon hitting a target, the bullet expands and tears large wounds: (+2) Damage. However, the penetration is reduced: for Armor rating (3) or more the Damage total is halved.",
+        "fields": [
+          [
+            "Trailblazer Damage",
+            "14"
+          ],
+          [
+            "Trailblazer Distance",
+            "30 / 120"
+          ],
+          [
+            "Stubbed Damage",
+            "14"
+          ],
+          [
+            "Stubbed Distance",
+            "15 / 60"
+          ],
+          [
+            "Special",
+            "+2 Damage; against Armor rating (3+) total Damage is halved"
+          ]
+        ]
+      },
+      {
+        "title": "Shotgun Shell",
+        "description": "All three barrels can be loaded with Caliber 12 and fired separately. Reloading takes (1) Round per barrel.",
+        "fields": [
+          [
+            "Trailblazer Distance",
+            "10 / 40"
+          ],
+          [
+            "Damage",
+            "10"
+          ],
+          [
+            "Magazine",
+            "3"
+          ],
+          [
+            "Qualities",
+            "Scatter"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Armor",
+    "items": [
+      {
+        "title": "Tunnel Shield",
+        "image": "assets/tunnel-shield.webp",
+        "alt": "Tunnel Shield",
+        "description": "The Tunnel Shield is primarily used by Sappers as mobile cover for demolitions. The shield plates are collapsible to make transport in the tunnels easier.",
+        "fields": [
+          [
+            "Specialty",
+            "The Tunnel Shield offers (+2) Passive Defense and +4D to Active Defense. However, it is very unwieldy and heavy (encumbrance +3). Only 1-handed weapons can be used when carrying this shield, and all attacks are made with a penalty of -2D."
+          ],
+          [
+            "Defense",
+            "+4D / +2"
+          ],
+          [
+            "Attack",
+            "-2D"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "-"
+          ],
+          [
+            "Value",
+            "450"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Harness",
+        "description": "The Hellvetic Harness is the second-most important piece of equipment for soldiers after the Trailblazer. In the time when the Hellvetics bridged the Reaper’s Blow, this armor was perfected, and another function was added: heat dissipation. Today, it doesn’t only offer good ballistic protection, but also compensates for the infernal fires of the passages close to the Reaper’s Blow.",
+        "fields": [
+          [
+            "Specialty",
+            "The armor plates of the Harness can be hardened and enameled in the fortress plants. The finish increases the Armor rating, but also the risk of the plates breaking (permanently (-1) Armor rating after (12) points of Damage with one hit; see “Brittle” Quality)."
+          ],
+          [
+            "Armor Rating",
+            "5"
+          ],
+          [
+            "Qualities",
+            "Fire Resistant (8)"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "4800"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Recon Harness",
+        "description": "With the Recon and infiltration variety, the ceramic armor plates of the regular Harness are replaced by flexible, fiber-hardened mesh. The armor is lighter and tighter. Clothing can be worn over it as camo.",
+        "fields": [
+          [
+            "Specialty",
+            "If a stranger tries to see through the camo, he must make an Action roll on INS+Perception (5) (see “Camo” Quality)."
+          ],
+          [
+            "Armor Rating",
+            "3"
+          ],
+          [
+            "Qualities",
+            "Camo (5C)"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "3500"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Heavy Duty",
+        "description": "The Heavy Duty Armor is a modular exoskeleton clad in Harness plates. It is custom-fitted for every mission.",
+        "fields": [
+          [
+            "Specialty",
+            "An exoskeleton gives its wearer BOD+Force +3D. All attacks and attempts to use Active Defense, as well as fine motor Actions, are at -2D. Modules can be combined as long as they fit into the armor’s slots."
+          ],
+          [
+            "Armor Rating",
+            "7"
+          ],
+          [
+            "Qualities",
+            "Massive (9), Fire Resistant (8)"
+          ],
+          [
+            "Encumbrance",
+            "4"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Slots",
+            "3"
+          ],
+          [
+            "Value",
+            "8000"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Heavyweight",
+        "description": "The heavyweight module augments the Harness with heavy servomotors on the arms and legs, giving its wearer BOD+Force +6D (2 Slots).",
+        "fields": [
+          [
+            "Effect",
+            "BOD+Force +6D, needs 2 Slots"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "6800"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Cutter",
+        "description": "The Hellvetic’s hands are encased in hydraulic steel scissors that cut through sheet metal and iron. They are extremely powerful, but too slow to serve as an attack weapon. Obstacles are attacked with a power of (20) points of Damage per Round. However, the blades need grip, which is why steel hatches are immune to them (3 Slots).",
+        "fields": [
+          [
+            "Effect",
+            "No attack tool; (20) points of Damage per Round to obstacles; 3 Slots"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "1200"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Cooler",
+        "description": "The armor plates are riddled with small tubes that dissipate heat. Ventilators swirl heat accumulation. The Soldier can enter even the depths of the Reaper’s Blow without fear of incineration (1 Slot).",
+        "fields": [
+          [
+            "Effect",
+            "Can withstand extreme heat; 1 Slot"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "V"
+          ],
+          [
+            "Value",
+            "5000"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Arc Welder",
+        "description": "An arc welder is attached to the main hand. The gas supply leads to a tank on the back beneath the armor. While the arc welder can be used in melee, it is not recommended to go to war with it, for the tank is fragile: a direct hit (Aimed, Difficulty +2) with at least (4) Damage penetrates it and ignites the gas. The detonation destroys the exoskeleton: the soldier has no chance. Used as a tool, the arc welder does (15) points of Damage per Round to metals (3 Slots).",
+        "fields": [
+          [
+            "Effect",
+            "(15) points of Damage to obstacles; risk of tank being hit; detonation when at least (4) Damage; 3 Slots"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "2000"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      },
+      {
+        "title": "Tunnel Driller",
+        "description": "The Tunnel Driller is the biggest and most sophisticated add-on. To carry it, the shoulders and main arm have to be reinforced: stabilizers absorb vibration and change the kinetic energy to warmth. The drill is Petro driven, and the tank is carried on the back. Heavy Duty Harnesses with Tunnel Driller support rescue missions after cave-ins.\n\nThey break through rock and concrete with (10) points of Damage per Round but are completely unsuited for combat: -6D to attacks and Active Defense. The tank runs the same risk of danger as the one from the arc welder variety (3 Slots).",
+        "fields": [
+          [
+            "Effect",
+            "Concrete and rock: (10) points of Damage per Round; risk of tank being hit; 3 Slots"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Value",
+            "1000"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      }
+    ]
+  }
+];
