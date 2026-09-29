@@ -707,7 +707,6 @@ const equipmentGroups=[
       },
       {
         "title": "Neolibyan Hunting Rifle",
-        "placeholder": "NEOLIBYAN HUNTING RIFLE\nARTWORK PLACEHOLDER",
         "description": "It is said that you can tell a Neolibyan’s wealth from his garb, the good teeth of his followers, and his rifle. The precision rifles fashioned in African workshops are beautifully crafted individual items, and their glory symbolizes their owner’s status. Some Neolibyans have their rifle bejeweled with gold and silver, while others prefer gemstones or ivory.",
         "fields": [
           [
@@ -762,7 +761,9 @@ const equipmentGroups=[
             "Resources",
             "3"
           ]
-        ]
+        ],
+        "image": "assets/neolibyan-hunting-rifle.webp?v=20260929-3",
+        "alt": "Neolibyan hunting rifle"
       },
       {
         "title": "Masterpiece Rifle",
