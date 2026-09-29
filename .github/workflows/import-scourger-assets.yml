@@ -24,6 +24,7 @@ jobs:
           curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUeN3b0KLZ-PTRPgJ_UQKKsD8Kz3f3KdBCB3PiCMjCDUkYnPiyEdFSgYxgNg9N5RUvU5Wx-xOLdCyVgyffzL10JVJqUoAhiz3rLgiXbAYEa0iqxFwYgJROxPgM5m1u3ws2rTCqwOktuhLP_Xkdz2Ol7vrC39x4FwnwsNuoKWFtbNTl0xaLk=s2048?key=J-7G4TEZSkZU0RfKr16qpQ" -o /tmp/scourger-main.png
       - name: Convert and commit
         run: |
+          git pull --rebase origin main
           cwebp -quiet -q 86 -alpha_q 100 /tmp/scourger-main.png -resize 989 1400 -o assets/scourger-main.webp
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
