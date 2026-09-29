@@ -492,7 +492,6 @@ const equipmentGroups=[
     "items": [
       {
         "title": "Sun Eye",
-        "placeholder": "SUN EYE\nARTWORK PLACEHOLDER",
         "description": "Sun Eyes are night scopes from the RG warehouses. Generations of Palers adorned them with engravings and various embellishments, fought for them and worshipped them. A stylized sun is an omnipresent symbol: according to legends the sun was incarcerated in these devices to brighten the user’s sight.\n\nThe Sun Eyes are precious and are guarded vigilantly today by the Demagogues. Only the Cyclopes are allowed to use these artifacts.",
         "fields": [
           [
@@ -523,11 +522,12 @@ const equipmentGroups=[
             "Resources",
             "3"
           ]
-        ]
+        ],
+        "image": "assets/sun-eye.webp?v=20260929-2",
+        "alt": "Paler Sun Eye"
       },
       {
         "title": "Sunburst",
-        "placeholder": "SUNBURST\nARTWORK PLACEHOLDER",
         "description": "Palers don’t need any light in their bunkers, which are brightened by LCD displays and blinking LEDs, but in unexplored hallways or in starless nights they are just as blind as any other person. This is why many carry one of the old Sunburst torches, wrapped in leather and holy cloth strips, augmented by capacitors, fragments of motherboards, mirror shards, and whatever else the old warehouses yield.\n\nBecause of their robust design, the artifacts are well suited as clubs. Actually, this is their main use, for there is an energy supply problem: the E-Cubes used in the lamps are usually empty, and the recharging stations in the bunkers have long since gone out of service.",
         "fields": [
           [
@@ -554,7 +554,9 @@ const equipmentGroups=[
             "Resources",
             "2"
           ]
-        ]
+        ],
+        "image": "assets/sunburst.webp?v=20260929-2",
+        "alt": "Paler Sunburst"
       }
     ]
   },
@@ -693,7 +695,6 @@ const equipmentGroups=[
     "items": [
       {
         "title": "Submachine Gun",
-        "placeholder": "SUBMACHINE GUN\nARTWORK PLACEHOLDER",
         "description": "The original guardians of the Sleepers were equipped with muffled submachine guns, ideally suited for combat in the closed tunnel systems of the Dispensers. Now, centuries later, these weapons have been passed down to the Palers.",
         "fields": [
           [
@@ -744,7 +745,9 @@ const equipmentGroups=[
             "Resources",
             "3"
           ]
-        ]
+        ],
+        "image": "assets/submachine-gun.webp?v=20260929-2",
+        "alt": "Paler submachine gun"
       }
     ]
   },
@@ -944,7 +947,7 @@ function renderPotentials(){
   renderPotential(0);
 }
 function renderEquipment(){
-  document.querySelector("#equipment-groups").innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?"open":"")+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.placeholder?'<div class="equipment-art-placeholder asset-placeholder">'+fmt(x.placeholder)+'</div>':"")+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':"")+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl></article>').join("")+'</div></div></details>').join("");
+  document.querySelector("#equipment-groups").innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?"open":"")+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.image?'<div class="equipment-art"><img src="'+x.image+'" alt="'+esc(x.alt||x.title)+'"></div>':x.placeholder?'<div class="equipment-art-placeholder asset-placeholder">'+fmt(x.placeholder)+'</div>':"")+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':"")+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl></article>').join("")+'</div></div></details>').join("");
 }
 document.querySelectorAll(".rank-node").forEach(b=>b.addEventListener("click",()=>renderRank(b.dataset.rank)));
 renderRank("specter");
