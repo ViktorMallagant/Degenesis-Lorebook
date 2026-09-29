@@ -216,3 +216,260 @@ const ranks={
     ]
   }
 };
+const potentials=[
+  {
+    "title": "I. Fiat Lux",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Renown 4"
+      ],
+      [
+        "Effect",
+        "Lies hide in darkness, light reveals the truth. The Judge is a blazing paragon of lawfulness and incorruptibility, and the people around him know it. The bad ones among them are skittish, they blink too often, their movements are nervous, their shoulders rigid. The Judge sees all of these signs, he feels every lie - and he is already deciding upon the punishment."
+      ],
+      [
+        "Rules",
+        "When dealing with scum in general—and especially with Apocalyptics—the Judge gets a +1D bonus per Potential level to seeing through deception, along with +1D Mental Defense."
+      ]
+    ]
+  },
+  {
+    "title": "II. Lynch Law",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges"
+      ],
+      [
+        "Effect",
+        "The Judges have been controlling the people for so long that they know exactly which buttons to push to bring their anger to a boiling point."
+      ],
+      [
+        "Rules",
+        "A Judge with this Potential can gather a mob and incite it against his target: when doing so he adds +1D to CHA+Leadership per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "III. Hammer Blow",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges"
+      ],
+      [
+        "Effect",
+        "The judgement hammer is unwieldy and heavy. Vagrants ignore its symbolic value and complain that they can barely hold their ground against the enemies of the Judges with this archaic, clumsy weapon. They have no idea. Those who find themselves wielding the judgement hammer soon learn to harness the brute force that is in every blow: their hands slide across the shaft, controlling and redirecting the centrifugal forces. With the correct technique, the hammer is as easy to use as a sword, without losing its impact."
+      ],
+      [
+        "Rules",
+        "The penalty caused by the “Impact” Quality is reduced by (1) per Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "IV. Janus Face",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges"
+      ],
+      [
+        "Effect",
+        "Judges spend all their lives dealing with scum. It would take only a small step out of the light to move into the darkness. Some use this experience to delve into their opponents’ minds and preempt all of their actions."
+      ],
+      [
+        "Rules",
+        "A Judge with Janus Face puts himself into his opponent’s position in battle. To do so, he rolls INS+Empathy against his opponent’s PSY+Willpower/Faith. If the Judge’s roll succeeds, he has looked through his opponent. The Judge gets a +1D bonus per Potential level to all Attacks and Defenses against the target for the rest of the battle."
+      ]
+    ]
+  },
+  {
+    "title": "V. Stampede",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges"
+      ],
+      [
+        "Effect",
+        "Sometimes violence is the only option. The Judge bows his head, kicks off with his back foot, and surges into motion. The wind tears his hat away, but he does not look back, instead pushing his head into the flow. He holds his hammer in both hands: one under the hammerhead, the other at the end of the shaft. His enemy is only two steps away. He raises the hammer as if blocking with a quarterstaff, feels the impact, puts all his weight into it, sees and feels the spray of spittle, and passes through. Behind him, he hears the body crash into the ground. His comrades will handle the rest."
+      ],
+      [
+        "Rules",
+        "The Judge launches himself at an enemy for (1) full Combat Round. He rolls BOD+Force + his Potential level in dice. If the Attack roll is successful, his target falls to the ground and cannot move for (1) Combat Round."
+      ]
+    ]
+  },
+  {
+    "title": "VI. Steel Thunder",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges"
+      ],
+      [
+        "Effect",
+        "The hammer is heavy, but with training it can be swung upwards with one hand like a pendulum. One more step, the arm circling easily, and it comes down again, only to rise up once more with even more momentum. Even a trained Judge cannot keep this up for long. Moreover, the side of the body that faces away from the hammer hand would be an easy target, if the Judge did not carry a musket in his other hand to fire on his opponents from a short distance.\n\nIn spite of its drawbacks, some Judges still use this technique: a double hit with hammer and bullet usually ends the combat."
+      ],
+      [
+        "Rules",
+        "A Judge using a Judgement hammer may choose to use the Steel Thunder technique when making an attack roll. They take a -4D penalty to Handling on their subsequent Attack rolls, until they stop using the technique. The penalty is reduced by 1D per Potential level. If the attack hits, any Triggers rolled count for (2) extra Damage. Until the Judge’s next turn after ceasing the Steel Thunder, his Passive Defense is reduced to (1)."
+      ]
+    ]
+  },
+  {
+    "title": "VII. Dura Lex",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Protector, Primal"
+      ],
+      [
+        "Effect",
+        "A Judge is the law, and the law is a harsh opponent to overcome. Judges deal with scum all their life, and they’re hardened by battle against most opponents. Some Judges become formidable fighters against multiple foes, seeing it as a challenge to destroy them all at once. The more, the better."
+      ],
+      [
+        "Rules",
+        "The more enemies you throw at the Judge the more deadly he becomes. Each Combat Round, for every opponent the Judge is outnumbered by he regains (1) Ego Point up to his Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "VIII. Tremor",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Renown 4"
+      ],
+      [
+        "Effect",
+        "There comes a time when Judges become legendary lawmakers. Their shadow alone strikes fear. The list of their deeds is long and gruesome, and their name is whispered with terror among criminals. Infamous Judges command respect wherever they stride."
+      ],
+      [
+        "Rules",
+        "When facing the Judge, outlaws of the Protectorate must roll a Mental Defense against a Difficulty equal to the character’s Renown. If they fail the roll, the lawmaker adds his Renown to his Passive Defense for the remainder of the confrontation against the felons. This Potential has a vast area of effect.\n\nLEVEL 1: Protectorate\nLEVEL 2: Borca\nLEVEL 3: Europe"
+      ]
+    ]
+  },
+  {
+    "title": "IX. Justice for All",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Protector"
+      ],
+      [
+        "Effect",
+        "We fight together, we die together. Protectors live by the Codex, and they protect one another in battle to the very end. If one of them falls, it is up to another to take revenge and ensure that justice is served."
+      ],
+      [
+        "Rules",
+        "Witnessing the demise of a brothers-in-arms infuriates the Judge and renews his vigor. Each time he sees a comrade fall he regains (1) Ego Point per Potential level. Additionally his Passive Defense is raised by (1) per Potential level. The effects last until the end of the combat."
+      ]
+    ]
+  },
+  {
+    "title": "X. Blaze of Glory",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Executioner, BOD+Toughness 8"
+      ],
+      [
+        "Effect",
+        "Mors certa, hora incerta. Executioners act upon the maxim that if they have to die, they’ll drag as many to hell with them as they can. Nothing escapes the blind rage of a Judge who is exiting the world of the living in a blaze of glory."
+      ],
+      [
+        "Rules",
+        "The Judge chooses to suffer extra Damage when successfully attacked, up to to his Potential level. By leaving an opening in his defense and luring the opponent into strike range, the Executioner creates the perfect conditions to for a devastating retaliation blow. He attacks the opponent who struck him with his next Action, rolling BOD+Melee. If he succeeds he adds (1) Damage for every (1) Damage he took willingly during the previous turn. The additional Damage has the Fatal Quality, and ignores armor."
+      ]
+    ]
+  },
+  {
+    "title": "XI. Crackdown",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Protector, PSY+Brawl 6"
+      ],
+      [
+        "Effect",
+        "Nobody works together like a squad of Protectors. They know how to handle criminals and not give them a second to breathe or even harm any member of the squad. They take scum down in the blink of an eye and disarm them. The entire squad acts as one unit, each member intuitively knowing their cue."
+      ],
+      [
+        "Rules",
+        "Protector squads train to act intuitively as a single unit. Years of drill and routine deployment in the Protectorate sharpened these tactics. During the first Combat Round, the Judge may use the Initiative result of any other Judge on his team who also has Crackdown. At level 2, he may also do it on the second Combat Round, and at level 3 on the third."
+      ]
+    ]
+  },
+  {
+    "title": "XII. Tilt Shift",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Focus, INS+Empathy 8"
+      ],
+      [
+        "Effect",
+        "A Judge focuses in on a target, he smells the felon’s foul odor, and follows the trail like bloodhound. The world around him blurs out, and his entire perception is focused on the subject he is pursuing."
+      ],
+      [
+        "Rules",
+        "The Judge has a very specific set of skills. Like a hunter who chases his prey, the Judge tracks a criminal by profiling his behavior. To understand the purpose of his target in order to determine his whereabouts, the Judge, instead of rolling INS+Perception, adds +1D per Potential level to a Combination roll of INS+Empathy and PSY+Cunning against the criminal’s Mental Defense."
+      ]
+    ]
+  },
+  {
+    "title": "XIII. Undertaker",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Protector, Primal, BOD+Melee 8"
+      ],
+      [
+        "Effect",
+        "Some Judges know when enough is enough. They specialize in taking an enemy out with a single blow, and end the charade before the situation escalates. The hammer swings around in a devastating motion, shatters the skull of the opponent and smashes the neck vertebrae along the way. Nobody gets up after a well placed Undertaker blow."
+      ],
+      [
+        "Rules",
+        "This attack starts with an open feint. The Protector yanks his Judgement hammer far above his head, acting as if he is about to lose balance and leaves himself open to a counterattack. Meanwhile he raises the Impact Quality of his Judgement hammer by an amount up to his Potential level. If his following Attack roll succeeds, the hammer’s Damage is raised by the same amount and the Attack gains the Terrifying Quality with a rating equal to the Potential level."
+      ]
+    ]
+  },
+  {
+    "title": "XIV. Heritage",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, Advocate"
+      ],
+      [
+        "Effect",
+        "Hailing from one of the five major Advocate families in Justitian is considered a noble heritage. Doors open wide for those who carry the family name of Manteufel, Salvano, Masek, Jungbau, or Wender."
+      ],
+      [
+        "Rules",
+        "Things are easier for those who were born among the great houses of Justitian. Each time an Advocate gains (1) Potential level in Heritage, he can raise one Background of his choice by (1). Additionally, while in Justitian his Backgrounds cannot drop below (3). At level 2 the Potential is effective in the entire Protectorate and at level 3, it encompasses all of Borca."
+      ]
+    ]
+  },
+  {
+    "title": "XV. Hail of Lead",
+    "fields": [
+      [
+        "Prerequisite",
+        "Judges, AGI+Dexterity 8"
+      ],
+      [
+        "Effect",
+        "Not every Judge relies on a hammer. There are those who prefer to bury their opponents in a hail of lead. Their reloading skills are elegant, and can be missed in the blink of an eye. Before an attacker even sees the first shot coming, the Judge is already firing his next salvo."
+      ],
+      [
+        "Rules",
+        "For commoners, muzzleloading firearms are a pain, for a Judge it is tradition. When the Judge has his muzzleloading firearm in hand, he receives +1D per Potential level to his Initiative rolls. Additionally, if he rolls (2) Triggers when firing his weapon, it takes him only (1) Action to reload the musket. At Potential level 2 he requires only (1) Trigger for an immediate reload. At level 3, the Judge never spends more than (1) Action to reload a muzzleloader."
+      ]
+    ]
+  }
+];
