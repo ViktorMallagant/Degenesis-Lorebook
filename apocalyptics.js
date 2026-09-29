@@ -990,6 +990,98 @@ const equipmentGroups=[
             "5"
           ]
         ]
+      },
+      {
+        "title": "Catamaran",
+        "description": "",
+        "fields": [
+          [
+            "Max. Speed",
+            "4"
+          ],
+          [
+            "Acceleration",
+            "2"
+          ],
+          [
+            "Brake",
+            "5 Rounds"
+          ],
+          [
+            "Armor",
+            "3"
+          ],
+          [
+            "Body",
+            "40"
+          ],
+          [
+            "Structure",
+            "20"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "4"
+          ],
+          [
+            "Value",
+            "40000"
+          ],
+          [
+            "Resources",
+            "4"
+          ]
+        ]
+      },
+      {
+        "title": "Armed Catamaran",
+        "description": "",
+        "fields": [
+          [
+            "Max. Speed",
+            "3"
+          ],
+          [
+            "Acceleration",
+            "2 Rounds"
+          ],
+          [
+            "Brake",
+            "8 Rounds"
+          ],
+          [
+            "Armor",
+            "5"
+          ],
+          [
+            "Body",
+            "100"
+          ],
+          [
+            "Structure",
+            "50"
+          ],
+          [
+            "Tech",
+            "IV"
+          ],
+          [
+            "Slots",
+            "14"
+          ],
+          [
+            "Value",
+            "120000"
+          ],
+          [
+            "Resources",
+            "6"
+          ]
+        ]
       }
     ]
   }
