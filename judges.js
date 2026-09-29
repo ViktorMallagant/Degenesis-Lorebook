@@ -473,3 +473,366 @@ const potentials=[
     ]
   }
 ];
+const equipmentGroups=[
+  {
+    "title": "Talismans",
+    "items": [
+      {
+        "title": "Codex",
+        "description": "In the land of the lawless, the Codex with its rules, laws, and epigrams is a home for the Judge, based on the writings of the First Judge. Every Judge's Codex is unique, but most of the time the palm-sized book is bound in cowhide and carried in a satchel at the belt.",
+        "fields": [
+          [
+            "Specialty",
+            "If a Judge meditates on his Codex for (1) Combat Round, he recovers (1) Ego Point. This is possible only once a day. Higher-ranking Judges prefer annotated special editions of the Codex that contain a glossary. These give them +2D to CHA+Expression when Judging."
+          ],
+          [
+            "Standard Effect",
+            "1 Round of meditation: +1 Ego Point"
+          ],
+          [
+            "Special Edition",
+            "+1 Ego Point; CHA+Expression +2D"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Value",
+            "300 / 800"
+          ],
+          [
+            "Resources",
+            "- / 3"
+          ]
+        ]
+      },
+      {
+        "title": "Judgment Tools",
+        "description": "Only a very few crimes are punished with death or imprisonment by the Judges. Instead, convicts are marked, and the colors needed for that are part of the Judgment tools that every Judge carries around in his leather bag. Additional tools include a branding iron to mark repeat offenders, rapists, and killers, as well as a lighter and coal.",
+        "fields": [
+          [
+            "Specialty",
+            "None"
+          ],
+          [
+            "Effect",
+            "Used to mark outlaws"
+          ],
+          [
+            "Encumbrance",
+            "-"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Value",
+            "40"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Weapons",
+    "items": [
+      {
+        "title": "Judgment Hammer",
+        "image": "assets/judgment-hammer.webp",
+        "alt": "Judgment Hammer",
+        "description": "The First Judge founded the tradition of judging by hammer. It has lingered on until today. Every City Judge gets one of these solid steel hammers when he is anointed—and will soon have to use it.\n\nA Judgment hammer is not a trinket. It symbolizes the executive power. That is why its rounded steel head is unadorned. The shaft is over 1 m long and just as plain.",
+        "fields": [
+          [
+            "Specialty",
+            "A Judgment hammer has the negative special ability “Impact (3T)”. It can be dampened by a Potential."
+          ],
+          [
+            "Handling",
+            "-2D"
+          ],
+          [
+            "Distance",
+            "1"
+          ],
+          [
+            "Damage",
+            "1+F"
+          ],
+          [
+            "Magazine",
+            "-"
+          ],
+          [
+            "Qualities",
+            "Blunt, Impact (3T)"
+          ],
+          [
+            "Encumbrance",
+            "3"
+          ],
+          [
+            "Tech",
+            "III"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "1500"
+          ],
+          [
+            "Resources",
+            "-"
+          ]
+        ]
+      },
+      {
+        "title": "Judges' Musket",
+        "image": "assets/judges-musket.webp",
+        "alt": "Judges' Musket",
+        "description": "The muzzle loader made in Justitian’s factories by the Steel Masters is of a similar design to muskets from the Bygone 17th and 18th centuries. It is loaded with gunpowder and a lead bullet via the barrel, and then the load is compressed with a rod: the weapon can only shoot once before it needs to be reloaded.\n\nEvery musket is adorned with standardized ornaments that show which Steel Master made it in which year. The hammer trap in the stock, which contains spare parts and maintenance material, is also standard.",
+        "fields": [
+          [
+            "Specialty",
+            "There are a few double-barreled muskets. Every barrel is fired by its own trigger. If both barrels are fired at once, the accuracy decreases by -2D, but the Damage is doubled. The loading of a Judges’ musket takes (2) Actions (per barrel)."
+          ],
+          [
+            "Caliber",
+            "Lead bullet"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "10 / 40"
+          ],
+          [
+            "Damage",
+            "8"
+          ],
+          [
+            "Magazine",
+            "1"
+          ],
+          [
+            "Qualities",
+            "Muzzle Loader"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "III"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "900"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      },
+      {
+        "title": "Flintlock Pistol",
+        "image": "assets/flintlock-pistol.webp",
+        "alt": "Flintlock Pistol",
+        "description": "The firing technology and design of the flintlock pistol are identical to its larger brother, the Judges’ musket. The range and penetration of the bullets are lower, but the smaller size makes up for that: when the musket is empty, the Judge drops it and pulls the flintlock pistol from his belt, then once that is fired he pulls out another.",
+        "fields": [
+          [
+            "Specialty",
+            "Judges can carry several pistols. As with the Judges’ musket, reloading takes 2 Actions."
+          ],
+          [
+            "Caliber",
+            "Lead bullets"
+          ],
+          [
+            "Handling",
+            "-"
+          ],
+          [
+            "Distance",
+            "5 / 20"
+          ],
+          [
+            "Damage",
+            "8"
+          ],
+          [
+            "Magazine",
+            "1"
+          ],
+          [
+            "Qualities",
+            "Muzzle Loader"
+          ],
+          [
+            "Encumbrance",
+            "1"
+          ],
+          [
+            "Tech",
+            "III"
+          ],
+          [
+            "Slots",
+            "1"
+          ],
+          [
+            "Value",
+            "300"
+          ],
+          [
+            "Resources",
+            "2"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Armor",
+    "items": [
+      {
+        "title": "Judges' Hat and Coat",
+        "description": "",
+        "fields": [
+          [
+            "Armor Rating",
+            "2"
+          ],
+          [
+            "Qualities",
+            "-"
+          ],
+          [
+            "Encumbrance",
+            "2"
+          ],
+          [
+            "Tech",
+            "II"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "180"
+          ],
+          [
+            "Resources",
+            "1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Vehicles & Mounts",
+    "items": [
+      {
+        "title": "Judges' Horse",
+        "description": "Riding is the Judge’s preferred means of travel. As a young Protector, the Judge will have to make do with old nags and slow-gaited horses. But later, the Judiciary provides him with a charger—and perhaps someday with one of the battle hardened Judges’ horses.",
+        "fields": [
+          [
+            "Specialty",
+            "If the Judge attacks from horseback with his Judgment hammer, he may roll the combo AGI+Navigation and BOD+Melee. The speed of the Judge’s horse increases the impact of his blow."
+          ],
+          [
+            "Max. Speed",
+            "3"
+          ],
+          [
+            "Acceleration",
+            "2"
+          ],
+          [
+            "Brake",
+            "1"
+          ],
+          [
+            "Armor",
+            "-"
+          ],
+          [
+            "Flesh Wounds",
+            "16"
+          ],
+          [
+            "Trauma",
+            "8"
+          ],
+          [
+            "Slots",
+            "2"
+          ],
+          [
+            "Value",
+            "5500"
+          ],
+          [
+            "Resources",
+            "3"
+          ]
+        ]
+      }
+    ]
+  }
+];
+
+const esc=v=>String(v).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+const fmt=v=>esc(v).replaceAll("\n\n","<br><br>").replaceAll("\n","<br>");
+function renderRank(id){
+  const r=ranks[id],d=document.querySelector("#rank-detail");
+  d.innerHTML='<p class="rank-kicker">SELECTED RANK</p><h3>'+esc(r.title)+'</h3><p>'+fmt(r.description)+'</p><dl class="entry-fields">'+r.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl>';
+  document.querySelectorAll(".rank-node").forEach(b=>{const s=b.dataset.rank===id;b.classList.toggle("is-selected",s);b.setAttribute("aria-pressed",String(s));});
+}
+function renderPotential(i){
+  const p=potentials[i];
+  document.querySelector("#potential-detail").innerHTML='<p class="rank-kicker">SELECTED POTENTIAL</p><h3>'+esc(p.title)+'</h3><dl class="entry-fields">'+p.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl>';
+  document.querySelectorAll(".potential-select").forEach((b,j)=>b.classList.toggle("is-selected",i===j));
+}
+function renderPotentials(){
+  const l=document.querySelector("#potential-list");
+  l.innerHTML=potentials.map((p,i)=>'<button class="potential-select" data-potential-index="'+i+'">'+esc(p.title)+'</button>').join("");
+  l.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>renderPotential(+b.dataset.potentialIndex)));
+  renderPotential(0);
+}
+function renderEquipment(){
+  document.querySelector("#equipment-groups").innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?"open":"")+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.image?'<div class="equipment-art"><img src="'+x.image+'" alt="'+esc(x.alt)+'"></div>':"")+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':"")+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl></article>').join("")+'</div></div></details>').join("");
+}
+document.querySelectorAll(".rank-node").forEach(b=>b.addEventListener("click",()=>renderRank(b.dataset.rank)));
+renderRank("vagrant");
+renderPotentials();
+renderEquipment();
+const navToggle=document.querySelector("#lorebook-nav-toggle"),sidebarScrim=document.querySelector("#sidebar-scrim");
+const setSidebar=o=>{document.body.classList.toggle("sidebar-open",o);navToggle?.setAttribute("aria-expanded",String(o));};
+setSidebar(matchMedia("(min-width: 761px)").matches);
+navToggle?.addEventListener("click",()=>setSidebar(!document.body.classList.contains("sidebar-open")));
+sidebarScrim?.addEventListener("click",()=>setSidebar(false));
+document.querySelectorAll('.lorebook-sidebar a[aria-disabled="true"]').forEach(a=>a.addEventListener("click",e=>e.preventDefault()));
+
