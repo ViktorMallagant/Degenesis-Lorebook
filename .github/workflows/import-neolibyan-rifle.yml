@@ -1,0 +1,34 @@
+name: Import Neolibyan hunting rifle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-neolibyan-rifle.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-asset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+      - name: Download hunting rifle
+        run: |
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUedUjctuQ7DzFOhJP_d4tpCpNadGF2N1IH5i2jBA1LHStO8lwphmOTlkmVphPUKKJ7aGLvH4VJEZJOTFSRiOujJRS1CwG9HhABV7TSkkqMo63RTBgFKPL_CoTibjc8ZJd5W4IFj7iZGpasa6M42rs45Tvv-GdBHfVS1scC9yjbKx5EeF4U=s2048?key=h9cqZT1W8ry3Y5hTsGJT6Q" -o /tmp/hunting-rifle.png
+      - name: Convert and commit
+        run: |
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/hunting-rifle.png -resize 1600 0 -o assets/neolibyan-hunting-rifle.webp
+          git pull --rebase origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/neolibyan-hunting-rifle.webp
+          git rm .github/workflows/import-neolibyan-rifle.yml
+          git commit -m "Add Neolibyan hunting rifle artwork"
+          git push
