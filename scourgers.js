@@ -492,7 +492,6 @@ const equipmentGroups=[
       },
       {
         "title": "Combat Knife",
-        "placeholder": "COMBAT KNIFE\nARTWORK PLACEHOLDER",
         "description": "Combat knives of UEO or UAO stock are made from bygone steel alloys and are coveted melee weapons. The serrated edge of the blade is helpful in the wilderness and causes massive wounds.\n\nThe crossguards of UEO combat knives have steel eyelets so they can be attached to most assault rifles as bayonets.\n\nUAO combat knives are also called Scourger Daggers and are given as honorary gifts by the Chaga to skilled fighters in his pack. On one side, the crossguard turns into a grip protector so the knife can also be used as a knuckleduster.",
         "fields": [
           [
@@ -539,11 +538,12 @@ const equipmentGroups=[
             "Resources",
             "2"
           ]
-        ]
+        ],
+        "image": "assets/combat-knife.webp?v=20260929-2",
+        "alt": "Scourger combat knife"
       },
       {
         "title": "Scourge",
-        "placeholder": "SCOURGE\nARTWORK PLACEHOLDER",
         "description": "The Scourge entered the land in the hand of the Hybrispanian invaders, driving the Africans—until they rose up and tore the shock whips from the hands of the invaders. Since then, the Scourge has been a symbol for Africa’s freedom.\n\nThe design of the weapon hasn’t changed since that day: the shaft is insulated and contains an E-Cube that energizes a thicket of barbed cords of more than 3 meters in length. The cords are retractable so that the Scourge can be worn on the belt.\n\nWhen someone is hit by the Scourge, the cords discharge a network of blue lightning. It smells of ozone and burnt flesh.",
         "fields": [
           [
@@ -590,7 +590,9 @@ const equipmentGroups=[
             "Resources",
             "2"
           ]
-        ]
+        ],
+        "image": "assets/scourge.webp?v=20260929-2",
+        "alt": "Scourger Scourge"
       },
       {
         "title": "Assault Rifle",
@@ -889,7 +891,7 @@ function renderPotentials(){
   renderPotential(0);
 }
 function renderEquipment(){
-  document.querySelector("#equipment-groups").innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?"open":"")+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.placeholder?'<div class="equipment-art-placeholder asset-placeholder">'+fmt(x.placeholder)+'</div>':"")+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':"")+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl></article>').join("")+'</div></div></details>').join("");
+  document.querySelector("#equipment-groups").innerHTML=equipmentGroups.map((g,i)=>'<details class="equipment-group" '+(i===0?"open":"")+'><summary><span>'+esc(g.title)+'</span><span class="equipment-count">'+g.items.length+' ENTRIES</span></summary><div class="equipment-group-body"><div class="equipment-grid">'+g.items.map(x=>'<article class="reference-card equipment-card">'+(x.image?'<div class="equipment-art"><img src="'+x.image+'" alt="'+esc(x.alt||x.title)+'"></div>':x.placeholder?'<div class="equipment-art-placeholder asset-placeholder">'+fmt(x.placeholder)+'</div>':"")+'<h3>'+esc(x.title)+'</h3>'+(x.description?'<p>'+fmt(x.description)+'</p>':"")+'<dl class="entry-fields compact-fields">'+x.fields.map(([a,b])=>'<div><dt>'+esc(a)+'</dt><dd>'+fmt(b)+'</dd></div>').join("")+'</dl></article>').join("")+'</div></div></details>').join("");
 }
 document.querySelectorAll(".rank-node").forEach(b=>b.addEventListener("click",()=>renderRank(b.dataset.rank)));
 renderRank("dufu");
