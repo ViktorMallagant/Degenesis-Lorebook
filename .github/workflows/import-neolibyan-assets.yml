@@ -1,0 +1,33 @@
+name: Import Neolibyan artwork
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-neolibyan-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+      - name: Download artwork
+        run: |
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdy0_6ijpuKPm4BUS3u5yLKhfyE9Aprtwcvn5E-Uo3FM8Ak6a5iHkj4fcUaDERk0nNEMqxkkbOqV5mR1MzI6pLMqPOY1n4XceT9SpzNpcLfvLjd1QQdNplWLuuu8mJ9DeRYncuCBG4ZSqk2cCZMEvBkYCfMxIG9Ngon8s8ITsV7OBP4bGg=s2048?key=llgtnktXWaKCDcSuJCBsRg" -o /tmp/neolibyan-main.png
+      - name: Convert and commit
+        run: |
+          cwebp -quiet -q 86 -alpha_q 100 /tmp/neolibyan-main.png -resize 989 1400 -o assets/neolibyan-main.webp
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/neolibyan-main.webp
+          git rm .github/workflows/import-neolibyan-assets.yml
+          git commit -m "Add Neolibyan artwork"
+          git push
