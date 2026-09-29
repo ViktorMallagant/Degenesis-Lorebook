@@ -1,0 +1,43 @@
+name: Import Judge artwork
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-judge-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+      - name: Download artwork
+        run: |
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfNLfS6wVn-XIIVPjVVTzf2M5deUz-yrwYJP-jo7QSlJk1EVaRquCYQALS3fX1q9OxP19Bi5gVlkgBZU3tXuzvn2g98zDBUI-16GPHDQkMPuPKWHl53cpr5YAZaCAIGJTL6aavuWtY3kJLHQBuCpKhoHj3JOTaLPNJqHALRYp8OFflqRIk=s2048?key=goHSWOCnQ-FkMzrOannTMA" -o /tmp/judge-main.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUetMPxl7JPhHY0cxuCvF_aFEuTPbZbu8ccJLatd3f3loCAg8IdgE9G7F6IalwY0zA7vH4kc71mSIWn9aFzi0tKIa9Vy8TXfsxqfmlA3GAmcrEJKuQ1YkEWu6wWB0DnZQ5pWYl-rPPMUP4Vrt2UXGvMV_j3gnleOiGxv9gKrG4KuOnC5T-Q=s2048?key=goHSWOCnQ-FkMzrOannTMA" -o /tmp/judge-executioner.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUf3ToQOJrTz9PTrUnu1Nqs6KfsxnD1T3SxCvpWNmMmaXHURfbmJ75DJgPUhK1M1QHApbtAObNsRQjKpr9I7M8QRxJ6UUePoPfJ40XVVWkgn2F8lCYTfY-sJ-pAxBMPVbqqDKHNB5ALXhGM_n_9J7keURYpD1W6Q3ZE5MPdrqaMmDPcdYJY=s2048?key=goHSWOCnQ-FkMzrOannTMA" -o /tmp/judgment-hammer.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfhHbBTq0ptE_HqHVGFIRXQSsrmcK-GGrjTXDxmT8BQ-kfZiXjaHE0XpmwlljkgbXzzfxWT6DRammj5HVW_5kb5Int4cNShvI1GR-VKYIxUMtTI-kxkhMBr8PYAqjVDhNkrMTHY6fztx7CVVysGIVQermnft11zSpJUV8lo8Xfuty0iRu8=s2048?key=goHSWOCnQ-FkMzrOannTMA" -o /tmp/judges-musket.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUcJQ1-WKK6wWwX3KfVKOB_Z7wuWjOy7Y52vvO1y_g1tEMqT5m3OUus7a2d9yVr03qMczTHJAsFjyH8JGQZGuK1JRHo3vGU524lzwolVUUfkgPEFJq94zi_ku5oKogRgVJse-bbwfSHwNJfUdFeuN-wxAj6PJrrCSWeTaGAVC4UAKpDo6Uc=s2048?key=goHSWOCnQ-FkMzrOannTMA" -o /tmp/flintlock-pistol.png
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfhfM4gy9lNkCDJ2AwPyJB-yCXbGW7juUnFb4zkYUkgifGa73aEUxls9b-1gid3pEQpFuTosN08OuOfRIpoDZfDHJaF0IQVc2p6TtWdIDKawuNIVzvquk7Ur4ch1u9vQiVns2GyttLdI1WdfVprutw8fX-CvvJYVZxQ6TgLdiHLM0LzZiQ=s2048?key=goHSWOCnQ-FkMzrOannTMA" -o /tmp/judges-logo.png
+      - name: Convert and commit
+        run: |
+          cwebp -quiet -q 86 -alpha_q 100 /tmp/judge-main.png -resize 989 1400 -o assets/judge-main.webp
+          cwebp -quiet -q 86 -alpha_q 100 /tmp/judge-executioner.png -resize 975 1400 -o assets/judge-executioner.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/judgment-hammer.png -o assets/judgment-hammer.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/judges-musket.png -o assets/judges-musket.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/flintlock-pistol.png -o assets/flintlock-pistol.webp
+          cwebp -quiet -lossless /tmp/judges-logo.png -o assets/judges-logo.webp
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/judge-main.webp assets/judge-executioner.webp assets/judgment-hammer.webp assets/judges-musket.webp assets/flintlock-pistol.webp assets/judges-logo.webp
+          git rm .github/workflows/import-judge-assets.yml
+          git commit -m "Add Judge artwork"
+          git push
