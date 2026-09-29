@@ -1,0 +1,58 @@
+name: Import missing cult artwork
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-missing-cult-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+      - name: Download artwork
+        run: |
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfL21jGPtGH40sMkHVyQKLLUXkohUCzc8QF2a3exRWJl_JkSFSDagxXbcpDlCrl9Ug1vnmsTRVi24fx96njv7Gf0LL0-qlQF9jQdS6SrvMN3asYo83SzBgfF2SWrYy4tC_4zkRwJ8FrP8YG9tbivsKUSBcD5dPJk2N-KN9GkhWhWorPhxY=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/neolibyans-logo.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdHUaDxrHFtp_Lh34oErdxYW8KLiYWJIjE57-lr_NVMiB9Upq3p__KYzTAMO2WIaUkFWohioB3uwHqmus1OHhxHilmas8AZBD4I_oqluPCrc4YORjwSs4_Y-WkjyApgC56EWIP2zd6qWV2FD6QpIZleXq7esJWG32sZhJkJYZfgJ-Xf8EY=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/palers-logo.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdFa1KnCCQOtsLhm0B7Lt--VnU-pHp4r06y7nSHOB7hcAZzKJlbMmUVEKUFMY7ZnLegwSeI8FybSgUFyY5EStp3rU7Zbl3MRujHcpHxxA3-eq-GZfBxXJPvRquvOA7RoIGmx4e30kf5oKQHDPcvLJcPVK5s3wkOIi-SudmPO_qNyj5XCSE=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/scourgers-logo.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdM_vZlhD3rIQViGWcp5yXaP4tCjy6vyCxckjWZJmWiK_K2r6EuzXOMbWEFl0mIkRGYqSojvBiHjudFHlt4ewPHRXCc4OJMisPSFY_B19qrH39zSrb7kMF7OeIlzfaZC51chEX-gIHHiLChm-EyKSA2VtWmsgWl3HMp6tbbR48ZK2rE=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/combat-knife.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfpxIsh1lixU43IXi5-Wyym_VxgE7HWx1P6JflA1AKuXl6XnvUp3iRulSl6Co5w9D_1cTmNdhsf-DwiB6OVZOyThjLDMk6pye3clc0RvGsPnqhQ7EV4W4fEmA4YtEgT1AXjiy128v3bYFHhI9UxnZ7xL5tL2HI4M3Ea33UYipAS9PFlbDk=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/neolibyan-great-hunter.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdON-L1l__nrtW4bgUJ_yi_iqN0_XDO0tq_hg8ff2Vm8uPDyB9FGZ1Nz9DIGEVQkk2KZNh-hpNvOy9eLS02XzdDdfwJzCgVUXsUgoH0UflK5sdtKecEMTnSZCBtChR3g3V3ssVkkpVUKxeT92yhAW1XMRcV9ogL8yN2JfUclr85uMz7ppg=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/paler-redeemer.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUdbyPz1Vc77mVKY3mJ-aNaDGUBJ54ERRgookED8ttlOt6SY0g6xNYIg8-1b-0uE5BmZ-qQI9686UdRqBM6jVTR1-ixDOG8Gt6n6mBS6EW7FvXK0caF2TNUqRDBoOR0D2w_0V-Q9VbBieDif2_W1Hub-pO4JrIReG_OG2HCI9hZuDLBtQ8c=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/scourge.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfQN1z_jIYQpfZs5IPjt_ZXaROcFbNF0i8H7KAXWBFKdxxWxpI84CnYf8KXkg_F6KHuChZfzdA3OJiATfvrMl-VEQnIxDtCLppGxhVAfOGAGr--ZBDuAAAdNxiD0r1k4ppjSUYm4qisPrcGLntDgv0xpCaZWmrNjeWuHYCgaqlk9WduT2Q=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/scourger-chaga.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUeszDk6xEqb8mv8GV4OXv1EmwR_2GLSIm-hoNEfEeweAw2oxvKzRiXCEMwj8WObC3ms8Ul4KmYXneg2DSphLaJvPa9sMZ6m2XW17mGg3XwaZZN9rNmm4fcjlN6HyohUj4ox65QmGI___c38NqK-LWaRh3eGd1X7AfXepDORcPhwI-6xnfg=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/submachine-gun.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUeWF6EXKwX5TDEDz25JzedDwppWr4SdIGLm4oDQ3G0qbqm_esDvxI7x0U0byHPskWrBqf4H6xXaW_4g9QUfUd4Bg5CvkhbCNgWV6ueegGd3M6DRerUwzA_v76-VGYd-mcSFAgsF482rs_Ltgmw7lTOoFz4oBos4BdgAnsa2wESJERpo-Eo=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/sun-eye.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUeuQ8lpiZyq9tvM-N8Xk8nxv_z_OEBjdj0mC_MB494jCWn9HEThJsEqjSOokG0Q2DCCpJ1sO_XSdfIlwwFi1ZIqLLrA5_necWnIlG9O0KnkekSOnzay6qf0Kb588PnsS69xigtNUDzJ5fMAlJkz7IV6B1-n9y1HCN7iris_JYS3MFlVbkY=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/sunburst.png"
+          curl -fL "https://lh7-rt.googleusercontent.com/slidesz/AGV_vUeCA27tKBs4rsl0ZdCiFPqsZ0rbAcdO8nymXpgEgIv7pTL39_fjOqRic4pvJZ_e8ijoMylAhX5peFQXTkq7btxUSsNyNprXxVDXV_DRF9mf3vJ-qNCLQ2N8zHvdCCTZXufKnGZGFcEx-W9Y-yuaDffYelevcSBk420pm4gk4iXxd7ZU=s2048?key=avL1Bpav50qIWIay-1vASQ" -o "/tmp/surge-tank.png"
+      - name: Convert artwork
+        run: |
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/neolibyans-logo.png -resize 640 640 -o assets/neolibyans-logo.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/palers-logo.png -resize 640 640 -o assets/palers-logo.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/scourgers-logo.png -resize 640 640 -o assets/scourgers-logo.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/combat-knife.png -resize 1400 0 -o assets/combat-knife.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/neolibyan-great-hunter.png -resize 0 1400 -o assets/neolibyan-great-hunter.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/paler-redeemer.png -resize 0 1400 -o assets/paler-redeemer.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/scourge.png -resize 1173 403 -o assets/scourge.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/scourger-chaga.png -resize 0 1400 -o assets/scourger-chaga.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/submachine-gun.png -resize 1392 610 -o assets/submachine-gun.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/sun-eye.png -resize 825 936 -o assets/sun-eye.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/sunburst.png -resize 1400 0 -o assets/sunburst.webp
+          cwebp -quiet -q 88 -alpha_q 100 /tmp/surge-tank.png -resize 1400 0 -o assets/surge-tank.webp
+      - name: Commit artwork
+        run: |
+          git pull --rebase origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.webp
+          git rm .github/workflows/import-missing-cult-assets.yml
+          git commit -m "Add Neolibyan, Paler, and Scourger artwork"
+          git push
