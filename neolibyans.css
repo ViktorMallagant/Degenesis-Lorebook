@@ -1,0 +1,80 @@
+/* Neolibyan page */
+.neolibyan-hierarchy-canvas {
+  position: relative;
+  width: 1180px;
+  height: 700px;
+  margin: 0 auto;
+}
+.neolibyan-rank-lines {
+  position: absolute;
+  inset: 0;
+  width: 1180px;
+  height: 700px;
+  overflow: visible;
+  fill: none;
+  stroke: rgba(255,255,255,0.50);
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.neolibyan-rank-node {
+  width: 165px;
+  min-height: 50px;
+  padding: 0.72rem 0.9rem;
+}
+.asset-placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(255,255,255,0.28);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01)),
+    repeating-linear-gradient(45deg, transparent 0 12px, rgba(255,255,255,0.025) 12px 13px);
+  color: rgba(255,255,255,0.46);
+  font-family: var(--heading-font);
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cult-logo-placeholder {
+  width: 74px;
+  height: 74px;
+  flex: 0 0 auto;
+  font-size: 0.55rem;
+}
+.nav-logo-placeholder {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px dashed rgba(255,255,255,0.36);
+  background: rgba(255,255,255,0.025);
+}
+.placeholder-briefing-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rank-art-placeholder {
+  width: min(100%, 420px);
+  min-height: 520px;
+  padding: 1rem;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+.equipment-art-placeholder {
+  width: 100%;
+  min-height: 220px;
+  padding: 1rem;
+}
+.footer-logo-placeholder {
+  width: 44px;
+  height: 44px;
+  font-size: 0.45rem;
+}
+.neolibyans-page .hero-figure {
+  image-rendering: auto;
+}
+@media (max-width: 760px) {
+  .neolibyan-hierarchy-canvas { margin-left: 0; }
+  .cult-logo-placeholder { width: 58px; height: 58px; }
+}
