@@ -862,6 +862,20 @@ body.sidebar-open .lorebook-sidebar { transform: translateX(0); }
   background: rgba(182,42,42,0.12);
 }
 .lorebook-sidebar a[aria-disabled="true"] { cursor: default; }
+.lorebook-sidebar summary .culture-heading-link {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+.lorebook-sidebar summary .culture-heading-link:hover,
+.lorebook-sidebar summary .culture-heading-link[aria-current="page"] { color: var(--red-bright); }
+.lorebook-sidebar summary .culture-heading-link:focus-visible {
+  outline: 2px solid var(--red-bright);
+  outline-offset: 4px;
+}
 .sidebar-scrim { display: none; }
 body.sidebar-open main,
 body.sidebar-open footer {
