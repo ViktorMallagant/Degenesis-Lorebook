@@ -820,7 +820,9 @@ const equipmentGroups=[
             "Resources",
             "4"
           ]
-        ]
+        ],
+        "image": "assets/scourger-kom.webp?v=20260929-1",
+        "alt": "Scourger Kom"
       },
       {
         "title": "Speedboat",
