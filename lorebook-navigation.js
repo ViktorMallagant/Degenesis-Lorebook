@@ -31,23 +31,24 @@
   trees.forEach(({ tree }) => tree.addEventListener('toggle', saveTrees));
   window.addEventListener('pagehide', saveTrees);
 
-  // The Cultures heading also opens its overview without losing either tree's state.
-  const heading = document.querySelector('.lorebook-sidebar .culture-heading-link');
-  const summary = heading?.closest('summary');
-  const tree = summary?.parentElement;
-  if (!summary || !(tree instanceof HTMLDetailsElement)) return;
+  // Each main heading opens its overview without losing either tree's state.
+  document.querySelectorAll('.lorebook-sidebar .culture-heading-link, .lorebook-sidebar .cult-heading-link').forEach((heading) => {
+    const summary = heading.closest('summary');
+    const tree = summary?.parentElement;
+    if (!summary || !(tree instanceof HTMLDetailsElement)) return;
 
-  const destination = new URL(heading.href);
-  const onOverview = window.location.pathname === destination.pathname;
+    const destination = new URL(heading.href);
+    const onOverview = window.location.pathname === destination.pathname;
 
-  summary.addEventListener('click', (event) => {
-    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    event.stopPropagation();
-    const open = !tree.open;
-    tree.open = open;
-    saveTrees();
-    if (onOverview) return;
-    window.location.assign(destination.href);
-  }, true);
+    summary.addEventListener('click', (event) => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const open = !tree.open;
+      tree.open = open;
+      saveTrees();
+      if (onOverview) return;
+      window.location.assign(destination.href);
+    }, true);
+  });
 })();
