@@ -1,0 +1,39 @@
+/* Culture dossiers: the artwork stays still while the dossier scrolls. */
+.culture-page { min-height:100vh; background:#09090a; }
+.culture-page::before { display:none; }
+.culture-backdrop { position:fixed; inset:0; z-index:0; pointer-events:none; background:linear-gradient(rgba(6,6,7,.14),rgba(6,6,7,.30)),url("assets/africa-background.webp?v=20260930-1") center center / cover no-repeat; }
+.culture-page.sidebar-open .culture-backdrop { left:270px; }
+.culture-page main,.culture-page footer { position:relative; z-index:1; }
+.culture-hero { min-height:calc(100svh - 70px); display:flex; align-items:flex-end; padding:5rem clamp(1.2rem,5vw,5rem) 3rem; border-bottom:1px solid var(--line); background:linear-gradient(0deg,rgba(6,6,7,.82),rgba(6,6,7,.26) 65%,transparent); }
+.culture-hero-inner { width:100%; max-width:1000px; margin-inline:auto; }
+.culture-hero .hero-title-row { text-shadow:0 3px 24px rgba(0,0,0,.8); }
+.culture-hero .eyebrow { color:#ff7168; text-shadow:0 2px 8px #000; }
+.culture-hero .hero-lede { color:#f2efe9; text-shadow:0 2px 12px #000; }
+.culture-facts { max-width:none; }
+.culture-facts article { background:rgba(8,8,9,.85); backdrop-filter:blur(4px); }
+.culture-facts a { text-decoration:none; }
+.culture-facts a:hover,.culture-facts a:focus-visible { color:#fff; text-decoration:underline; }
+.culture-summary { width:calc(100% - 2 * clamp(1.2rem,5vw,5rem)); max-width:900px; margin:4rem auto; padding:clamp(1.4rem,4vw,3.5rem); border:1px solid var(--line); background:rgba(8,8,9,.88); box-shadow:0 20px 80px rgba(0,0,0,.22); backdrop-filter:blur(4px); }
+.culture-summary .section-heading { margin-bottom:2.5rem; }
+.culture-summary .section-heading h2 { font-size:clamp(2rem,4vw,3.4rem); }
+.culture-section { scroll-margin-top:100px; padding-block:1.8rem; border-top:1px solid var(--line); }
+.culture-section h3 { margin:0 0 1.15rem; font-size:clamp(1.35rem,2vw,1.7rem); line-height:1.2; font-weight:500; }
+.culture-section p { margin:0 0 1.1rem; color:#dedad4; line-height:1.8; }
+.culture-section p:last-child { margin-bottom:0; }
+.culture-footer { flex-wrap:wrap; background:rgba(8,8,9,.94); }
+.culture-footer p { margin:0; }
+.culture-sources { color:var(--muted); font-size:.75rem; }
+@media(max-width:760px) {
+  .culture-page.sidebar-open .culture-backdrop { left:0; }
+  .culture-backdrop { background-position:50% center; }
+  .culture-hero { min-height:auto; padding-top:4rem; }
+  .culture-hero .hero-title-row { gap:1rem; }
+  .culture-hero .cult-logo { width:62px; height:62px; }
+  .culture-summary { margin-block:2rem; }
+  .culture-section { scroll-margin-top:1rem; }
+  .culture-footer { justify-content:center; text-align:center; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .culture-page { scroll-behavior:auto; }
+  .culture-page main,.culture-page footer,.culture-page .lorebook-sidebar { transition:none; }
+}
