@@ -7,10 +7,14 @@
   <meta name="description" content="Degenesis: Alpha & Omega — a lorebook for the post-Eshaton world.">
   <title>Degenesis: Alpha & Omega — Lorebook</title>
   <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
-  <link rel="stylesheet" href="styles.css?v=20260930-4">
+  <link rel="stylesheet" href="styles.css?v=20260930-5">
   <link rel="stylesheet" href="landing.css?v=20260927-2">
 </head>
 <body class="landing-page">
+  <script>
+    // Set the layout before the header, sidebar, or page content can paint.
+    document.body.classList.toggle('sidebar-open', !document.body.classList.contains('landing-page') && window.matchMedia('(min-width: 761px)').matches);
+  </script>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header landing-header">
@@ -62,6 +66,22 @@
       </details>
     </div>
   </aside>
+  <script>
+    // Restore the trees as soon as their markup exists, before page rendering.
+    (() => {
+      const toggle = document.querySelector('#lorebook-nav-toggle');
+      toggle?.setAttribute('aria-expanded', String(document.body.classList.contains('sidebar-open')));
+      try {
+        const saved = JSON.parse(sessionStorage.getItem('degenesis:lorebook:tree-state'));
+        document.querySelectorAll('.lorebook-sidebar details').forEach((tree) => {
+          const key = tree.querySelector('summary')?.textContent.trim().toLowerCase();
+          if (typeof saved?.[key] === 'boolean') tree.open = saved[key];
+        });
+      } catch {
+        // Fresh visits and blocked storage retain the collapsed defaults.
+      }
+    })();
+  </script>
   <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
 
   <div class="landing-backdrop" aria-hidden="true"></div>

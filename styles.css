@@ -1127,3 +1127,25 @@ footer p.community-disclaimer a:focus-visible {
   outline: 2px solid var(--red-bright);
   outline-offset: 3px;
 }
+
+
+/* Page entrances are independent of the already-settled sidebar layout. */
+body:not(.landing-page) :is(.hero-copy, .culture-hero-inner) {
+  animation: lorebook-copy-enter 320ms ease-out both;
+}
+body:not(.landing-page) :is(.hero-figure, .culture-backdrop) {
+  animation: lorebook-art-enter 380ms ease-out both;
+}
+@keyframes lorebook-copy-enter {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes lorebook-art-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body:not(.landing-page) :is(.hero-copy, .culture-hero-inner, .hero-figure, .culture-backdrop) {
+    animation: none;
+  }
+}
