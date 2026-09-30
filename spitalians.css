@@ -1,0 +1,7 @@
+/* Spitalian page */
+.spitalian-hierarchy-canvas{position:relative;width:1420px;height:720px;margin:0 auto}
+.spitalian-rank-lines{position:absolute;inset:0;width:1420px;height:720px;overflow:visible;fill:none;stroke:rgba(255,255,255,.50);stroke-linecap:square;stroke-linejoin:miter;stroke-width:2;vector-effect:non-scaling-stroke}
+.spitalian-rank-node{width:180px;min-height:50px;padding:.72rem .9rem}
+.spitalians-page .hero-figure{image-rendering:auto}
+.spitalians-page .briefing-art img{max-height:700px}
+@media(max-width:760px){.spitalian-hierarchy-canvas{margin-left:0}}
