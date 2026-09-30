@@ -29,8 +29,6 @@
 .culture-entry { margin-top:2rem; }
 .culture-entry h3 a { color:inherit; text-decoration:underline; text-underline-offset:.2em; }
 .culture-entry h3 a:hover { color:var(--red-bright); }
-.culture-map-link { display:inline-block; margin-top:1rem; padding:.65rem 1rem; border:1px solid var(--line-strong); background:rgba(8,8,9,.7); color:var(--ink); font-size:.82rem; text-decoration:none; }
-.culture-map-link:hover,.culture-map-link:focus-visible { background:var(--paper-raised); border-color:var(--red-bright); }
 @media(max-width:760px) {
   .culture-page.sidebar-open .culture-backdrop { left:0; }
   .culture-backdrop { background-position:50% center; }
