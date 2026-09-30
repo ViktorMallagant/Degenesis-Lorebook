@@ -2,7 +2,7 @@
 (() => {
   const trees = Array.from(document.querySelectorAll('.lorebook-sidebar details')).map((tree) => ({
     tree,
-    key: tree.querySelector('nav')?.getAttribute('aria-label')?.toLowerCase()
+    key: tree.querySelector('summary')?.textContent.trim().toLowerCase()
   })).filter(({ key }) => key);
   const stateKey = 'degenesis:lorebook:tree-state';
 
