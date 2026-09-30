@@ -1086,3 +1086,30 @@ body.sidebar-open .hero-copy {
   color: #fff;
   background: rgba(182, 42, 42, 0.12);
 }
+
+/* Shared community attribution, kept as the last row of every page footer. */
+footer { flex-wrap: wrap; padding: 2rem 1.5rem; }
+footer .community-disclaimer {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: none;
+  overflow-wrap: break-word;
+}
+footer .community-disclaimer a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+footer .community-disclaimer a:hover { color: var(--red-bright); }
+footer .community-disclaimer a:focus-visible {
+  outline: 2px solid var(--red-bright);
+  outline-offset: 3px;
+}
