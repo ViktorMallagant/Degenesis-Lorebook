@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="Franka, The Swarm: Pheromancers, resistance, free settlements, and cultural memory in the world of Degenesis.">
+  <title>Franka | Degenesis: Alpha &amp; Omega - Lorebook</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
+  <link rel="preload" as="image" href="assets/franka-background.webp?v=20260930-1">
+  <link rel="stylesheet" href="styles.css?v=20260930-5">
+  <link rel="stylesheet" href="cultures.css?v=20260930-7">
+</head>
+<body class="culture-page franka-page">
+  <script>
+    // Set the layout before the header, sidebar, or page content can paint.
+    document.body.classList.toggle('sidebar-open', !document.body.classList.contains('landing-page') && window.matchMedia('(min-width: 761px)').matches);
+  </script>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="false" aria-controls="lorebook-sidebar"><img class="brand-icon" src="assets/favicon.png" alt=""><span>DEGENESIS: ALPHA &amp; OMEGA - LOREBOOK</span></button>
+    <nav class="section-nav" aria-label="Franka sections">
+      <a class="current-entry" href="#top"><img src="assets/franka-logo.webp?v=20260930-1" alt=""><span>Franka</span></a>
+      <a href="#briefing">Summary</a>
+      <a href="#a-homeland-transformed">Homeland</a>
+      <a href="#toulouse-and-aquitaine">Society</a>
+      <a href="#the-resistance">Conflict</a>
+    </nav>
+  </header>
+<aside class="lorebook-sidebar" id="lorebook-sidebar" aria-label="Lorebook navigation">
+    <div class="sidebar-inner">
+      <nav class="sidebar-home" aria-label="Lorebook home"><a href="index.html">Home</a></nav>
+      <details>
+        <summary><a class="culture-heading-link" href="cultures.html">Cultures</a></summary>
+        <nav aria-label="Cultures">
+          <a href="africa.html">Africa</a>
+          <a href="borca.html">Borca</a>
+          <a href="balkhan.html">Balkhan</a>
+          <a class="active" href="#top" aria-current="page">Franka</a>
+          <a href="#" aria-disabled="true">Hybrispania</a>
+          <a href="#" aria-disabled="true">Pollen</a>
+          <a href="#" aria-disabled="true">Purgare</a>
+        </nav>
+      </details>
+      <details>
+        <summary><a class="cult-heading-link" href="cults.html">Cults</a></summary>
+        <nav aria-label="Cults">
+          <a href="anabaptists.html">Anabaptists</a>
+          <a href="anubians.html">Anubians</a>
+          <a href="apocalyptics.html">Apocalyptics</a>
+          <a href="chroniclers.html">Chroniclers</a>
+          <a href="clanners.html">Clanners</a>
+          <a href="hellvetics.html">Hellvetics</a>
+          <a href="jehammedans.html">Jehammedans</a>
+          <a href="judges.html">Judges</a>
+          <a href="neolibyans.html">Neolibyans</a>
+          <a href="palers.html">Palers</a>
+          <a href="scourgers.html">Scourgers</a>
+          <a href="scrappers.html">Scrappers</a>
+          <a href="spitalians.html">Spitalians</a>
+        </nav>
+      </details>
+    </div>
+  </aside>
+  <script>
+    // Restore the trees as soon as their markup exists, before page rendering.
+    (() => {
+      const toggle = document.querySelector('#lorebook-nav-toggle');
+      toggle?.setAttribute('aria-expanded', String(document.body.classList.contains('sidebar-open')));
+      try {
+        const saved = JSON.parse(sessionStorage.getItem('degenesis:lorebook:tree-state'));
+        document.querySelectorAll('.lorebook-sidebar details').forEach((tree) => {
+          const key = tree.querySelector('summary')?.textContent.trim().toLowerCase();
+          if (typeof saved?.[key] === 'boolean') tree.open = saved[key];
+        });
+      } catch {
+        // Fresh visits and blocked storage retain the collapsed defaults.
+      }
+    })();
+  </script>
+  <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
+  <div class="culture-backdrop" aria-hidden="true"></div>
+  <main id="main-content">
+    <section class="culture-hero" id="top" aria-labelledby="culture-title">
+      <div class="culture-hero-inner">
+        <p class="eyebrow">CULTURE DOSSIER</p>
+        <div class="hero-title-row"><h1 id="culture-title">Franka</h1><img class="cult-logo" src="assets/franka-logo.webp?v=20260930-1" width="512" height="512" alt="Frankan Culture logo"></div>
+        <p class="hero-lede">The Swarm</p>
+        <div class="quick-facts culture-facts">
+          <article><h2>Common Cults</h2><ul><li><a href="anabaptists.html">Anabaptists</a></li><li><a href="apocalyptics.html">Apocalyptics</a></li><li><a href="chroniclers.html">Chroniclers</a></li><li><a href="clanners.html">Clanners</a></li><li><a href="hellvetics.html">Hellvetics</a></li><li><a href="judges.html">Judges</a></li><li><a href="scrappers.html">Scrappers</a></li><li><a href="spitalians.html">Spitalians</a></li></ul></article>
+          <article><h2>Attribute Bonus</h2><p class="quick-fact-subtitle"><em>+1 MAX</em></p><ul><li>Charisma</li><li>Instinct</li></ul></article>
+          <article><h2>Skill Bonus</h2><p class="quick-fact-subtitle"><em>+1 MAX</em></p><ul><li>(BOD) Stamina</li><li>(AGI) Stealth</li><li>(CHA) Negotiation</li><li>(PSY) Faith/Willpower</li><li>(PSY) Deception</li></ul></article>
+        </div>
+      </div>
+    </section>
+    <section class="culture-summary" id="briefing" aria-labelledby="summary-heading">
+      <div class="section-heading"><div><p class="eyebrow">RESISTANCE · MEMORY · FREEDOM</p><h2 id="summary-heading">Culture &amp; Society</h2></div></div>
+<article class="culture-section" id="the-swarm"><h3>The Swarm</h3>
+<p>Franka survives among flooded ruins, insect colonies, and communities whose freedom depends upon resisting the influence of the Pheromancers. Across its central regions, humans and insects have become parts of the same collective, bound together by chemical signals that reach into desire, fear, and obedience. Beyond that influence, families, Clans, and settlements continue to defend a life in which their decisions remain their own.</p>
+<p>Resistance gives the Culture much of its shared purpose, but Frankan life extends beyond the battlefield. Rivers carry travelers through dangerous territory, restored books preserve a connection to the past, and western farms sustain communities still capable of planning for a future. Trade brings essential protection and supplies alongside competing ambitions. Across these relationships, the struggle is to preserve a people as well as the ground beneath their feet.</p>
+</article>
+<article class="culture-section" id="a-homeland-transformed"><h3>A Homeland Transformed</h3>
+<p>The Eshaton struck the Massif Central, devastating settlements and releasing the Sepsis that spread through fallen France. Changes in the land redirected water, dried some rivers, and flooded other regions. Fields became swamps, roads disappeared into mud, and insect infestations consumed provisions and overwhelmed the survivors’ homes. Retreat to boats and river settlements offered temporary protection without resolving the threat.</p>
+<p>By 2595, much of central Franka has become a wet landscape of marshes, waterways, and concrete ruins rising from the mire. Houses stand on stilts, while boats and rafts make routes possible where roads have vanished. Farther west, the swamps give way to deciduous forests and fertile land beneath a mild Atlantic climate. These regional differences allow free communities to support one another, even as the most dangerous terrain separates them.</p>
+</article>
+<article class="culture-section" id="the-pheromancers"><h3>The Pheromancers</h3>
+<p>The first Pheromancers appeared to offer relief from the insect plague. Emerging from the devastated mountains, they moved through villages with unfamiliar gestures and could drive away vermin that human efforts had failed to control. Many Frankans accepted their assistance despite their disturbing appearance. Dependence gradually became devotion, as the same influence that governed insects drew people into feelings of peace and consuming affection.</p>
+<p>Pheromantic control reaches beyond a simple command. Fear can become hostility toward an approaching enemy, while attachment to a Pheromancer can make service feel deeply meaningful. Communities within the swarm cultivate fields, build homes, and protect the being they love. For the free Frankans, that apparent contentment carries a terrible cost: the people inside it can lose the ability to recognize how thoroughly their loyalties have been shaped.</p>
+</article>
+<article class="culture-section" id="souffrance"><h3>Souffrance</h3>
+<p>Souffrance occupies the crater at the heart of Franka’s infestation. Basalt, broken slopes, Mother spore fields, and towering mud structures frame a settlement shared by humans, Pheromancers, and insects. Termites repair damaged structures and open new paths through the rock, while pheromone trails guide inhabitants between monuments and gathering places. The city expresses a form of organization in which ordinary distinctions between human settlement and insect colony have eroded.</p>
+<p>For devoted visitors, time in Souffrance becomes a spiritual experience. Many leave as emissaries carrying the Pheromancers’ influence into surrounding villages, marked to pass safely through barriers that would threaten an outsider. Queens breed within protected chambers along the crater, sustaining the system around them. What followers regard as communion and privilege becomes, to the Resistance and Spitalians, evidence of humanity’s submission.</p>
+</article>
+<article class="culture-section" id="the-untouchables"><h3>The Untouchables</h3>
+<p>Some inhabitants resist or remain immune to the Pheromancers’ influence. Known as Untouchables, they breathe the same air as their neighbors without sharing the feelings that govern those neighbors’ lives. This gives them a clear view of the swarm, but also leaves them isolated within communities where devotion is expected.</p>
+<p>Many conceal their difference because discovery could separate them from their families or expose them to danger. Others join the Resistance, using their position inside the hive to gather information and valuable glandular discharge. Their circumstances make resistance intensely personal. Escaping control does not necessarily mean being willing to abandon the people who remain beneath it.</p>
+</article>
+<article class="culture-section" id="marduk-oil-and-the-price-of-freedom"><h3>Marduk Oil and the Price of Freedom</h3>
+<p>Anubians distill Pheromancer discharge into Marduk Oil, a preparation that protects its user against pheromantic influence when applied to the skin. For Resistance fighters and Scrappers entering the swamps, access to this protection can determine whether an expedition returns with its purpose intact. Franka’s struggle therefore depends in part upon recovering material from the very beings it seeks to defeat.</p>
+<p>That same discharge enters Neolibyan markets as a valuable substance capable of influencing attraction and desire. Trade connects infiltration, distillation, commercial opportunity, and the defense of free communities. Frankans need access to protective supplies, while merchants see valuable goods. These overlapping interests sustain cooperation without ensuring that everyone involved shares the same understanding of what freedom requires.</p>
+</article>
+<article class="culture-section" id="the-resistance"><h3>The Resistance</h3>
+<p>The Resistance grows from communities watching their people drawn into the swarm and their homes overtaken by insects. Farmers, Clanners, and trained fighters cooperate with Spitalians and Anabaptists, carrying local knowledge into campaigns against breeding sites and pheromone structures. Protected by Marduk Oil, infiltrators can move among controlled populations, sabotage markers, and attack the Pheromancers directing them.</p>
+<p>Success demands sacrifice and adaptation. One major assault destroyed part of a spore field and exposed an enormous network of vents and insect trails beneath it, weakening the illusion through which the swarm concealed its nature. Such victories encourage further resistance, but do not remove the systems surrounding the battlefield. A liberated place still needs supplies, protection, and relationships strong enough to survive the next attack.</p>
+</article>
+<article class="culture-section" id="parasite-and-the-lost-capital"><h3>Parasite and the Lost Capital</h3>
+<p>Parasite, the remains of Paris, lies amid rising water, Mother spore fields, and immense breeding colonies. Ruined buildings emerge from green pools, jetties connect precarious patches of dry ground, and insect traffic fills streets that once belonged to an entirely different civilization. Around the Eiffel Tower, nests and marker insects make the approach increasingly dangerous.</p>
+<p>The Seine nevertheless provides a route into the city’s heart. Raiders use boats, pesticides, and immersion in the river to break the pheromone trails that would otherwise guide pursuers after them. Expeditions also seek works of art and books, recovering fragments of a cultural inheritance that Frankans refuse to surrender completely. Salvage in Parasite can therefore preserve memory as well as provide material wealth.</p>
+</article>
+<article class="culture-section" id="the-ziggurath-network"><h3>The Ziggurath Network</h3>
+<p>Pheromancers establish monumental stepped structures known as Zigguraths, drawing human labor into construction even where the chosen site seems impractical. Settlements develop around them, and their inhabitants direct work and devotion toward the Pheromancer occupying the summit. Agriculture can flourish under that protection while hostile communities outside the system face the insects’ destructive force.</p>
+<p>Spitalian observations suggest that the Zigguraths function as junctions in a larger network. Pheromancers redirect swarms between settlements, combining or dividing them and sending them against external threats. Known sites also imply the outline of a Chakra pattern that twelve structures would complete. The relationship between these locations and Parasite’s breeding chambers suggests a design whose full purpose remains uncertain.</p>
+</article>
+<article class="culture-section" id="holding-back-the-flood"><h3>Holding Back the Flood</h3>
+<p>Free Frankan communities watch insect movements as part of ordinary life. Agricultural workers recognize numerous species, children help estimate the size of termite columns, and couriers carry observations between posts. Shared records turn scattered sightings into warnings, allowing the Resistance to prepare before separate swarms converge upon a settlement.</p>
+<p>Defense combines pheromone buoys, insecticides, fire, and changes to the terrain. Buoys prepared with glandular discharge can divert insects or divide an approaching mass into smaller groups, while Anabaptists and Spitalians destroy what remains. Valleys may be flooded and forests burned to deny the swarm its route. Protecting a community can therefore require damaging the surrounding land, and every defense depends upon understanding an enemy capable of changing its methods.</p>
+</article>
+<article class="culture-section" id="the-passages-and-borderpost-south"><h3>The Passages and Borderpost South</h3>
+<p>The destruction of Borderpost North broke a crucial route between Borca and Briton. A massive swarm, accompanied by pale bodies moving within it, ignored the prepared pheromone buoys and overwhelmed defenses that had been expected to hold. Its passage left termite structures where troops and travelers had once gathered, demonstrating that established precautions could no longer be trusted without question.</p>
+<p>Borderpost South remains an essential entrance to the surviving route through Franka. Spitalians and Hellvetic Sappers constructed linked concrete blocks, protective tunnels, and a trading plaza capable of being sealed against pheromones and insects. Disinfection and examination with Mollusks make crossing dependent upon Spitalian judgment. The outpost offers shelter, commerce, and a base for operations, while its uncompromising response to infection makes that protection frightening for the people seeking it.</p>
+</article>
+<article class="culture-section" id="trade-along-the-passage-south"><h3>Trade Along the Passage South</h3>
+<p>The Passage South connects Borderpost South with Dijon, Lyon, and the Mediterranean coast before continuing through free Franka. Chronicler installations along the route advertise artifacts that can be exchanged for Drafts, expressing an effort to keep salvage within their commercial network. African involvement offers competing markets and resources, continuing a relationship that began with the removal of machinery and harbor equipment from devastated Frankan cities.</p>
+<p>Toulon developed into a prosperous salvage center under the Neolibyan Hamza Abubakar III. His agreement with the Pheromancer Murnakir in 2589 established a boundary that allowed trade to flourish where expeditions had previously been threatened. Farther west, Montpellier receives African goods while Spitalians watch the approaching vents beyond its walls. Commerce can support free communities, but the peace enabling it may depend upon bargains their allies find difficult to accept.</p>
+</article>
+<article class="culture-section" id="toulouse-and-aquitaine"><h3>Toulouse and Aquitaine</h3>
+<p>Toulouse preserves an identity that reaches beyond resistance. Books recovered from Parasite are cleaned and restored, giving the city a role in maintaining Franka’s knowledge and cultural memory. Defensive work continues around that effort: troops pass through, fire ditches are prepared, and the smell of fuel can mingle with the life of a settlement devoted to preserving more than survival.</p>
+<p>Aquitaine benefits from fertile western land, grain fields, vineyards, and a mild Atlantic climate. Anabaptist Ascetics contribute sustained agricultural labor, while its communities host people whose Cult affiliations carry uneasy relationships. Nearby, Chronicler facilities organize the recovery of shipwrecks and containers washed in from the ocean. Unfamiliar symbols upon some wrecks suggest connections beyond the known world, placing the region’s productive present beside questions about distant human societies.</p>
+</article>
+<article class="culture-section" id="briton-and-anabaptist-resolve"><h3>Briton and Anabaptist Resolve</h3>
+<p>In northwestern Franka, Briton broke from pheromantic control after the death of its ruling Pheromancer. Freed inhabitants destroyed signs of that reign, but could not secure their future through revolt alone. Appeals for assistance brought the Anabaptists, who committed themselves to defending the region and reclaiming Franka from the Demiurge.</p>
+<p>Their defeat of the Pheromancer King Ganaress strengthened bonds with local communities and established a shared purpose around liberation. Brest, St-Brieuc, and Rennes became major Anabaptist settlements, supported by villages supplying agricultural goods and volunteers. Religious conviction gives that alliance determination and continuity, while also shaping the authority under which Briton’s inhabitants now organize their lives.</p>
+</article>
+<article class="culture-section" id="beyond-the-familiar-routes"><h3>Beyond the Familiar Routes</h3>
+<p>In northeastern Franka, the swamps retreat into tundra and the salt wastes of the Stukov Desert. Sepsis and gases drifting from the termitariums sustain unfamiliar forms of life beneath the crust. Independent Clans survive through close knowledge of insects, scarce water, and the resources the desert provides, maintaining ways of life that outsiders scarcely understand. Accounts of artifact-gathering creatures and subterranean hoards add further uncertainty to a region whose hazards attract determined explorers.</p>
+<p>Farther north, beyond the Janus Crater’s rim, old Britain lies under the prohibition imposed by the Marauder Argyre. Stories reaching Briton describe strange light displays, enslaved people fitted with bulky devices, and figures marked with glowing paint. Reliable knowledge remains scarce, and Scrappers who venture into the territory do not return. Franka’s northern horizon therefore holds a threat different from the swarm, concealed behind rumor and the claim of the Vulture.</p>
+</article>
+<article class="culture-section" id="the-frankan-conflict"><h3>The Frankan Conflict</h3>
+<p>Free Franka sustains itself through watchfulness, practical knowledge, trade, faith, and the determination to preserve a cultural inheritance threatened by both devastation and control. Fertile regions feed those holding dangerous routes, recovered books reconnect people with their past, and cooperation between communities makes resistance possible. None of those achievements removes the pressure of dependency upon Cults, merchants, and protective resources.</p>
+<p>A Frankan character may carry family ties into a settlement ruled by a Pheromancer, trust a trader whose prosperity rests upon compromise, or defend an Anabaptist alliance while questioning its demands. Recovering an artwork can matter as much as securing a weapon when both help preserve a community’s future. Across the Culture, the struggle is to remain capable of choosing, to protect the people whose choices have been taken from them, and to sustain a life worth reclaiming.</p>
+</article></section>
+  </main>
+  <footer class="culture-footer"><img src="assets/franka-logo.webp?v=20260930-1" alt=""><p>Degenesis: Alpha &amp; Omega — Franka</p><p class="culture-sources">Primal Punk pp. 71–81 · KatharSys pp. 34–35</p>
+    <p class="community-disclaimer">This page is a community creation for the tabletop role playing game <a href="https://degenesis.com/">Degenesis®</a>. Degenesis® is a trademark of <a href="https://sixmorevodka.com/">SIXMOREVODKA® Studio GmbH</a>. All rights reserved. This page is not affiliated with SIXMOREVODKA Studio GmbH.</p>
+  </footer>
+  <script src="cultures.js?v=20260930-1"></script>
+<script src="lorebook-navigation.js?v=20260930-4"></script>
+</body>
+</html>
