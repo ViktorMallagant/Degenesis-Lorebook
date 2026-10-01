@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="Hybrispania, The Killing Fields: Guerreros, Castile, African rule, prophecy, and the Warpage in the world of Degenesis.">
+  <title>Hybrispania | Degenesis: Alpha &amp; Omega - Lorebook</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
+  <link rel="preload" as="image" href="assets/hybrispania-background.webp?v=20261001-1">
+  <link rel="stylesheet" href="styles.css?v=20260930-5">
+  <link rel="stylesheet" href="cultures.css?v=20261001-1">
+</head>
+<body class="culture-page hybrispania-page">
+  <script>
+    // Set the layout before the header, sidebar, or page content can paint.
+    document.body.classList.toggle('sidebar-open', !document.body.classList.contains('landing-page') && window.matchMedia('(min-width: 761px)').matches);
+  </script>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="false" aria-controls="lorebook-sidebar"><img class="brand-icon" src="assets/favicon.png" alt=""><span>DEGENESIS: ALPHA &amp; OMEGA - LOREBOOK</span></button>
+    <nav class="section-nav" aria-label="Hybrispania sections">
+      <a class="current-entry" href="#top"><img src="assets/hybrispania-logo.webp?v=20261001-1" alt=""><span>Hybrispania</span></a>
+      <a href="#briefing">Summary</a>
+      <a href="#a-forest-fortress">Homeland</a>
+      <a href="#castile-and-madrid">Society</a>
+      <a href="#the-hybrispanian-conflict">Conflict</a>
+    </nav>
+  </header>
+<aside class="lorebook-sidebar" id="lorebook-sidebar" aria-label="Lorebook navigation">
+    <div class="sidebar-inner">
+      <nav class="sidebar-home" aria-label="Lorebook home"><a href="index.html">Home</a></nav>
+      <details>
+        <summary><a class="culture-heading-link" href="cultures.html">Cultures</a></summary>
+        <nav aria-label="Cultures">
+          <a href="africa.html">Africa</a>
+          <a href="borca.html">Borca</a>
+          <a href="balkhan.html">Balkhan</a>
+          <a href="franka.html">Franka</a>
+          <a class="active" href="#top" aria-current="page">Hybrispania</a>
+          <a href="#" aria-disabled="true">Pollen</a>
+          <a href="#" aria-disabled="true">Purgare</a>
+        </nav>
+      </details>
+      <details>
+        <summary><a class="cult-heading-link" href="cults.html">Cults</a></summary>
+        <nav aria-label="Cults">
+          <a href="anabaptists.html">Anabaptists</a>
+          <a href="anubians.html">Anubians</a>
+          <a href="apocalyptics.html">Apocalyptics</a>
+          <a href="chroniclers.html">Chroniclers</a>
+          <a href="clanners.html">Clanners</a>
+          <a href="hellvetics.html">Hellvetics</a>
+          <a href="jehammedans.html">Jehammedans</a>
+          <a href="judges.html">Judges</a>
+          <a href="neolibyans.html">Neolibyans</a>
+          <a href="palers.html">Palers</a>
+          <a href="scourgers.html">Scourgers</a>
+          <a href="scrappers.html">Scrappers</a>
+          <a href="spitalians.html">Spitalians</a>
+        </nav>
+      </details>
+    </div>
+  </aside>
+  <script>
+    // Restore the trees as soon as their markup exists, before page rendering.
+    (() => {
+      const toggle = document.querySelector('#lorebook-nav-toggle');
+      toggle?.setAttribute('aria-expanded', String(document.body.classList.contains('sidebar-open')));
+      try {
+        const saved = JSON.parse(sessionStorage.getItem('degenesis:lorebook:tree-state'));
+        document.querySelectorAll('.lorebook-sidebar details').forEach((tree) => {
+          const key = tree.querySelector('summary')?.textContent.trim().toLowerCase();
+          if (typeof saved?.[key] === 'boolean') tree.open = saved[key];
+        });
+      } catch {
+        // Fresh visits and blocked storage retain the collapsed defaults.
+      }
+    })();
+  </script>
+  <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
+  <div class="culture-backdrop" aria-hidden="true"></div>
+  <main id="main-content">
+    <section class="culture-hero" id="top" aria-labelledby="culture-title">
+      <div class="culture-hero-inner">
+        <p class="eyebrow">CULTURE DOSSIER</p>
+        <div class="hero-title-row"><h1 id="culture-title">Hybrispania</h1><img class="cult-logo" src="assets/hybrispania-logo.webp?v=20261001-1" width="512" height="512" alt="Hybrispanian Culture logo"></div>
+        <p class="hero-lede">The Killing Fields</p>
+        <div class="quick-facts culture-facts">
+          <article><h2>Common Cults</h2><ul><li><a href="anubians.html">Anubians</a></li><li><a href="apocalyptics.html">Apocalyptics</a></li><li><a href="clanners.html">Clanners</a></li><li><a href="jehammedans.html">Jehammedans</a></li><li><a href="neolibyans.html">Neolibyans</a></li><li><a href="palers.html">Palers</a></li><li><a href="scourgers.html">Scourgers</a></li><li><a href="scrappers.html">Scrappers</a></li><li><a href="spitalians.html">Spitalians</a></li></ul></article>
+          <article><h2>Attribute Bonus</h2><p class="quick-fact-subtitle"><em>+1 MAX</em></p><ul><li>Intellect</li><li>Agility</li></ul></article>
+          <article><h2>Skill Bonus</h2><p class="quick-fact-subtitle"><em>+1 MAX</em></p><ul><li>(BOD) Melee</li><li>(AGI) Mobility</li><li>(AGI) Stealth</li><li>(INT) Medicine</li><li>(INS) Orienteering</li></ul></article>
+        </div>
+      </div>
+    </section>
+    <section class="culture-summary" id="briefing" aria-labelledby="summary-heading">
+      <div class="section-heading"><div><p class="eyebrow">FREEDOM · SACRIFICE · DESTINY</p><h2 id="summary-heading">Culture &amp; Society</h2></div></div>
+<article class="culture-section" id="the-killing-fields"><h3>The Killing Fields</h3>
+<p>Hybrispania lives with a war that has outlasted the people who began it. Beneath humid forests, among the fortresses of Castile, and within the restored cities of the south, generations inherit conflicting accounts of invasion, revenge, and freedom. The Guerreros defend their homeland against African power, while the Africans remember the Spanish assault that first brought bloodshed across the Strait. Both histories sustain loyalties that have become difficult to separate from the people themselves.</p>
+<p>Yet the peninsula holds more than a single battlefield. Castilian communities cultivate land protected by Madrid, southern families negotiate lives beneath Neolibyan authority, and Lisbon turns toward the Atlantic rather than the struggle inland. Between these worlds, the Primer has introduced another danger: prophetic beings whose assistance sustains the resistance, even as their manipulation of time threatens the country they help defend.</p>
+</article>
+<article class="culture-section" id="gibraltar-and-the-war-that-returned"><h3>Gibraltar and the War That Returned</h3>
+<p>After the Eshaton, reconstruction became a source of Spanish national pride. Disaster relief, convoy work, and rebuilding strengthened confidence that the country could master its circumstances. Energy shortages undermined that confidence. Ash obscured solar installations, coastal destruction ruined wind turbines, and generators consumed dwindling fuel reserves. Attention turned toward African oil, where an armed expedition was presented as an opportunity to secure the resources reconstruction required.</p>
+<p>Workers on both sides helped restore a crossing at Gibraltar, using wreckage, stone, and concrete to connect the damaged Strait. The cooperation became a route for armed Spanish convoys to seize oil fields. Resistance grew as the occupation escalated into destruction and killings. Eventually, African forces drove the invaders back across the crossing and followed them into their homeland. The war that Hybrispanians now understand as a struggle for liberation began with their predecessors’ attempt to take another people’s wealth.</p>
+</article>
+<article class="culture-section" id="a-forest-fortress"><h3>A Forest Fortress</h3>
+<p>The climate has transformed much of the peninsula. Dense oak and beech forests occupy land once accustomed to conserving water, while streams, pools, and mangroves spread through formerly dry country. Warm, damp air hangs over roads and buildings buried beneath moss. This landscape offers shelter and sustenance, but it also conceals the remains of generations of fighting. A quiet path can pass above a forgotten tunnel or lead directly into an old trap.</p>
+<p>As African advances broke the larger Hybrispanian forces, resistance dispersed into small Guerrero units. The forest became their strongest advantage against vehicles, armor, and superior weapons. Fighters obstruct roads, undermine crossings, dig concealed shelters, and guide enemies toward pits and ambushes. Scourgers answer with their own traps, demolitions, and brutal reprisals. The struggle has made local knowledge indispensable and turned much of the terrain between the southern cities and Madrid into a battlefield without reliable boundaries.</p>
+</article>
+<article class="culture-section" id="the-guerreros"><h3>The Guerreros</h3>
+<p>Guerreros and Guerreras organize their lives around resistance. Camps are temporary, possessions remain few, and familiarity with the woods matters more than the comfort of a permanent home. Tracking, concealment, mobility, and the ability to survive away from settlements allow small groups to continue fighting after larger forces would have collapsed. Shared stories of fallen fighters give the struggle continuity, making the dead companions whose examples still guide the living.</p>
+<p>This devotion can leave little room for interests outside the war. Sacrifice is honored, and cruelty toward enemies can be justified as service to freedom. Capture carries a particular terror because slavery threatens the fighter’s independence and identity. Enslaved Guerreros may preserve their resolve by waiting for an opportunity to resist rather than accepting defeat. Their reputation for defiance also makes them dangerous captives, shaping the work and confinement their captors consider safe.</p>
+</article>
+<article class="culture-section" id="castile-and-madrid"><h3>Castile and Madrid</h3>
+<p>Madrid protects the approach to the Castilian plateau. Its survival preserves towns such as Salamanca, Leon, Burgos, and Valladolid, where a gentler landscape of fields, hills, and stone settlements offers evidence that the resistance still has something tangible to defend. Agriculture, domestic life, and the presence of children place the war beside ordinary hopes. Veterans recount their experiences in sunlit streets, connecting the security of the present to the sacrifices made beyond it.</p>
+<p>The arenas carry that connection into public ritual. Young fighters reenact celebrated battles, testing themselves against stories their communities already know. Madrid’s Las Ventas stands among the largest of these gathering places, but even smaller towns maintain spaces for combat. Victories can grant brief acclaim and reinforce the expectation that the next generation will continue the struggle. Castile preserves a life beyond the forest while preparing its children to return there.</p>
+</article>
+<article class="culture-section" id="faith-memory-and-the-war"><h3>Faith, Memory, and the War</h3>
+<p>Songs, memorials, and painted battles make resistance a shared cultural inheritance. Martyrs provide examples of courage, and their names accompany preparations for attacks and the burial of companions. This remembrance gives suffering meaning, but its constant repetition can exhaust even the people whose deeds it celebrates. A Culture committed to honoring sacrifice can struggle to imagine what its identity might become if sacrifice were no longer required.</p>
+<p>Jehammedan communities are deeply involved in Castilian life. Their herds supply meat, their baths serve the towns, and their sons fight beside the Guerreros. In Valladolid, the Iconides lend religious authority to military leadership through relics, Icons, and public exhortation. Their influence draws strength from earlier victories and their own history of combat. Faith reinforces endurance while also increasing the pressure to return to battle, even when fighters have barely recovered.</p>
+</article>
+<article class="culture-section" id="la-campeadora"><h3>La Campeadora</h3>
+<p>La Campeadora has become the resistance’s most powerful unifying figure. Once enslaved in Cordoba under the name Ayana, she carries the wounds of campaigns fought across the peninsula. Her authority rests on more than survival or skill with a weapon. She understands her audience, speaking to grief and attachment before turning those feelings toward renewed commitment. The country’s beauty, its people, and the suffering of captives become parts of a persuasive call to continue fighting.</p>
+<p>She visits settlements, inspects hidden stores, and restores determination among exhausted Guerreros. Her leadership also exposes how far the resistance is willing to go. Children recruited from villages learn concealment, trapping, and violence in the forest. Those who cooperate with African authorities become targets alongside the occupying forces. For her followers, uncompromising resolve promises liberation; for the people she considers traitors, the same resolve makes her arrival a threat.</p>
+</article>
+<article class="culture-section" id="the-pact-that-holds-the-line"><h3>The Pact That Holds the Line</h3>
+<p>African military power should have made Madrid vulnerable. Surge Tanks could approach by different routes, while Scourger vehicles threatened to overwhelm resistance beyond the forest. Cutting the city off would also deprive the Guerreros of the supplies and shelter sustained by Castile. Yet repeated advances encountered prepared obstacles: collapsing ground, trapped routes, and defenses placed where the attackers intended to travel.</p>
+<p>Forest knowledge alone cannot explain the precision of these preparations. The Guerreros have entered a relationship with the Pregnoctics, Aberrants whose perception reaches into possible futures. Their guidance allows the resistance to anticipate movements that would otherwise remain hidden. The alliance preserves a balance that weapons and numbers could not maintain, but it also makes the defense of human freedom dependent upon beings transformed by the spores.</p>
+</article>
+<article class="culture-section" id="the-price-of-prophecy"><h3>The Price of Prophecy</h3>
+<p>The Pregnoctics offer different kinds of assistance and danger. Enigmates guide people through approaching events, while Mnemonids sense people across time and space and move at the edges of perception, sometimes traveling far beyond Hybrispania. Nodes possess a still more extraordinary relationship with existence. Their minds encompass places and eras beyond a single body, and the marks they carve into trees express destinies through coordinates of time and space.</p>
+<p>When ordinary prophecy offers no escape from defeat, the resistance turns to a Node. The Woman of the Mountain can give a warrior experience of an attack before it occurs, leaving time to prepare its defeat. Such knowledge demands payment. La Campeadora sends young girls into the mountains under the promise of combat training; they return aged, their lives consumed in exchange for revelations. The future bought for the country is paid for by people denied their own.</p>
+</article>
+<article class="culture-section" id="the-renegados"><h3>The Renegados</h3>
+<p>In southern Hybrispania, African settlement has developed into a life that extends beyond conquest. Neolibyans restored palaces and public spaces, merchants filled markets, and cities such as Seville and Gibraltar became centers of trade and government. Generations born after the original fighting have found ways to live together. Hybrispanians can work freely, share leisure with African neighbors, and pursue security without joining the resistance.</p>
+<p>The northern Guerreros call these people Renegados, treating accommodation as betrayal. Southern families know that liberation under La Campeadora can bring punishment rather than relief, especially after the devastation of Cordoba. Their peace nevertheless remains unequal. Neolibyan Consuls hold authority, and conflict with that authority can still end in enslavement. Cooperation offers a life worth preserving without removing the power that makes preservation depend upon restraint.</p>
+</article>
+<article class="culture-section" id="the-consejeros"><h3>The Consejeros</h3>
+<p>Hybrispanian communities elect Consejeros to settle disputes among their own people and negotiate with African authorities. These representatives attempt to protect local interests, secure privileges, and keep ordinary disagreements from becoming confrontations with the ruling Consuls. Their work gives communities a voice within an unequal system, relying upon judgment and relationships where open resistance could destroy the peace they are trying to maintain.</p>
+<p>Those negotiations can demand disturbing compromises. Young Hybrispanians may be offered as political guarantees or recruited into city guards, placing them in the service of the authorities their northern kin fight. For Guerreros, seeing Hybrispanians protect a system that includes slavery confirms the accusation of betrayal. For the Consejeros, refusing every compromise may leave their communities exposed. The conflict divides people through decisions about how to survive, as much as through allegiance to either side.</p>
+</article>
+<article class="culture-section" id="cordoba-and-the-failure-of-trust"><h3>Cordoba and the Failure of Trust</h3>
+<p>Cordoba reveals how quickly coexistence can collapse. The Neolibyan Consul Jaafar once found pleasure in the city and maintained relationships with Hybrispanian inhabitants. La Campeadora’s campaign turned its streets into dangerous ground. Attacks, poisoned supplies, and the threat of sabotage drove civilians away and made every remaining resident appear a possible accomplice. Gardens and palaces survived, but the confidence that had made them desirable places to live did not.</p>
+<p>Repression deepened the damage. Scourgers seized Hybrispanians, including people whose earlier friendship with Jaafar should have protected them. Outside the gates, the heads of defeated enemies became warnings, answered by Guerrero trophies placed under cover of darkness. Traps spread among these growing fields of skulls. Neither familiarity nor past kindness could reliably survive a cycle in which each attack became justification for the next retaliation.</p>
+</article>
+<article class="culture-section" id="the-warpage"><h3>The Warpage</h3>
+<p>Around the Mirar Crater, the Pregnoctics’ intervention has produced a disturbance far more dangerous than an uncertain prediction. The Warpage develops within a triangle formed by the Node Enigma and two other Nodes near Cuenca and Cordoba. Its apparent relationship to past, present, and future offers a pattern, but its instability resists explanation. Even Enigmates avoid its interior, leaving those who enter with little dependable guidance.</p>
+<p>Within it, time ceases to behave as a continuous path. Ruined cities can reappear in their former glory and vanish again, carrying people and tearing through the surrounding forest. Old transmissions reach Chronicler receivers as though newly sent. Sounds, colors, seasons, and perception become unreliable, while travelers can be caught in temporal phenomena that remove them from the world they knew. The power protecting Hybrispania now threatens the reality upon which protection depends.</p>
+</article>
+<article class="culture-section" id="a-broken-front"><h3>A Broken Front</h3>
+<p>The Warpage has disrupted the resistance as well as its enemies. La Campeadora was near Cordoba when it emerged, leaving Madrid beyond a region that her followers can no longer cross with confidence. Scourgers gather outside the disturbance, securing approaches while the Guerreros attempt to determine where passage remains possible. A force accustomed to using terrain against its opponents must now confront terrain that can defeat its own understanding of movement.</p>
+<p>Scouts mark dangerous areas and leave fragments of maps where others might recover them. Many never return. These incomplete reports cannot provide the certainty that prophetic guidance once promised. African forces may eventually use the disturbance to trap the Guerreros against an impossible retreat, while the resistance searches for a way to turn it to advantage. The alliance that prevented defeat has introduced a crisis with no assured beneficiary.</p>
+</article>
+<article class="culture-section" id="lisbon-and-the-atlantic"><h3>Lisbon and the Atlantic</h3>
+<p>Lisbon keeps its distance from the inland war. Its inhabitants remember opposing the original Spanish invasion of Africa and reject the assumption that they must share the consequences chosen elsewhere. Channels and dangerous waters isolate its approaches, denying Scourger vehicles an easy route. Shipbuilding and Atlantic commerce organize daily life instead: blue-sailed dhows carry merchants toward Aquitaine and Briton, and a small African trading community known as the Leopards finds refuge there.</p>
+<p>The city’s independence does not free it from the Primer. Waterways teem with organisms that can cling to swimmers and drag them beneath the surface. On the shore, an immense spiral shell draws visitors into an interior where echoes, orientation, and memory become disordered. Exploring deeper becomes a test of daring with uncertain limits. Lisbon offers another way to be Hybrispanian, while preserving mysteries as unsettling as those beyond the forest front.</p>
+</article>
+<article class="culture-section" id="the-hybrispanian-conflict"><h3>The Hybrispanian Conflict</h3>
+<p>A Hybrispanian character inherits a homeland whose people disagree about what loyalty demands. A fighter from Castile may understand compromise as surrender, while someone raised in Seville remembers the relatives and neighbors who would suffer from another uprising. A Lisboan may place greater trust in a ship and its crew than in either side’s claims. These differences shape attachments, suspicions, and the stories a character accepts about the past.</p>
+<p>The Culture’s central struggle concerns the price of freedom and the people allowed to define it. Courage can protect a community or bind it to endless war. Peace can preserve families while requiring obedience to injustice. Prophecy can save a country by consuming the lives of its children. For a Hybrispanian, the question becomes what must be defended, what can be forgiven, and which sacrifices they will refuse even when others call them necessary.</p>
+</article></section>
+  </main>
+  <footer class="culture-footer"><img src="assets/hybrispania-logo.webp?v=20261001-1" alt=""><p>Degenesis: Alpha &amp; Omega — Hybrispania</p><p class="culture-sources">Primal Punk pp. 107–117 · KatharSys pp. 34–35</p>
+    <p class="community-disclaimer">This page is a community creation for the tabletop role playing game <a href="https://degenesis.com/">Degenesis®</a>. Degenesis® is a trademark of <a href="https://sixmorevodka.com/">SIXMOREVODKA® Studio GmbH</a>. All rights reserved. This page is not affiliated with SIXMOREVODKA Studio GmbH.</p>
+  </footer>
+  <script src="cultures.js?v=20260930-1"></script>
+<script src="lorebook-navigation.js?v=20260930-4"></script>
+</body>
+</html>
