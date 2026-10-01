@@ -298,6 +298,17 @@
   border-top: 1px solid rgba(255,255,255,0.1);
   background: rgba(7,7,8,0.95);
 }
+.landing-footer p.developer-credit {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 .landing-footer img {
   width: 22px;
   height: 22px;
