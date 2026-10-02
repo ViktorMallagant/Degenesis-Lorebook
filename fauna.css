@@ -1,0 +1,51 @@
+/* Fauna — variable-format creature dossiers */
+.fauna-page { min-height:100vh; background:#09090a; }
+.fauna-page main,.fauna-page footer { position:relative; z-index:2; }
+.fauna-backdrop { position:fixed; inset:70px 0 0; z-index:0; pointer-events:none; background:linear-gradient(90deg,rgba(6,6,7,.52),rgba(6,6,7,.24) 47%,rgba(6,6,7,.10)),linear-gradient(0deg,rgba(6,6,7,.58),rgba(6,6,7,.08) 68%),url("assets/fauna/fauna.webp") 52% 34% / cover no-repeat; }
+.fauna-hero { min-height:min(760px,82vh); display:flex; align-items:flex-end; border-bottom:1px solid var(--line); }
+.fauna-hero-inner,.fauna-overview,.fauna-list { width:min(1180px,92vw); margin-inline:auto; }
+.fauna-hero-inner { padding:clamp(7rem,14vw,12rem) 0 clamp(4rem,8vw,7rem); text-shadow:0 3px 22px rgba(0,0,0,.9); }
+.fauna-page .eyebrow,.fauna-source { color:var(--red-bright); font-family:var(--heading-font); font-size:.69rem; font-weight:800; letter-spacing:.19em; text-transform:uppercase; }
+.fauna-page .eyebrow { margin:0 0 .7rem; }
+.fauna-hero h1 { margin:0; font-size:clamp(5rem,12vw,10.5rem); font-weight:200; letter-spacing:-.045em; line-height:.9; text-transform:uppercase; }
+.fauna-lede { margin:1.3rem 0 0; color:#f0ede7; font-family:var(--heading-font); font-size:clamp(1.05rem,2vw,1.55rem); font-weight:300; letter-spacing:.14em; text-transform:uppercase; }
+.fauna-overview { margin-top:clamp(2.5rem,6vw,5rem); padding:clamp(2rem,5vw,4rem); border:1px solid var(--line); border-top:3px solid var(--red); background:rgba(8,8,9,.88); box-shadow:0 20px 70px rgba(0,0,0,.22); backdrop-filter:blur(4px); }
+.fauna-overview h2 { margin:0 0 1.5rem; font-size:clamp(2.3rem,5vw,4.8rem); font-weight:300; line-height:1; text-transform:uppercase; }
+.overview-copy { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(1.5rem,4vw,4rem); color:#dedad4; }
+.overview-copy p { margin:0; }
+.fauna-list { display:grid; gap:1.65rem; padding:clamp(3rem,7vw,6rem) 0 clamp(5rem,9vw,8rem); }
+.fauna-divider { scroll-margin-top:96px; padding:2.3rem clamp(1.5rem,4vw,3rem); border-left:3px solid var(--red); background:linear-gradient(90deg,rgba(182,42,42,.14),transparent 70%); }
+.fauna-divider span { font-family:var(--heading-font); font-size:clamp(2.5rem,7vw,5.8rem); font-weight:250; letter-spacing:.02em; line-height:.9; text-transform:uppercase; }
+.fauna-divider p { max-width:720px; margin:.8rem 0 0; color:var(--muted); }
+.fauna-card { position:relative; display:grid; scroll-margin-top:96px; overflow:hidden; border:1px solid var(--line); background:rgba(8,8,9,.88); box-shadow:0 24px 70px rgba(0,0,0,.20); backdrop-filter:blur(4px); }
+.fauna-card--illustrated { grid-template-columns:minmax(260px,.36fr) minmax(0,.64fr); min-height:420px; }
+.fauna-card--text-only { grid-template-columns:1fr; }
+.fauna-card:target { border-color:rgba(239,76,67,.72); box-shadow:0 0 0 1px rgba(239,76,67,.18),0 24px 70px rgba(0,0,0,.30); }
+.fauna-art { position:relative; display:grid; min-height:100%; margin:0; padding:clamp(1.4rem,3vw,2.6rem); place-items:center; overflow:hidden; border-right:1px solid var(--line); background:radial-gradient(circle at 52% 42%,rgba(255,255,255,.065),transparent 58%),linear-gradient(150deg,rgba(182,42,42,.14),transparent 48%); }
+.fauna-art::after { position:absolute; right:0; bottom:0; left:0; height:3px; content:""; background:var(--red); }
+.fauna-art img { width:100%; max-width:390px; max-height:520px; object-fit:contain; filter:drop-shadow(0 18px 28px rgba(0,0,0,.5)); }
+.fauna-copy { padding:clamp(1.7rem,4vw,3.35rem); }
+.fauna-source { margin:0 0 .4rem; }
+.fauna-copy h2 { margin:0 0 1.4rem; font-size:clamp(2.25rem,5vw,4.5rem); font-weight:300; line-height:.96; letter-spacing:.01em; text-transform:uppercase; }
+.fauna-description { color:#dedad4; line-height:1.75; }
+.fauna-description > p { margin:0 0 1.05rem; }
+.fauna-description > p:last-child { margin-bottom:0; }
+.mechanic-box { margin-top:1.55rem; padding:1.25rem 1.35rem; border:1px solid var(--line); border-top:2px solid var(--red); background:rgba(255,255,255,.026); }
+.mechanic-box h3 { margin:0 0 .9rem; color:#f5f2ec; font-family:var(--heading-font); font-size:1rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.mechanic-box p { margin:.7rem 0 0; }
+.mechanic-box p:first-of-type { margin-top:0; }
+.mechanic-box dl { display:grid; gap:0; margin:0; }
+.mechanic-box dl > div { display:grid; grid-template-columns:minmax(110px,.22fr) minmax(0,1fr); gap:1rem; padding:.72rem 0; border-top:1px solid rgba(255,255,255,.08); }
+.mechanic-box dl > div:first-child { border-top:0; padding-top:0; }
+.mechanic-box dt { color:var(--red-bright); font-family:var(--heading-font); font-size:.68rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.mechanic-box dd { margin:0; color:#f0ece6; }
+.drug-box ol { margin:.8rem 0 0; padding-left:1.4rem; }
+.drug-box li + li { margin-top:.65rem; }
+.fauna-footer { flex-wrap:wrap; background:rgba(7,7,8,.96); border-top:1px solid var(--line); }
+.fauna-footer p { margin:0; }
+.fauna-sources { color:var(--muted); font-size:.75rem; }
+@media(min-width:761px) { .fauna-page.sidebar-open .fauna-backdrop { left:270px; } }
+@media(max-width:900px) { .overview-copy { grid-template-columns:1fr; } .fauna-card--illustrated { grid-template-columns:210px minmax(0,1fr); } .fauna-art { padding:1.2rem; } .mechanic-box dl > div { grid-template-columns:1fr; gap:.2rem; } }
+@media(max-width:760px) { .fauna-backdrop { inset:0; background-position:58% 24%; } .fauna-hero { min-height:580px; } .fauna-hero h1 { font-size:clamp(4.2rem,22vw,7rem); } .fauna-hero-inner,.fauna-overview,.fauna-list { width:min(92vw,680px); } .fauna-overview { padding:1.5rem; } .fauna-card--illustrated { grid-template-columns:1fr; } .fauna-art { min-height:230px; max-height:390px; border-right:0; border-bottom:1px solid var(--line); } .fauna-art img { max-width:280px; max-height:330px; } .fauna-copy { padding:1.45rem; } .fauna-copy h2 { font-size:clamp(2rem,11vw,3.35rem); } .fauna-footer { justify-content:center; text-align:center; } }
+@media(prefers-reduced-motion:no-preference) { .fauna-card { animation:fauna-enter 360ms ease-out both; } .fauna-card:nth-of-type(3n+2) { animation-delay:35ms; } .fauna-card:nth-of-type(3n) { animation-delay:70ms; } }
+@keyframes fauna-enter { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
