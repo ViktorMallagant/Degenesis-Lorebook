@@ -49,3 +49,25 @@
 @media(max-width:760px) { .fauna-backdrop { inset:0; background-position:58% 24%; } .fauna-hero { min-height:580px; } .fauna-hero h1 { font-size:clamp(4.2rem,22vw,7rem); } .fauna-hero-inner,.fauna-overview,.fauna-list { width:min(92vw,680px); } .fauna-overview { padding:1.5rem; } .fauna-card--illustrated { grid-template-columns:1fr; } .fauna-art { min-height:230px; max-height:390px; border-right:0; border-bottom:1px solid var(--line); } .fauna-art img { max-width:280px; max-height:330px; } .fauna-copy { padding:1.45rem; } .fauna-copy h2 { font-size:clamp(2rem,11vw,3.35rem); } .fauna-footer { justify-content:center; text-align:center; } }
 @media(prefers-reduced-motion:no-preference) { .fauna-card { animation:fauna-enter 360ms ease-out both; } .fauna-card:nth-of-type(3n+2) { animation-delay:35ms; } .fauna-card:nth-of-type(3n) { animation-delay:70ms; } }
 @keyframes fauna-enter { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+/* Explicit desktop sidebar slide */
+@media (min-width: 761px) {
+  .fauna-page main,
+  .fauna-page footer {
+    margin-left: 0 !important;
+    transition: margin-left 180ms ease, width 180ms ease;
+  }
+  .fauna-page.sidebar-open main,
+  .fauna-page.sidebar-open footer {
+    width: calc(100% - 270px);
+    margin-left: 270px !important;
+  }
+  .fauna-page.sidebar-open .fauna-backdrop { left: 270px; }
+}
+@media (max-width: 760px) {
+  .fauna-page main,
+  .fauna-page footer {
+    width: auto;
+    margin-left: 0 !important;
+  }
+}
