@@ -1,7 +1,7 @@
 /* Fauna — variable-format creature dossiers */
 .fauna-page { min-height:100vh; background:#09090a; }
 .fauna-page main,.fauna-page footer { position:relative; z-index:2; }
-.fauna-backdrop { position:fixed; inset:70px 0 0; z-index:0; pointer-events:none; background:linear-gradient(90deg,rgba(6,6,7,.52),rgba(6,6,7,.24) 47%,rgba(6,6,7,.10)),linear-gradient(0deg,rgba(6,6,7,.58),rgba(6,6,7,.08) 68%),url("assets/fauna/fauna.webp") 52% 34% / cover no-repeat; }
+.fauna-backdrop { position:fixed; transition:left 180ms ease; inset:70px 0 0; z-index:0; pointer-events:none; background:linear-gradient(90deg,rgba(6,6,7,.52),rgba(6,6,7,.24) 47%,rgba(6,6,7,.10)),linear-gradient(0deg,rgba(6,6,7,.58),rgba(6,6,7,.08) 68%),url("assets/fauna/fauna.webp") 52% 34% / cover no-repeat; }
 .fauna-hero { min-height:min(760px,82vh); display:flex; align-items:flex-end; border-bottom:1px solid var(--line); }
 .fauna-hero-inner,.fauna-overview,.fauna-list { width:min(1180px,92vw); margin-inline:auto; }
 .fauna-hero-inner { padding:clamp(7rem,14vw,12rem) 0 clamp(4rem,8vw,7rem); text-shadow:0 3px 22px rgba(0,0,0,.9); }

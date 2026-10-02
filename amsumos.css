@@ -9,6 +9,7 @@ body.amsumos-page {
 
 .amsumos-backdrop {
   position: fixed;
+  transition: left 180ms ease;
   inset: 70px 0 0;
   z-index: -2;
   background-image:
@@ -441,4 +442,29 @@ body.amsumos-page {
 
 @media (min-width: 761px) {
   .amsumos-page.sidebar-open .amsumos-backdrop { left: 270px; }
+}
+
+/* Footer alignment override */
+.amsumos-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: .55rem;
+  text-align: center;
+}
+.amsumos-footer > img {
+  margin: 0 auto .35rem;
+}
+.amsumos-footer > p:not(.community-disclaimer) {
+  width: 100%;
+  margin: 0 !important;
+  color: #fff !important;
+  text-align: center !important;
+}
+.amsumos-footer .footer-source {
+  color: #fff !important;
+}
+.amsumos-footer .community-disclaimer {
+  margin-top: 1rem !important;
 }
