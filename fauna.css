@@ -71,3 +71,40 @@
     margin-left: 0 !important;
   }
 }
+
+/* Strong sidebar slide override: mirrors the Lorebook motion with an explicit transform. */
+.fauna-page {
+  overflow-x: hidden;
+}
+@media (min-width: 761px) {
+  .fauna-page main,
+  .fauna-page footer {
+    width: 100%;
+    margin-left: 0 !important;
+    transform: translateX(0);
+    transition: transform 180ms ease, width 180ms ease !important;
+    will-change: transform;
+  }
+  .fauna-page.sidebar-open main,
+  .fauna-page.sidebar-open footer {
+    width: calc(100% - 270px);
+    margin-left: 0 !important;
+    transform: translateX(270px);
+  }
+  .fauna-page .fauna-backdrop {
+    left: 0;
+    right: 0;
+    transition: left 180ms ease !important;
+  }
+  .fauna-page.sidebar-open .fauna-backdrop {
+    left: 270px;
+  }
+}
+@media (max-width: 760px) {
+  .fauna-page main,
+  .fauna-page footer {
+    width: auto;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+}

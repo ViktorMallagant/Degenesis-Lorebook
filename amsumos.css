@@ -534,3 +534,40 @@ body.amsumos-page {
     white-space: normal;
   }
 }
+
+/* Strong sidebar slide override: mirrors the Lorebook motion with an explicit transform. */
+.amsumos-page {
+  overflow-x: hidden;
+}
+@media (min-width: 761px) {
+  .amsumos-page main,
+  .amsumos-page footer {
+    width: 100%;
+    margin-left: 0 !important;
+    transform: translateX(0);
+    transition: transform 180ms ease, width 180ms ease !important;
+    will-change: transform;
+  }
+  .amsumos-page.sidebar-open main,
+  .amsumos-page.sidebar-open footer {
+    width: calc(100% - 270px);
+    margin-left: 0 !important;
+    transform: translateX(270px);
+  }
+  .amsumos-page .amsumos-backdrop {
+    left: 0;
+    right: 0;
+    transition: left 180ms ease !important;
+  }
+  .amsumos-page.sidebar-open .amsumos-backdrop {
+    left: 270px;
+  }
+}
+@media (max-width: 760px) {
+  .amsumos-page main,
+  .amsumos-page footer {
+    width: auto;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+}
