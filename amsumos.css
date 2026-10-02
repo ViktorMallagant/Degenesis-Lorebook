@@ -1,0 +1,429 @@
+
+body.amsumos-page {
+  --ams-copper: #c36f52;
+  --ams-copper-bright: #ef9b72;
+  --ams-panel: rgba(9, 9, 10, 0.86);
+  --ams-panel-soft: rgba(12, 12, 13, 0.76);
+  background: #070707;
+}
+
+.amsumos-backdrop {
+  position: fixed;
+  inset: 70px 0 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(90deg, rgba(5,5,6,.28), rgba(5,5,6,.08) 48%, rgba(5,5,6,.34)),
+    linear-gradient(180deg, rgba(5,5,6,.12), rgba(5,5,6,.62)),
+    url("assets/amsumos/background.webp");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  filter: saturate(.76) contrast(1.04) brightness(.78);
+}
+
+.amsumos-page .site-header {
+  background: rgba(8,8,9,.94);
+}
+
+.amsumos-page .section-nav a:hover,
+.amsumos-page .section-nav a:focus-visible,
+.amsumos-page .eyebrow,
+.amsumos-page .section-kicker,
+.variant-label,
+.order-number {
+  color: var(--ams-copper-bright);
+}
+
+.amsumos-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr);
+  min-height: min(860px, calc(100vh - 70px));
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  background: linear-gradient(90deg, rgba(4,4,5,.96) 0%, rgba(4,4,5,.86) 42%, rgba(4,4,5,.28) 68%, rgba(4,4,5,.1) 100%);
+}
+
+.hero-copy-panel {
+  position: relative;
+  z-index: 3;
+  align-self: center;
+  padding: clamp(4rem, 8vw, 8rem) 1.5rem clamp(5rem, 8vw, 8rem) max(4vw, calc((100vw - 1500px)/2));
+}
+
+.hero-title-line {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.amsumos-logo {
+  width: clamp(92px, 9vw, 150px);
+  height: clamp(92px, 9vw, 150px);
+  object-fit: contain;
+  filter: drop-shadow(0 0 26px rgba(255,255,255,.14));
+}
+
+.amsumos-hero h1 {
+  margin: 0;
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-weight: 300;
+  letter-spacing: .055em;
+}
+
+.hero-lede {
+  max-width: 820px;
+  margin: 1rem 0 0;
+  color: #d6d0c9;
+  font-size: clamp(1rem, 1.7vw, 1.55rem);
+  letter-spacing: .12em;
+}
+
+.hero-source {
+  margin-top: 1.6rem;
+  color: #8f8983;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.hero-machine {
+  position: relative;
+  z-index: 1;
+  min-height: 700px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero-machine::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(4,4,5,.84), transparent 28%),
+    linear-gradient(0deg, rgba(4,4,5,.88), transparent 24%);
+  pointer-events: none;
+}
+
+.hero-machine img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 55% 15%;
+  filter: saturate(.88) contrast(1.04);
+}
+
+.amsumos-section {
+  width: min(1480px, 92vw);
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.renegade-copy h2 {
+  margin: .2rem 0 0;
+  font-size: clamp(2.8rem, 5vw, 5.8rem);
+  font-weight: 300;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+.section-kicker,
+.variant-label {
+  margin: 0;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, .65fr);
+  gap: clamp(2rem, 5vw, 6rem);
+}
+
+.copy-column {
+  columns: 2;
+  column-gap: clamp(2rem, 4vw, 4.5rem);
+  color: #d0cbc4;
+}
+
+.copy-column p {
+  margin-top: 0;
+  break-inside: avoid;
+}
+
+.lore-callout,
+.artifact-callout,
+.variant-card,
+.order-card {
+  border: 1px solid rgba(255,255,255,.17);
+  background: var(--ams-panel);
+  backdrop-filter: blur(4px);
+}
+
+.lore-callout {
+  padding: 1.5rem;
+  border-top: 3px solid var(--ams-copper);
+}
+
+.lore-callout h3,
+.artifact-callout h3,
+.variant-card h3,
+.order-card h3 {
+  margin: 0 0 .8rem;
+}
+
+.lore-callout p,
+.artifact-callout p,
+.variant-copy p,
+.order-copy p,
+.renegade-copy > p {
+  color: #cbc6bf;
+}
+
+.lore-callout--danger {
+  margin-top: 2rem;
+  border-top-color: #b23a30;
+}
+
+.artifact-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem 1.8rem;
+}
+
+.artifact-code {
+  flex: 0 0 auto;
+  color: rgba(255,255,255,.45);
+  font-family: monospace;
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  letter-spacing: .12em;
+}
+
+.renegade-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .55fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  align-items: center;
+}
+
+.renegade-mark {
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,.13);
+  background: rgba(0,0,0,.46);
+}
+
+.renegade-mark img {
+  display: block;
+  width: 100%;
+  max-height: 640px;
+  object-fit: contain;
+  filter: contrast(1.04);
+}
+
+.action-break {
+  position: relative;
+  width: min(1600px, 96vw);
+  min-height: 440px;
+  margin: clamp(2rem, 5vw, 5rem) auto;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.16);
+  background: #090909;
+}
+
+.action-break img {
+  width: 100%;
+  height: clamp(440px, 56vw, 760px);
+  object-fit: cover;
+  object-position: center 45%;
+  filter: saturate(.82) contrast(1.04);
+}
+
+.action-break::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(0deg, rgba(5,5,6,.92) 0%, rgba(5,5,6,0) 52%);
+}
+
+.action-break-caption {
+  position: absolute;
+  right: clamp(1.2rem, 4vw, 4rem);
+  bottom: clamp(1.2rem, 4vw, 3rem);
+  left: clamp(1.2rem, 4vw, 4rem);
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.action-break-caption span {
+  color: var(--ams-copper-bright);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.action-break-caption strong {
+  max-width: 760px;
+  font-size: clamp(1.4rem, 3vw, 2.8rem);
+  font-weight: 300;
+  text-align: right;
+}
+
+.variant-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(380px, .85fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-top: 1.5rem;
+  padding: clamp(1.4rem, 3vw, 2.7rem);
+  scroll-margin-top: 92px;
+}
+
+.variant-card h3 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.profile-block {
+  align-self: stretch;
+  margin: 0;
+  padding: 1.25rem 1.4rem;
+  overflow-x: auto;
+  border-left: 3px solid var(--ams-copper);
+  color: #f1eee9;
+  background: rgba(0,0,0,.58);
+  font-family: "Courier New", monospace;
+  font-size: .9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: 1.45fr .75fr;
+  gap: 1.5rem;
+}
+
+.order-card {
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 2.7rem);
+  overflow: hidden;
+}
+
+.order-number {
+  position: absolute;
+  top: -.45rem;
+  right: .6rem;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  opacity: .08;
+}
+
+.order-card h3 {
+  position: relative;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 400;
+}
+
+.order-copy p {
+  position: relative;
+  white-space: pre-line;
+}
+
+.amsumos-footer {
+  width: min(1280px, 90vw);
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+  color: #8e8983;
+  text-align: center;
+}
+
+.amsumos-footer img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  opacity: .55;
+}
+
+.amsumos-footer > p {
+  margin: .5rem 0;
+}
+
+.footer-source {
+  font-size: .75rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.community-disclaimer {
+  max-width: 900px;
+  margin: 1.3rem auto 0 !important;
+  font-size: .72rem;
+}
+
+@media (max-width: 980px) {
+  .amsumos-hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-copy-panel {
+    min-height: 480px;
+    background: linear-gradient(180deg, rgba(4,4,5,.84), rgba(4,4,5,.48));
+  }
+  .hero-machine {
+    min-height: 620px;
+  }
+  .overview-grid,
+  .renegade-layout,
+  .variant-card,
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+  .copy-column {
+    columns: 1;
+  }
+  .artifact-callout,
+  .action-break-caption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .action-break-caption strong {
+    text-align: left;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-title-line {
+    align-items: flex-start;
+  }
+  .amsumos-logo {
+    width: 72px;
+    height: 72px;
+  }
+  .amsumos-hero h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+  .hero-machine {
+    min-height: 500px;
+  }
+  .artifact-code {
+    display: none;
+  }
+  .profile-block {
+    font-size: .78rem;
+  }
+}
