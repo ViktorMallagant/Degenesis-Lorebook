@@ -27,3 +27,6 @@
   body.clan-page:not(.sidebar-open) .clan-hero-copy{padding-left:max(4vw,calc((100vw - 1380px)/2))}
   body.clan-page.sidebar-open .clan-hero-copy{padding-left:max(4vw,calc((100vw - 270px - 1380px)/2))}
 }
+
+.clan-playability-note{margin:0 0 1.5rem;padding:.85rem 1rem;border-left:3px solid var(--red-bright);background:var(--clan-panel);color:var(--text);font-size:.9rem;line-height:1.6}
+@media(min-width:761px){body.pandorians-page.sidebar-open .clan-section,body.usudi-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}}
