@@ -1,170 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="AMSUMOS — the Machine Men of Degenesis, with variants, profiles, renegades, and standing orders from KatharSys.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="AMSUMOS — the Machine Men of Degenesis, with variants, profiles, renegades, and standing orders.">
   <title>AMSUMOS | Degenesis: Alpha &amp; Omega - Lorebook</title>
   <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
-  <link rel="stylesheet" href="styles.css?v=20261002-1">
-  <link rel="stylesheet" href="amsumos.css?v=20261002-5">
+  <link rel="stylesheet" href="styles.css?v=20261002-2">
+  <link rel="stylesheet" href="cultures.css?v=20261001-3">
+  <link rel="stylesheet" href="amsumos-20261002.css?v=2">
 </head>
-<body class="amsumos-page">
-  <script>document.body.classList.toggle('sidebar-open', window.matchMedia('(min-width: 761px)').matches);</script>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<body class="culture-page amsumos-page">
+<script>document.body.classList.toggle('sidebar-open',!document.body.classList.contains('landing-page')&&window.matchMedia('(min-width:761px)').matches);</script>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="false" aria-controls="lorebook-sidebar"><img class="brand-icon" src="assets/favicon.png" alt=""><span>DEGENESIS: ALPHA &amp; OMEGA - LOREBOOK</span></button>
+  <nav class="section-nav" aria-label="AMSUMOS sections"><a class="current-entry" href="#top"><img src="assets/amsumos/logo.webp" alt=""><span>AMSUMOS</span></a><a href="#overview">Legacy</a><a href="#renegades">Renegades</a><a href="#variants">Variants</a><a href="#orders">Orders</a></nav>
+</header>
+<aside class="lorebook-sidebar" id="lorebook-sidebar" aria-label="Lorebook navigation"><div class="sidebar-inner">
+<nav class="sidebar-home" aria-label="Lorebook home"><a href="index.html">Home</a></nav>
+<details><summary><a class="culture-heading-link" href="cultures.html">Cultures</a></summary><nav aria-label="Cultures"><a href="africa.html">Africa</a><a href="borca.html">Borca</a><a href="balkhan.html">Balkhan</a><a href="franka.html">Franka</a><a href="hybrispania.html">Hybrispania</a><a href="pollen.html">Pollen</a><a href="purgare.html">Purgare</a></nav></details>
+<details><summary><a class="cult-heading-link" href="cults.html">Cults</a></summary><nav aria-label="Cults"><a href="anabaptists.html">Anabaptists</a><a href="anubians.html">Anubians</a><a href="apocalyptics.html">Apocalyptics</a><a href="chroniclers.html">Chroniclers</a><a href="clanners.html">Clanners</a><a href="hellvetics.html">Hellvetics</a><a href="jehammedans.html">Jehammedans</a><a href="judges.html">Judges</a><a href="neolibyans.html">Neolibyans</a><a href="palers.html">Palers</a><a href="scourgers.html">Scourgers</a><a href="scrappers.html">Scrappers</a><a href="spitalians.html">Spitalians</a></nav></details>
+<details><summary><a class="concept-heading-link" href="concepts.html">Concepts</a></summary><nav aria-label="Concepts"><a href="concepts.html#concept-00">0. The Adventurer</a><a href="concepts.html#concept-01">I. The Creator</a><a href="concepts.html#concept-02">II. The Mentor</a><a href="concepts.html#concept-03">III. The Martyr</a><a href="concepts.html#concept-04">IV. The Ruler</a><a href="concepts.html#concept-05">V. The Seeker</a><a href="concepts.html#concept-06">VI. The Healer</a><a href="concepts.html#concept-07">VII. The Traditionalist</a><a href="concepts.html#concept-08">VIII. The Mediator</a><a href="concepts.html#concept-09">IX. The Hermit</a><a href="concepts.html#concept-10">X. The Heretic</a><a href="concepts.html#concept-11">XI. The Conqueror</a><a href="concepts.html#concept-12">XII. The Abomination</a><a href="concepts.html#concept-13">XIII. The Destroyer</a><a href="concepts.html#concept-14">XIV. The Chosen</a><a href="concepts.html#concept-15">XV. The Defiler</a><a href="concepts.html#concept-16">XVI. The Protector</a><a href="concepts.html#concept-17">XVII. The Visionary</a><a href="concepts.html#concept-18">XVIII. The Zealot</a><a href="concepts.html#concept-19">XIX. The Disciple</a><a href="concepts.html#concept-20">XX. The Righteous</a><a href="concepts.html#concept-21">XXI. The Traveler</a></nav></details>
+<details><summary><a class="fauna-heading-link" href="fauna.html">Fauna</a></summary><nav aria-label="Fauna"><a href="fauna.html#gendo">Gendos</a><a href="fauna.html#mammoth">Mammoths</a><a href="fauna.html#spore-beast">Spore Beasts</a><a href="fauna.html#leperos">Leperos</a><a href="fauna.html#stukov-scorpions">Stukov Scorpions</a><a href="fauna.html#dust-worms">Dust Worms</a><a href="fauna.html#desert-clams">Desert Clams</a><a href="fauna.html#husk-spiders">Husk Spiders</a><a href="fauna.html#fractal-stars">Fractal Stars</a><a href="fauna.html#rift-centipede">Rift Centipede</a><a href="fauna.html#bog-kraken">Bog Kraken</a><a href="fauna.html#flying-leech">Flying Leech</a><a href="fauna.html#acid-jellyfish">Acid Jellyfish</a><a href="fauna.html#armored-snails">Armored Snails</a><a href="fauna.html#trilobites">Trilobites</a><a href="fauna.html#membrane-creatures">Membrane Creatures</a><a href="fauna.html#dismembered">The Dismembered</a><a href="fauna.html#discordant-spore-fields">Discordant Spore Fields</a><a href="fauna.html#phase-beasts">Phase Beasts</a></nav></details>
+<details open><summary><a class="amsumos-heading-link" href="#top" aria-current="page">AMSUMOS</a></summary><nav aria-label="AMSUMOS"><a href="#overview">Overview</a><a href="#renegades">Renegades</a><a href="#enforcer">Enforcer</a><a href="#porcupine">Porcupine</a><a href="#tanker">Tanker</a><a href="#orders">Orders</a></nav></details>
+<details><summary><a class="sleepers-heading-link" href="sleepers.html">Sleepers</a></summary><nav aria-label="Sleepers"><a href="sleepers.html#overview">Overview</a><a href="sleepers.html#cascades">Cascades</a><a href="sleepers.html#soldier">Soldier</a><a href="sleepers.html#sociocybernetic">Sociocybernetic</a><a href="sleepers.html#hunter">Hunter</a><a href="sleepers.html#infiltrator">Infiltrator</a><a href="sleepers.html#tactics">Tactics</a></nav></details>
+</div></aside>
+<button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
+<div class="culture-backdrop amsumos-backdrop" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="false" aria-controls="lorebook-sidebar">
-      <img class="brand-icon" src="assets/favicon.png" alt=""><span>DEGENESIS: ALPHA &amp; OMEGA - LOREBOOK</span>
-    </button>
-    <nav class="section-nav" aria-label="AMSUMOS sections">
-      <a href="#overview">Legacy</a>
-      <a href="#renegades">Renegades</a>
-      <a href="#variants">Variants</a>
-      <a href="#orders">Orders</a>
-    </nav>
-  </header>
+<main id="main-content">
+<section class="special-hero" id="top"><div class="special-hero-copy"><p class="eyebrow">THE MACHINE MEN</p><div class="special-title-row"><h1>AMSUMOS</h1><img src="assets/amsumos/logo.webp" alt="AMSUMOS emblem"></div><p class="hero-lede">Autonomous Mobile Systems for Unmanned Military Operations</p><p class="special-source">KatharSys pp. 264–269</p></div><figure class="special-hero-art"><img src="assets/amsumos/main.webp" alt="AMSUMO Machine Man"></figure></section>
 
-  <aside class="lorebook-sidebar" id="lorebook-sidebar" aria-label="Lorebook navigation">
-    <div class="sidebar-inner">
-      <nav class="sidebar-home" aria-label="Lorebook home"><a href="index.html">Home</a></nav>
-      <details>
-        <summary><a class="culture-heading-link" href="cultures.html">Cultures</a></summary>
-        <nav aria-label="Cultures"><a href="africa.html">Africa</a><a href="borca.html">Borca</a><a href="balkhan.html">Balkhan</a><a href="franka.html">Franka</a><a href="hybrispania.html">Hybrispania</a><a href="pollen.html">Pollen</a><a href="purgare.html">Purgare</a></nav>
-      </details>
-      <details>
-        <summary><a class="cult-heading-link" href="cults.html">Cults</a></summary>
-        <nav aria-label="Cults"><a href="anabaptists.html">Anabaptists</a><a href="anubians.html">Anubians</a><a href="apocalyptics.html">Apocalyptics</a><a href="chroniclers.html">Chroniclers</a><a href="clanners.html">Clanners</a><a href="hellvetics.html">Hellvetics</a><a href="jehammedans.html">Jehammedans</a><a href="judges.html">Judges</a><a href="neolibyans.html">Neolibyans</a><a href="palers.html">Palers</a><a href="scourgers.html">Scourgers</a><a href="scrappers.html">Scrappers</a><a href="spitalians.html">Spitalians</a></nav>
-      </details>
-      <details>
-        <summary><a class="concept-heading-link" href="concepts.html">Concepts</a></summary>
-        <nav aria-label="Concepts">
-          <a href="concepts.html#concept-00">0. The Adventurer</a><a href="concepts.html#concept-01">I. The Creator</a><a href="concepts.html#concept-02">II. The Mentor</a><a href="concepts.html#concept-03">III. The Martyr</a><a href="concepts.html#concept-04">IV. The Ruler</a><a href="concepts.html#concept-05">V. The Seeker</a><a href="concepts.html#concept-06">VI. The Healer</a><a href="concepts.html#concept-07">VII. The Traditionalist</a><a href="concepts.html#concept-08">VIII. The Mediator</a><a href="concepts.html#concept-09">IX. The Hermit</a><a href="concepts.html#concept-10">X. The Heretic</a><a href="concepts.html#concept-11">XI. The Conqueror</a><a href="concepts.html#concept-12">XII. The Abomination</a><a href="concepts.html#concept-13">XIII. The Destroyer</a><a href="concepts.html#concept-14">XIV. The Chosen</a><a href="concepts.html#concept-15">XV. The Defiler</a><a href="concepts.html#concept-16">XVI. The Protector</a><a href="concepts.html#concept-17">XVII. The Visionary</a><a href="concepts.html#concept-18">XVIII. The Zealot</a><a href="concepts.html#concept-19">XIX. The Disciple</a><a href="concepts.html#concept-20">XX. The Righteous</a><a href="concepts.html#concept-21">XXI. The Traveler</a>
-        </nav>
-      </details>
-      <details>
-        <summary><a class="fauna-heading-link" href="fauna.html">Fauna</a></summary>
-        <nav aria-label="Fauna">
-          <a href="fauna.html#gendo">Gendos</a>
-          <a href="fauna.html#mammoth">Mammoths</a>
-          <a href="fauna.html#spore-beast">Spore Beasts</a>
-          <a href="fauna.html#leperos">Leperos</a>
-          <a href="fauna.html#stukov-scorpions">Stukov Scorpions</a>
-          <a href="fauna.html#dust-worms">Dust Worms</a>
-          <a href="fauna.html#desert-clams">Desert Clams</a>
-          <a href="fauna.html#husk-spiders">Husk Spiders</a>
-          <a href="fauna.html#fractal-stars">Fractal Stars</a>
-          <a href="fauna.html#rift-centipede">Rift Centipede</a>
-          <a href="fauna.html#bog-kraken">Bog Kraken</a>
-          <a href="fauna.html#flying-leech">Flying Leech</a>
-          <a href="fauna.html#acid-jellyfish">Acid Jellyfish</a>
-          <a href="fauna.html#armored-snails">Armored Snails</a>
-          <a href="fauna.html#trilobites">Trilobites</a>
-          <a href="fauna.html#membrane-creatures">Membrane Creatures</a>
-          <a href="fauna.html#dismembered">The Dismembered</a>
-          <a href="fauna.html#discordant-spore-fields">Discordant Spore Fields</a>
-          <a href="fauna.html#phase-beasts">Phase Beasts</a>
-        </nav>
-      </details>
-      <details open>
-        <summary><a class="amsumos-heading-link" href="#top" aria-current="page">AMSUMOS</a></summary>
-        <nav aria-label="AMSUMOS">
-          <a href="#overview">Overview</a>
-          <a href="#renegades">Renegades</a>
-          <a href="#enforcer">Enforcer</a>
-          <a href="#porcupine">Porcupine</a>
-          <a href="#tanker">Tanker</a>
-          <a href="#orders">Orders</a>
-        </nav>
-      </details>
-    </div>
-  </aside>
+<section class="special-section" id="overview"><header class="special-heading"><p class="special-kicker">LEGACY</p><h2>Orders Without Masters</h2></header><div class="special-copy-grid"><div class="special-copy"><p>AMSUMOs were one of the Bygone world’s answers to a battlefield increasingly dominated by drones, autonomous systems, and electronic warfare. Unlike vulnerable unmanned vehicles, the humanoid Machine Men combined mobility, mass production, and a collective combat intelligence. They first entered police and security service, then guarded Spanish enclaves in Africa before being deployed in immense numbers as those conflicts escalated.</p><p>Their original directives emphasized containment, de-escalation, arrest, and battlefield control. The collapse of the Stream changed that. The 2<sup>16</sup> virus shattered the controlling programs, corrupting routines until orders became self-sustaining behavioral loops. After the Eshaton, AMSUMOs continued enforcing curfews, demanding identification, filling prisons beyond capacity, and purging installations because the machine logic no longer understood when a mission should end.</p><p>Centuries later, many remain frozen in place beneath jungle growth or stand watch over forgotten compounds with only a spark of power left in their skulls. Others still react to movement and environmental change. Their final orders survive even when the people, borders, and governments that issued them have vanished.</p></div><aside class="special-callout"><h3>The Ritual</h3><p>Settlements lying near known patrol routes learn to treat AMSUMO movements like a season. Routes and timing are memorized, windows shuttered, streets emptied, and even harmless changes can send the formation into a new and dangerous routine.</p></aside></div><div class="artifact-callout"><div><p class="special-kicker">AFRICAN HINTERLAND</p><h3>Subsumo Transponder</h3><p>Stories from Noret tell of a Marauder who can move among AMSUMOs without being attacked. Chroniclers suspect he possesses a lost Subsumo transponder—an artifact that causes the machines to recognize its bearer as one of their own.</p></div><span>IFF // SUBSUMO</span></div></section>
 
-  <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
-  <div class="amsumos-backdrop" aria-hidden="true"></div>
+<section class="special-section" id="renegades"><div class="special-copy-grid"><div class="special-copy"><header class="special-heading"><p class="special-kicker">RENEGADE</p><h2>When the Machine Looks Back</h2></header><p>Not every AMSUMO collapsed into the same loop. Some spent weeks observing ants, clouds, children, or other repeating patterns. From those observations grew new internal structures: curiosity, interpretation, and eventually a primitive consciousness. Such machines become renegades—individual minds emerging from a damaged military platform.</p><p>The personality that develops depends on what the machine studied. Whatever their character, renegades share a mark: they paint or scratch the 2<sup>16</sup> signature onto the forehead plate.</p><p>Freedom carries a price. An AMSUMO without a Tanker or charging station can exhaust itself in weeks. Some renegades eventually return to their old formations merely to survive, while others are rumored to wander hundreds of kilometers from any known patrol route.</p><aside class="special-callout"><h3>Independent</h3><p>Old documents hint at a reactor membrane capable of replacing the AMSUMO accumulator. It never entered mass production; damage could trigger a chain reaction, overheat the reactor, irradiate the area, and destroy the machine.</p></aside></div><figure class="symbol-art"><img src="assets/amsumos/2-16.webp" alt="2 to the power of 16 renegade mark"></figure></div></section>
 
-  <main id="main-content">
-    <section class="amsumos-hero" id="top">
-      <div class="hero-copy-panel">
-        <p class="eyebrow">THE MACHINE MEN</p>
-        <div class="hero-title-line">
-          <h1>AMSUMOS</h1>
-          <img src="assets/amsumos/logo.webp" class="amsumos-logo" alt="AMSUMOS emblem">
-        </div>
-        <p class="hero-lede">Autonomous Mobile Systems for Unmanned Military Operations</p>
-        <p class="hero-source">KatharSys pp. 264–269</p>
-      </div>
-      <figure class="hero-machine">
-        <img src="assets/amsumos/main.webp" alt="AMSUMO Machine Man">
-      </figure>
-    </section>
+<section class="image-break"><img src="assets/amsumos/extra.webp" alt="AMSUMOs engaging enemies in an icy landscape"><div><span>FORMATION ACTIVE</span><strong>Machine Men do not tire. They do not forget the route.</strong></div></section>
 
-    <section class="amsumos-section amsumos-overview" id="overview">
-      <header class="section-heading">
-        <p class="section-kicker">LEGACY</p>
-        <h2>Orders Without Masters</h2>
-      </header>
-      <div class="overview-grid">
-        <div class="copy-column">
-          <p>AMSUMOs were one of the Bygone world’s answers to a battlefield increasingly dominated by drones, autonomous systems, and electronic warfare. Unlike vulnerable unmanned vehicles, the humanoid Machine Men combined mobility, mass production, and a collective combat intelligence. They first entered police and security service, then guarded Spanish enclaves in Africa before being deployed in immense numbers as those conflicts escalated.</p>
-          <p>Their original directives emphasized containment, de-escalation, arrest, and battlefield control. The collapse of the Stream changed that. The <strong>2<sup>16</sup></strong> virus shattered the controlling programs, corrupting routines until orders became self-sustaining behavioral loops. After the Eshaton, AMSUMOs continued enforcing curfews, demanding identification, filling prisons beyond capacity, and purging installations because the machine logic no longer understood when a mission should end.</p>
-          <p>Centuries later, many remain frozen in place beneath jungle growth or stand watch over forgotten compounds with only a spark of power left in their skulls. Others still react to movement and environmental change. Their final orders survive even when the people, borders, and governments that issued them have vanished.</p>
-        </div>
-        <aside class="lore-callout">
-          <h3>The Ritual</h3>
-          <p>Settlements lying near known patrol routes learn to treat AMSUMO movements like a season or astronomical event. Routes and timing are memorized, windows shuttered, streets emptied, and even apparently harmless changes can be dangerous. A newly paved road, a moved stone, or a person appearing where none should be may cause the formation to halt, reassess, and violently rewrite its routine.</p>
-        </aside>
-      </div>
-
-      <div class="artifact-callout">
-        <div>
-          <p class="section-kicker">AFRICAN HINTERLAND</p>
-          <h3>Subsumo Transponder</h3>
-          <p>Stories from Noret tell of a Marauder who can move among AMSUMOs without being attacked. Chroniclers suspect he possesses a lost Subsumo transponder—an artifact that causes the machines to recognize its bearer as one of their own.</p>
-        </div>
-        <span class="artifact-code">IFF // SUBSUMO</span>
-      </div>
-    </section>
-
-    <section class="amsumos-section renegade-section" id="renegades">
-      <div class="renegade-layout">
-        <div class="renegade-copy">
-          <p class="section-kicker">RENEGADE</p>
-          <h2>When the Machine Looks Back</h2>
-          <p>Not every AMSUMO collapsed into the same loop. Some spent weeks observing ants, clouds, children, or other repeating patterns. From those observations grew new internal structures: curiosity, interpretation, and eventually a primitive consciousness. Such machines become renegades—individual minds emerging from a damaged military platform.</p>
-          <p>The personality that develops depends on what the machine studied. A renegade fascinated by children may be unpredictable but peaceful; one that learned from vermin or predation may become merciless. Whatever their character, renegades share a mark: they paint or scratch the <strong>2<sup>16</sup></strong> signature onto the forehead plate.</p>
-          <p>Freedom carries a price. An AMSUMO without a Tanker or charging station can exhaust itself in weeks. Some renegades eventually return to their old formations merely to survive, while others are rumored to wander hundreds of kilometers from any known patrol route under rags and cloaks.</p>
-          <aside class="lore-callout lore-callout--danger">
-            <h3>Independent</h3>
-            <p>Old documents hint at a reactor membrane capable of replacing the AMSUMO accumulator. It never entered mass production: damage could trigger a chain reaction, drive the reactor beyond 1000° C, irradiate the area, and destroy the machine. A truly independent renegade would therefore be both extraordinary and potentially catastrophic.</p>
-          </aside>
-        </div>
-        <figure class="renegade-mark">
-          <img src="assets/amsumos/2-16.webp" alt="2 to the power of 16 renegade mark">
-        </figure>
-      </div>
-    </section>
-
-    <section class="action-break" aria-label="AMSUMOs in combat">
-      <img src="assets/amsumos/extra.webp" alt="AMSUMOs engaging enemies in an icy landscape">
-      <div class="action-break-caption"><span>FORMATION ACTIVE</span><strong>Machine Men do not tire. They do not forget the route.</strong></div>
-    </section>
-
-    <section class="amsumos-section variants-section" id="variants">
-      <header class="section-heading">
-        <p class="section-kicker">VARIANTS</p>
-        <h2>One Frame, Three Roles</h2>
-      </header>
-
-      <article class="variant-card" id="enforcer">
-        <div class="variant-copy">
-          <p class="variant-label">VARIANT: ENFORCER</p>
-          <h3>Enforcer</h3>
-          <p>The Enforcer is the most common AMSUMO frame and the pack’s primary hunter. Its software contains a broad library of movement and reactive combat patterns, allowing it to improvise with crude weapons and dominate close combat. More dangerous still is its retreat-pattern recognition: it predicts likely escape routes and hideouts, often arriving ahead of prey that believed it had escaped.</p>
-          <p>Typical formations contain two to four machines. Enforcers lead the hunt and protect the rarer Porcupines and Tankers.</p>
-        </div>
-        <pre class="profile-block">PROFILE: ENFORCER
+<section class="special-section" id="variants"><header class="special-heading"><p class="special-kicker">VARIANTS</p><h2>One Frame, Three Roles</h2></header>
+<article class="variant-card" id="enforcer"><div><p class="special-kicker">VARIANT: ENFORCER</p><h3>Enforcer</h3><p>The Enforcer is the most common AMSUMO frame and the pack’s primary hunter. Its software contains a broad library of movement and reactive combat patterns, allowing it to improvise with crude weapons and dominate close combat. More dangerous still is its retreat-pattern recognition: it predicts likely escape routes and hideouts, often arriving ahead of prey that believed it had escaped.</p><p>Typical formations contain two to four machines. Enforcers lead the hunt and protect the rarer Porcupines and Tankers.</p></div><pre>PROFILE: ENFORCER
 INITIATIVE: 14D / 0 Ego Points
 SPECIALTY: INS+Perception 7D
 ATTACK: Stone club, 7D, Distance 1 m, Damage 10, Blunt
@@ -174,17 +49,8 @@ Ranged Combat active (-)
 Cannot be influenced mentally or socially
 MOVEMENT: 9D
 ARMOR: AMSUMO casing, Armor 8, Massive (10)
-CONDITION: 40 (Structure: 8)</pre>
-      </article>
-
-      <article class="variant-card" id="porcupine">
-        <div class="variant-copy">
-          <p class="variant-label">VARIANT: PORCUPINE</p>
-          <h3>Porcupine</h3>
-          <p>Porcupines sacrifice portions of their ceramic armor for a powerful sensor array. Up to 120 thick light-field antennae can rise from the core support structure across the shoulders and back, turning the machine into the formation’s geolocation, navigation, and tactical-network hub.</p>
-          <p>Linked Enforcers power down their own sensors and fight through the Porcupine’s shared picture of the battlefield. Every unit linked to it gains <strong>+2D to melee and ranged combat rolls</strong>. If the Porcupine is incapacitated or its transmission is jammed, the formation suffers <strong>-4D to all Action Rolls for the next Combat Round</strong> while the remaining machines reactivate their own simulations and reorient themselves.</p>
-        </div>
-        <pre class="profile-block">PROFILE: PORCUPINE
+CONDITION: 40 (Structure: 8)</pre></article>
+<article class="variant-card" id="porcupine"><div><p class="special-kicker">VARIANT: PORCUPINE</p><h3>Porcupine</h3><p>Porcupines sacrifice portions of their ceramic armor for a powerful sensor array. Up to 120 thick light-field antennae can rise from the core support structure across the shoulders and back, turning the machine into the formation’s geolocation, navigation, and tactical-network hub.</p><p>Linked Enforcers power down their own sensors and fight through the Porcupine’s shared picture of the battlefield. Every unit linked to it gains <strong>+2D to melee and ranged combat rolls</strong>. If the Porcupine is incapacitated or its transmission is jammed, the formation suffers <strong>-4D to all Action Rolls for the next Combat Round</strong> while the remaining machines reactivate their own simulations and reorient themselves.</p></div><pre>PROFILE: PORCUPINE
 INITIATIVE: 7D / 0 Ego Points
 SPECIALTY: INS+Perception 12D
 ATTACK: Fists, 8D, Distance 1 m, Damage 7, Blunt
@@ -195,17 +61,8 @@ Ranged Combat active (-)
 Cannot be influenced mentally or socially
 MOVEMENT: 7D
 ARMOR: AMSUMO core support structure, Armor 4
-CONDITION: 20 (Structure: 8)</pre>
-      </article>
-
-      <article class="variant-card" id="tanker">
-        <div class="variant-copy">
-          <p class="variant-label">VARIANT: TANKER</p>
-          <h3>Tanker</h3>
-          <p>AMSUMO power systems use bioreactors: nutrient-rich water supports algal cultures which, under sunlight, produce excess energy that is used to electrolyse hydrogen and feed a fuel cell. Age has reduced the output of most surviving machines to a fraction of their original performance.</p>
-          <p>The Tanker carries a more powerful version of this system and keeps the rest of the formation alive. Without Tankers, many Machine Men would have failed centuries ago.</p>
-        </div>
-        <pre class="profile-block">PROFILE: TANKER
+CONDITION: 20 (Structure: 8)</pre></article>
+<article class="variant-card" id="tanker"><div><p class="special-kicker">VARIANT: TANKER</p><h3>Tanker</h3><p>AMSUMO power systems use bioreactors: nutrient-rich water supports algal cultures which, under sunlight, produce excess energy that is used to electrolyse hydrogen and feed a fuel cell. Age has reduced the output of most surviving machines to a fraction of their original performance.</p><p>The Tanker carries a more powerful version of this system and keeps the rest of the formation alive. Without Tankers, many Machine Men would have failed centuries ago.</p></div><pre>PROFILE: TANKER
 INITIATIVE: 4D / 0 Ego Points
 ATTACK: Fists, 8D, Distance 1m, Damage 7, Blunt
 DEFENSE: Passive 1 (Optimized movement patterns, but
@@ -215,20 +72,10 @@ Ranged Combat active (-)
 Cannot be influenced mentally or socially
 MOVEMENT: 5D
 ARMOR: AMSUMO partial casing, Armor 6, Massive (8)
-CONDITION: 20 (Structure: 8)</pre>
-      </article>
-    </section>
+CONDITION: 20 (Structure: 8)</pre></article></section>
 
-    <section class="amsumos-section orders-section" id="orders">
-      <header class="section-heading">
-        <p class="section-kicker">STANDING ORDERS</p>
-        <h2>Patrol &amp; Salvage</h2>
-      </header>
-      <div class="orders-grid">
-        <article class="order-card">
-          <span class="order-number">01</span>
-          <h3>ORDER: PATROL</h3>
-          <div class="order-copy"><p>The hunting groups follow ancient, reinterpreted orders,
+<section class="special-section" id="orders"><header class="special-heading"><p class="special-kicker">STANDING ORDERS</p><h2>Patrol &amp; Salvage</h2></header><div class="orders-grid">
+<article class="order-card"><span class="order-number">01</span><h3>ORDER: PATROL</h3><p>The hunting groups follow ancient, reinterpreted orders,
 and stored routes. If people still live nearby, these paths
 are well known. Not even a stone may be moved along
 the path, every change arouses suspicions in the pack and
@@ -245,31 +92,14 @@ attack the interloper. Even the slightest resistance is met
 with deadly force. Those who let themselves be dragged
 along, however, will starve in the AMSUMO’s iron grip on
 its endless journey, or end up in a bone pit close to the
-squad’s recharging point.</p></div>
-        </article>
-        <article class="order-card">
-          <span class="order-number">02</span>
-          <h3>ORDER: SALVAGE</h3>
-          <div class="order-copy"><p>The AMSUMOs’ energy stores are feeble and ailing;
+squad’s recharging point.</p></article>
+<article class="order-card"><span class="order-number">02</span><h3>ORDER: SALVAGE</h3><p>The AMSUMOs’ energy stores are feeble and ailing;
 Machine Men keep becoming inoperative. Porcupines
 target their transponders and send a Tanker to reactivate
 them. Scrappers have used this signal in the past to trap
 AMSUMOs. But often Enforcers escort the Tankers—and
-the Scrappers retreat.</p></div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="amsumos-footer">
-    <div class="amsumos-footer-line">
-      <img src="assets/favicon.png" alt="Solar Cross">
-      <p><span>Degenesis: Alpha &amp; Omega — AMSUMOS</span><span class="footer-separator">·</span><span class="footer-source">KatharSys pp. 264–269</span></p>
-    </div>
-    <p class="community-disclaimer">This page is a community creation for the tabletop role playing game <a href="https://degenesis.com/">Degenesis®</a>. Degenesis® is a trademark of <a href="https://sixmorevodka.com/">SIXMOREVODKA® Studio GmbH</a>. All rights reserved. This page is not affiliated with SIXMOREVODKA Studio GmbH.</p>
-  </footer>
-
-  <script src="section-navigation.js?v=20261002-2"></script>
-  <script src="lorebook-navigation.js?v=20261002-2"></script>
-</body>
-</html>
+the Scrappers retreat.</p></article></div></section>
+</main>
+<footer class="special-footer"><div class="special-footer-line"><img src="assets/favicon.png" alt="Solar Cross"><p>Degenesis: Alpha &amp; Omega — AMSUMOS <span>·</span> KatharSys pp. 264–269</p></div><p class="community-disclaimer">This page is a community creation for the tabletop role playing game <a href="https://degenesis.com/">Degenesis®</a>. Degenesis® is a trademark of <a href="https://sixmorevodka.com/">SIXMOREVODKA® Studio GmbH</a>. All rights reserved. This page is not affiliated with SIXMOREVODKA Studio GmbH.</p></footer>
+<script src="cultures.js?v=20260930-1"></script><script src="lorebook-navigation.js?v=20261002-3"></script>
+</body></html>

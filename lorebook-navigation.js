@@ -32,7 +32,7 @@
   window.addEventListener('pagehide', saveTrees);
 
   // Each main heading opens its overview without losing either tree's state.
-  document.querySelectorAll('.lorebook-sidebar .culture-heading-link, .lorebook-sidebar .cult-heading-link, .lorebook-sidebar .concept-heading-link, .lorebook-sidebar .fauna-heading-link, .lorebook-sidebar .amsumos-heading-link').forEach((heading) => {
+  document.querySelectorAll('.lorebook-sidebar .culture-heading-link, .lorebook-sidebar .cult-heading-link, .lorebook-sidebar .concept-heading-link, .lorebook-sidebar .fauna-heading-link, .lorebook-sidebar .amsumos-heading-link, .lorebook-sidebar .sleepers-heading-link').forEach((heading) => {
     const summary = heading.closest('summary');
     const tree = summary?.parentElement;
     if (!summary || !(tree instanceof HTMLDetailsElement)) return;
