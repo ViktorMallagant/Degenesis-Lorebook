@@ -1159,3 +1159,13 @@ body:not(.landing-page) :is(.hero-figure, .culture-backdrop, .lorebook-hero-art)
 .lorebook-sidebar nav > .sidebar-subtree > summary:hover{color:#fff;background:rgba(255,255,255,.025)}
 .lorebook-sidebar nav > .sidebar-subtree > nav{gap:.08rem;padding:.05rem 0 .35rem .65rem}
 .lorebook-sidebar nav > .sidebar-subtree > nav a{padding:.42rem .7rem .42rem 1.05rem;font-size:.72rem}
+
+/* Nested Clanner overview link */
+.lorebook-sidebar nav > .sidebar-subtree > summary > .clanners-heading-link{
+  display:inline;padding:0;border:0;color:inherit;background:transparent;
+  font:inherit;letter-spacing:inherit;text-transform:inherit;
+}
+.lorebook-sidebar nav > .sidebar-subtree > summary > .clanners-heading-link:hover,
+.lorebook-sidebar nav > .sidebar-subtree > summary > .clanners-heading-link[aria-current="page"]{
+  color:var(--red-bright);
+}
