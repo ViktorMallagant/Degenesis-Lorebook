@@ -21,6 +21,7 @@
 @media(max-width:760px){.clan-trucks>div{grid-template-columns:1fr;gap:.4rem}.clan-title-row h1{min-width:0;font-size:clamp(2.25rem,10vw,4rem)}}
 @media(max-width:980px){.clan-hero,.clan-copy-grid{grid-template-columns:1fr}.clan-hero-art{min-height:600px}.clan-facts{grid-template-columns:1fr}}
 @media(max-width:760px){.clan-hero-copy{padding:4rem 5vw 2rem}.clan-title-row img{width:66px;height:66px}.clan-hero-art{min-height:500px}.clan-section{width:min(92vw,680px)}}
+@media(min-width:761px){body.corredores-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}}
 /* Align clan hero copy with the centered clan sections on desktop. */
 @media(min-width:1381px){
   body.clan-page:not(.sidebar-open) .clan-hero-copy{padding-left:max(4vw,calc((100vw - 1380px)/2))}
