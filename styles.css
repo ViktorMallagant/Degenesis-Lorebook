@@ -1149,3 +1149,13 @@ body:not(.landing-page) :is(.hero-figure, .culture-backdrop, .lorebook-hero-art)
     animation: none;
   }
 }
+
+/* Nested Clanner clan navigation */
+.lorebook-sidebar nav > .sidebar-subtree{margin:.08rem 0;border:0;background:rgba(255,255,255,.018)}
+.lorebook-sidebar nav > .sidebar-subtree > summary{position:relative;padding:.55rem .7rem .55rem 1.05rem;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.06em;list-style:none}
+.lorebook-sidebar nav > .sidebar-subtree > summary::-webkit-details-marker{display:none}
+.lorebook-sidebar nav > .sidebar-subtree > summary::after{position:absolute;right:.75rem;content:"+";color:#777;font-size:.9rem}
+.lorebook-sidebar nav > .sidebar-subtree[open] > summary::after{content:"–";color:var(--red-bright)}
+.lorebook-sidebar nav > .sidebar-subtree > summary:hover{color:#fff;background:rgba(255,255,255,.025)}
+.lorebook-sidebar nav > .sidebar-subtree > nav{gap:.08rem;padding:.05rem 0 .35rem .65rem}
+.lorebook-sidebar nav > .sidebar-subtree > nav a{padding:.42rem .7rem .42rem 1.05rem;font-size:.72rem}
