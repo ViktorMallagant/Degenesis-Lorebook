@@ -1130,10 +1130,10 @@ footer p.community-disclaimer a:focus-visible {
 
 
 /* Page entrances are independent of the already-settled sidebar layout. */
-body:not(.landing-page) :is(.hero-copy, .culture-hero-inner) {
+body:not(.landing-page) :is(.hero-copy, .culture-hero-inner, .lorebook-hero-copy) {
   animation: lorebook-copy-enter 320ms ease-out both;
 }
-body:not(.landing-page) :is(.hero-figure, .culture-backdrop) {
+body:not(.landing-page) :is(.hero-figure, .culture-backdrop, .lorebook-hero-art) {
   animation: lorebook-art-enter 380ms ease-out both;
 }
 @keyframes lorebook-copy-enter {
@@ -1145,7 +1145,7 @@ body:not(.landing-page) :is(.hero-figure, .culture-backdrop) {
   to { opacity: 1; transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  body:not(.landing-page) :is(.hero-copy, .culture-hero-inner, .hero-figure, .culture-backdrop) {
+  body:not(.landing-page) :is(.hero-copy, .culture-hero-inner, .lorebook-hero-copy, .hero-figure, .culture-backdrop, .lorebook-hero-art) {
     animation: none;
   }
 }
