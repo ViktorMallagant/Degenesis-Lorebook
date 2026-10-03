@@ -7,7 +7,7 @@
 .culture-hero { min-height:calc(100svh - 70px); display:flex; align-items:flex-end; padding:5rem clamp(1.2rem,5vw,5rem) 3rem; border-bottom:1px solid var(--line); background:linear-gradient(0deg,rgba(6,6,7,.82),rgba(6,6,7,.26) 65%,transparent); }
 .culture-hero-inner { width:100%; max-width:1000px; margin-inline:auto; }
 .culture-hero .hero-title-row { text-shadow:0 3px 24px rgba(0,0,0,.8); }
-.culture-hero .eyebrow { color:#ff7168; text-shadow:0 2px 8px #000; }
+.culture-hero .eyebrow { color:var(--red-bright); text-shadow:0 2px 8px #000; }
 .culture-hero .hero-lede { color:#f2efe9; text-shadow:0 2px 12px #000; }
 .culture-facts { max-width:none; }
 .culture-facts article { background:rgba(8,8,9,.85); backdrop-filter:blur(4px); }

@@ -1,4 +1,9 @@
-.clan-page{--clan-panel:rgba(8,8,9,.88)}
+.clan-page{
+  --clan-panel:rgba(8,8,9,.88);
+  background:
+    radial-gradient(circle at 14% 4%,rgba(182,42,42,.18),transparent 24rem),
+    linear-gradient(180deg,#101010 0%,#171717 42%,#121212 100%);
+}
 .clan-hero{display:grid;grid-template-columns:minmax(0,.94fr) minmax(420px,1.06fr);min-height:calc(100svh - 70px);overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#101010 0%,rgba(16,16,16,.52) 20%,transparent 57%)}
 .clan-hero-copy{position:relative;z-index:3;align-self:center;padding:clamp(4rem,8vw,8rem) 2rem clamp(5rem,8vw,8rem) 4vw}
 .clan-title-row{display:flex;align-items:center;gap:clamp(1rem,2vw,2.4rem)}.clan-title-row h1{margin:0;font-size:clamp(4rem,8vw,8rem);font-weight:300;letter-spacing:.01em}.clan-title-row img{width:clamp(82px,7vw,122px);height:clamp(82px,7vw,122px);object-fit:contain}

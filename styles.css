@@ -1160,12 +1160,27 @@ body:not(.landing-page) :is(.hero-figure, .culture-backdrop, .lorebook-hero-art)
 .lorebook-sidebar nav > .sidebar-subtree > nav{gap:.08rem;padding:.05rem 0 .35rem .65rem}
 .lorebook-sidebar nav > .sidebar-subtree > nav a{padding:.42rem .7rem .42rem 1.05rem;font-size:.72rem}
 
-/* Nested Clanner overview link */
+/* Nested Clanner overview link: behaves like every other selectable sidebar row. */
+.lorebook-sidebar nav > .sidebar-subtree > summary{
+  border-left:2px solid transparent;
+  cursor:pointer;
+}
+.lorebook-sidebar nav > .sidebar-subtree[open] > summary,
+.lorebook-sidebar nav > .sidebar-subtree > summary:has(.clanners-heading-link[aria-current="page"]){
+  border-left-color:var(--red-bright);
+  color:#fff;
+  background:rgba(182,42,42,.12);
+}
 .lorebook-sidebar nav > .sidebar-subtree > summary > .clanners-heading-link{
   display:inline;padding:0;border:0;color:inherit;background:transparent;
   font:inherit;letter-spacing:inherit;text-transform:inherit;
 }
 .lorebook-sidebar nav > .sidebar-subtree > summary > .clanners-heading-link:hover,
 .lorebook-sidebar nav > .sidebar-subtree > summary > .clanners-heading-link[aria-current="page"]{
-  color:var(--red-bright);
+  color:inherit;
+}
+
+/* One accent red for all small overline/kicker labels across the Lorebook. */
+:is(.eyebrow,.rank-kicker,.section-kicker,.variant-label,.special-kicker,.sleeper-kicker,.psych-kicker,.clan-kicker){
+  color:var(--red-bright)!important;
 }
