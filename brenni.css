@@ -7,5 +7,5 @@ body.brenni-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))
 
 .brenni-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
 
-.brenni-page .clan-title-row{gap:1rem}.brenni-page .clan-title-row h1{font-size:clamp(2.5rem,5vw,5rem);flex-shrink:1}.brenni-page .clan-title-row img{width:84px;height:84px;object-fit:contain;flex-shrink:0}
-@media(max-width:760px){.brenni-page .clan-title-row h1{font-size:clamp(1.8rem,8vw,3.5rem)}.brenni-page .clan-title-row img{width:55px;height:55px}}
+.brenni-page .clan-title-row{gap:1rem}.brenni-page .clan-title-row h1{font-size:clamp(2.5rem,5vw,5rem);flex-shrink:1}.brenni-page .clan-title-row img{width:100px;height:100px;object-fit:contain;flex-shrink:0}
+@media(max-width:760px){.brenni-page .clan-title-row h1{font-size:clamp(1.8rem,8vw,3.5rem)}.brenni-page .clan-title-row img{width:65px;height:65px}}

@@ -7,7 +7,7 @@ body.steel-masters-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 
 
 .steel-masters-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
 
-.steel-masters-page .clan-title-row{gap:1rem}.steel-masters-page .clan-title-row h1{font-size:clamp(1.8rem,3.1vw,3.2rem);flex-shrink:1}.steel-masters-page .clan-title-row img{width:80px;height:60px;object-fit:contain;flex-shrink:0}
+.steel-masters-page .clan-title-row{gap:1rem}.steel-masters-page .clan-title-row h1{font-size:clamp(1.8rem,2.65vw,2.8rem);flex-shrink:1}.steel-masters-page .clan-title-row img{width:80px;height:60px;object-fit:contain;flex-shrink:0}
 @media(max-width:760px){.steel-masters-page .clan-title-row h1{font-size:clamp(1.8rem,7vw,3.5rem)}.steel-masters-page .clan-title-row img{width:52px;height:39px}}
 
-.steel-masters-page .clanner-rank-node[data-rank="champion"],.steel-masters-page .clanner-rank-node[data-rank="founder"]{font-size:.74rem;padding:0 10px}
+.steel-masters-page .clanner-rank-node[data-rank="champion"],.steel-masters-page .clanner-rank-node[data-rank="founder"]{font-size:.85rem;padding:0 10px}
