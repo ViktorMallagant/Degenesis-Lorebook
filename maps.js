@@ -84,8 +84,11 @@
     const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientHeight : 1);
     zoom(scale * Math.exp(-clamp(delta, -200, 200) * .002), p.x, p.y);
   }, {passive:false});
+  viewport.addEventListener('dragstart', event => event.preventDefault());
   viewport.addEventListener('pointerdown', event => {
     if (!ready || (event.pointerType === 'mouse' && event.button !== 0) || event.target.closest('a')) return;
+    // Stop native image dragging and text selection before they cancel panning.
+    event.preventDefault();
     viewport.focus({preventScroll:true});
     viewport.setPointerCapture(event.pointerId);
     pointers.set(event.pointerId, local(event));

@@ -11,8 +11,7 @@
 <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="true" aria-controls="lorebook-sidebar"><img class="brand-icon" src="assets/favicon.png" alt=""><span>DEGENESIS: ALPHA &amp; OMEGA - LOREBOOK</span></button>
 <nav class="section-nav" aria-label="Garganti sections"><a class="current-entry" href="#top"><img src="assets/clanners-logo.webp" alt=""><span>Garganti</span></a><a href="#overview">Overview</a><a href="#hospitality">Hospitality</a><a href="#imprinting">Imprinting</a></nav>
 </header>
-<aside class="lorebook-sidebar" id="lorebook-sidebar"><div class="sidebar-inner"><nav class="sidebar-home" aria-label="Lorebook home"><a href="index.html">Home</a></nav>
-      <nav class="sidebar-home" aria-label="Maps"><a href="maps.html">Maps</a></nav><details><summary><a class="culture-heading-link" href="cultures.html">Cultures</a></summary><nav><a href="africa.html">Africa</a><a href="borca.html">Borca</a><a href="balkhan.html">Balkhan</a><a href="franka.html">Franka</a><a href="hybrispania.html">Hybrispania</a><a href="pollen.html">Pollen</a><a href="purgare.html">Purgare</a></nav></details>
+<aside class="lorebook-sidebar" id="lorebook-sidebar"><div class="sidebar-inner"><nav class="sidebar-home" aria-label="Lorebook home"><a href="index.html">Home</a></nav><details><summary><a class="culture-heading-link" href="cultures.html">Cultures</a></summary><nav><a href="africa.html">Africa</a><a href="borca.html">Borca</a><a href="balkhan.html">Balkhan</a><a href="franka.html">Franka</a><a href="hybrispania.html">Hybrispania</a><a href="pollen.html">Pollen</a><a href="purgare.html">Purgare</a></nav></details>
 <details open><summary><a class="cult-heading-link" href="cults.html">Cults</a></summary><nav><a href="anabaptists.html">Anabaptists</a><a href="anubians.html">Anubians</a><a href="apocalyptics.html">Apocalyptics</a><a href="chroniclers.html">Chroniclers</a><details class="sidebar-subtree" open>
   <summary><a class="clanners-heading-link" href="clanners.html">Clanners</a></summary>
   <nav aria-label="Clans">
@@ -132,7 +131,8 @@
     <a href="psychonauts.html">Overview</a><a href="biokinetics.html">Biokinetics</a><a href="dushani.html">Dushani</a><a href="pheromancers.html">Pheromancers</a><a href="pregnoctics.html">Pregnoctics</a><a href="psychokinetics.html">Psychokinetics</a>
   </nav>
 </details>
-</div></aside>
+
+<details class="maps-chapter"><summary><a class="maps-heading-link" href="maps.html">Maps</a></summary><nav aria-label="Maps"><a href="maps.html">World Map</a></nav></details></div></aside>
 <script>(()=>{const toggle=document.querySelector('#lorebook-nav-toggle');toggle?.setAttribute('aria-expanded',String(document.body.classList.contains('sidebar-open')));try{const saved=JSON.parse(sessionStorage.getItem('degenesis:lorebook:tree-state'));document.querySelectorAll('.lorebook-sidebar details').forEach(tree=>{const key=tree.querySelector('summary')?.textContent.trim().toLowerCase();if(typeof saved?.[key]==='boolean'&&!tree.classList.contains('sidebar-subtree'))tree.open=saved[key];});}catch{}})();</script>
 <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
 <main id="main-content">
@@ -151,5 +151,5 @@
 <section class="clan-section" id="imprinting"><header class="clan-heading"><p class="clan-kicker">IMPRINTING</p><h2>Symbols the Mammoths Recognize</h2></header><div class="clan-copy"><p>Traditional signs and sounds can quiet certain mammoths, lower their trunks, or make them trace patterns in the earth. The Clan’s strongest warriors claim responsive animals and train them for battle.</p><p>The strongest Garganti becomes Kagan. This leader interprets the laws and decides whether a settlement has failed its duty of hospitality. At the head of the herd, the Kagan can provoke his mammoth into an attack; the other animals follow its calls, turning the Clan’s advance into a mass of fur, flesh, and thunder.</p></div></section>
 </main>
 <footer class="clan-footer"><div class="clan-footer-line"><img src="assets/favicon.png" alt="Solar Cross"><p>Degenesis: Alpha &amp; Omega — Garganti <span>·</span> KatharSys p. 229</p></div><p class="community-disclaimer">This page is a community creation for the tabletop role playing game <a href="https://degenesis.com/">Degenesis®</a>. Degenesis® is a trademark of <a href="https://sixmorevodka.com/">SIXMOREVODKA® Studio GmbH</a>. All rights reserved. This page is not affiliated with SIXMOREVODKA Studio GmbH.</p></footer>
-<script src="cultures.js?v=20261003-3"></script><script src="lorebook-navigation.js?v=20261003-4"></script>
+<script src="cultures.js?v=20261003-3"></script><script src="lorebook-navigation.js?v=20261004-5"></script>
 </body></html>

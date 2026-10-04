@@ -1,5 +1,7 @@
 // Keep sidebar trees open across entries until their own heading closes them.
 (() => {
+  // Maps uses the same chapter-heading styles as Cults.
+  document.querySelectorAll(".maps-heading-link").forEach(heading => heading.classList.add("cult-heading-link"));
   const trees = Array.from(document.querySelectorAll('.lorebook-sidebar details')).map((tree) => ({
     tree,
     key: tree.querySelector('summary')?.textContent.trim().toLowerCase()
@@ -32,7 +34,7 @@
   window.addEventListener('pagehide', saveTrees);
 
   // Each main heading opens its overview without losing either tree's state.
-  document.querySelectorAll('.lorebook-sidebar .culture-heading-link, .lorebook-sidebar .cult-heading-link, .lorebook-sidebar .concept-heading-link, .lorebook-sidebar .fauna-heading-link, .lorebook-sidebar .amsumos-heading-link, .lorebook-sidebar .sleepers-heading-link, .lorebook-sidebar .marauders-heading-link, .lorebook-sidebar .psychonauts-heading-link, .lorebook-sidebar .clanners-heading-link').forEach((heading) => {
+  document.querySelectorAll('.lorebook-sidebar .culture-heading-link, .lorebook-sidebar .cult-heading-link, .lorebook-sidebar .concept-heading-link, .lorebook-sidebar .fauna-heading-link, .lorebook-sidebar .amsumos-heading-link, .lorebook-sidebar .sleepers-heading-link, .lorebook-sidebar .marauders-heading-link, .lorebook-sidebar .psychonauts-heading-link, .lorebook-sidebar .clanners-heading-link, .lorebook-sidebar .maps-heading-link').forEach((heading) => {
     const summary = heading.closest('summary');
     const tree = summary?.parentElement;
     if (!summary || !(tree instanceof HTMLDetailsElement)) return;
