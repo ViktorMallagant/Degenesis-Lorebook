@@ -1,0 +1,12 @@
+body.ganarids-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
+.ganarids-page .clan-title-row{flex-wrap:nowrap}.ganarids-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.ganarids-page .clanner-hierarchy-canvas,.ganarids-page .clanner-rank-lines{width:925px}
+.ganarids-page .clan-copy h3{margin-top:2rem}.ganarids-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.ganarids-page blockquote cite{font-size:.85rem}
+.ganarids-page .rank-detail{min-width:0}.ganarids-page .clan-section{scroll-margin-top:92px}
+@media(max-width:760px){body.ganarids-page.sidebar-open .clan-section{width:92vw}.ganarids-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
+
+.ganarids-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
+
+.ganarids-page .clanner-hierarchy-canvas,.ganarids-page .clanner-rank-lines{height:300px}
+.ganarids-page .clan-title-row{gap:1rem}.ganarids-page .clan-title-row h1{font-size:clamp(2.5rem,5vw,5rem)}.ganarids-page .clan-title-row img{width:64px;height:84px;object-fit:contain}
+@media(max-width:760px){.ganarids-page .clan-title-row h1{font-size:clamp(1.8rem,8vw,3.5rem)}.ganarids-page .clan-title-row img{width:46px;height:60px}}
