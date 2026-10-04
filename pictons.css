@@ -9,3 +9,5 @@ body.pictons-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px)
 
 .pictons-page .clan-title-row img{width:70px;height:110px;object-fit:contain}.pictons-page .entry-card p{line-height:1.8;color:#d0cbc4}
 @media(max-width:760px){.pictons-page .clan-title-row img{width:46px;height:72px}.pictons-page .compact-fields>div{grid-template-columns:100px minmax(0,1fr)}}
+
+.pictons-page .equipment-grid>.equipment-card:only-child{grid-column:1 / -1}
