@@ -1,5 +1,6 @@
 body.exalters-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
-.exalters-page .clan-title-row{flex-wrap:wrap}.exalters-page .clan-title-row h1{font-size:clamp(3rem,6vw,6rem)}
+.exalters-page .clan-title-row{flex-wrap:nowrap}.exalters-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.exalters-page .clanner-hierarchy-canvas,.exalters-page .clanner-rank-lines{width:925px}
 .exalters-page .clan-copy h3{margin-top:2rem}.exalters-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.exalters-page blockquote cite{font-size:.85rem}
 .exalters-rank-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.45fr);gap:2rem;align-items:start}.exalters-rank-art{margin:0}.exalters-rank-art img{display:block;width:100%;max-height:820px;object-fit:contain}.exalters-rank-art figcaption{text-align:center;color:var(--red-bright);font-family:var(--heading-font);font-size:.7rem;letter-spacing:.18em}
 .exalters-page .rank-detail{min-width:0}.exalters-page .clan-section{scroll-margin-top:92px}

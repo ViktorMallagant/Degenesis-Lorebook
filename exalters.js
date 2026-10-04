@@ -51,7 +51,7 @@ const ranks={
       ],
       [
         "Equipment",
-        "Pasiphae’s Stride; Sword engraved with the glyph of Revenge; Type-97 Rifle; Exalter battle armor (Armor rating 3, Enc. 1); Frag Grenadess"
+        "Pasiphae’s Stride; Sword engraved with the glyph of Revenge; Type-97 Rifle; Exalter battle armor (Armor rating 3, Enc. 1); Frag Grenades"
       ]
     ],
     "image": "assets/exalters-vigil.webp",
