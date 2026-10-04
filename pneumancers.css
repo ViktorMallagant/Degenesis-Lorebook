@@ -3,6 +3,7 @@ body.pneumancers-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 27
 .pneumancers-page .clanner-hierarchy-canvas,.pneumancers-page .clanner-rank-lines{width:925px}
 .pneumancers-page .clan-copy h3{margin-top:2rem}.pneumancers-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.pneumancers-page blockquote cite{font-size:.85rem}
 .pneumancers-page .rank-detail{min-width:0}.pneumancers-page .clan-section{scroll-margin-top:92px}
+.pneumancers-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
 @media(max-width:760px){body.pneumancers-page.sidebar-open .clan-section{width:92vw}.pneumancers-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
 
 .pneumancers-page .clan-title-row{gap:1rem}.pneumancers-page .clan-title-row h1{font-size:clamp(2.25rem,4vw,4.5rem)}.pneumancers-page .clan-title-row img{width:72px;height:88px}
