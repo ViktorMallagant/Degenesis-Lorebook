@@ -18,8 +18,11 @@
   function constrain() {
     const w = viewport.clientWidth, h = viewport.clientHeight;
     const iw = image.naturalWidth * scale, ih = image.naturalHeight * scale;
-    x = iw <= w ? (w - iw) / 2 : clamp(x, w - iw, 0);
-    y = ih <= h ? (h - ih) / 2 : clamp(y, h - ih, 0);
+    // Keep part of the map reachable while allowing free drag on both axes.
+    const visibleX = Math.min(100, iw / 4, w / 4);
+    const visibleY = Math.min(100, ih / 4, h / 4);
+    x = clamp(x, visibleX - iw, w - visibleX);
+    y = clamp(y, visibleY - ih, h - visibleY);
   }
   function paint() {
     constrain();
@@ -31,7 +34,10 @@
   function fit() {
     if (!ready) return;
     minimum = Math.min(viewport.clientWidth / image.naturalWidth, viewport.clientHeight / image.naturalHeight, 1);
-    scale = minimum; x = 0; y = 0; paint();
+    scale = minimum;
+    x = (viewport.clientWidth - image.naturalWidth * scale) / 2;
+    y = (viewport.clientHeight - image.naturalHeight * scale) / 2;
+    paint();
   }
   function zoom(next, ax = viewport.clientWidth / 2, ay = viewport.clientHeight / 2) {
     if (!ready) return;
