@@ -11,13 +11,39 @@
   // Region coordinates use original image pixels. Add entries with x, y, width,
   // height, label, and href when detailed regional or city maps are available.
   const regions = [];
+  const mapWidth = 9173, mapHeight = 11510;
   const pointers = new Map();
   let scale = 1, minimum = 1, x = 0, y = 0, ready = false;
   const maximum = 4;
   const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
+  const tileLayer = document.querySelector('#map-tiles');
+  const levels = [8,4,2,1].map(div => ({width:Math.ceil(mapWidth/div),height:Math.ceil(mapHeight/div)}));
+  const activeTiles = new Map();
+  function renderTiles() {
+    if (!ready) return;
+    const desired = scale * Math.min(window.devicePixelRatio || 1, 2);
+    let level = 0;
+    while(level < levels.length-1 && levels[level].width/mapWidth < desired) level++;
+    const info = levels[level], ratio = mapWidth/info.width, tileSize = 2048;
+    const left = Math.max(0, -x/scale), top = Math.max(0, -y/scale);
+    const right = Math.min(mapWidth,(viewport.clientWidth-x)/scale);
+    const bottom = Math.min(mapHeight,(viewport.clientHeight-y)/scale);
+    const needed = new Set();
+    for(let row=Math.max(0,Math.floor(top/(mapHeight/info.height)/tileSize));row<=Math.min(Math.ceil(info.height/tileSize)-1,Math.floor(bottom/(mapHeight/info.height)/tileSize));row++) {
+      for(let col=Math.max(0,Math.floor(left/ratio/tileSize));col<=Math.min(Math.ceil(info.width/tileSize)-1,Math.floor(right/ratio/tileSize));col++) {
+        const key=`${level}-${col}-${row}`;needed.add(key);
+        if(activeTiles.has(key))continue;
+        const tile=document.createElement('img');tile.alt='';tile.draggable=false;
+        tile.src=`assets/maps/world/${key}.webp`;
+        Object.assign(tile.style,{left:`${col*tileSize*ratio}px`,top:`${row*tileSize*mapHeight/info.height}px`,width:`${Math.min(tileSize,info.width-col*tileSize)*ratio}px`,height:`${Math.min(tileSize,info.height-row*tileSize)*mapHeight/info.height}px`});
+        tileLayer.append(tile);activeTiles.set(key,tile);
+      }
+    }
+    activeTiles.forEach((tile,key)=>{if(!needed.has(key)){tile.remove();activeTiles.delete(key);}});
+  }
   function constrain() {
     const w = viewport.clientWidth, h = viewport.clientHeight;
-    const iw = image.naturalWidth * scale, ih = image.naturalHeight * scale;
+    const iw = mapWidth * scale, ih = mapHeight * scale;
     // Keep part of the map reachable while allowing free drag on both axes.
     const visibleX = Math.min(100, iw / 4, w / 4);
     const visibleY = Math.min(100, ih / 4, h / 4);
@@ -27,16 +53,17 @@
   function paint() {
     constrain();
     layer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+    renderTiles();
     zoomText.textContent = `${Math.round(scale * 100)}%`;
     zoomIn.disabled = !ready || scale >= maximum;
     zoomOut.disabled = !ready || scale <= minimum;
   }
   function fit() {
     if (!ready) return;
-    minimum = Math.min(viewport.clientWidth / image.naturalWidth, viewport.clientHeight / image.naturalHeight, 1);
+    minimum = Math.min(viewport.clientWidth / mapWidth, viewport.clientHeight / mapHeight, 1);
     scale = minimum;
-    x = (viewport.clientWidth - image.naturalWidth * scale) / 2;
-    y = (viewport.clientHeight - image.naturalHeight * scale) / 2;
+    x = (viewport.clientWidth - mapWidth * scale) / 2;
+    y = (viewport.clientHeight - mapHeight * scale) / 2;
     paint();
   }
   function zoom(next, ax = viewport.clientWidth / 2, ay = viewport.clientHeight / 2) {
@@ -112,7 +139,7 @@
   new ResizeObserver(()=>{
     if(!ready)return;
     const wasFit=Math.abs(scale-minimum)<.001;
-    minimum=Math.min(viewport.clientWidth/image.naturalWidth,viewport.clientHeight/image.naturalHeight,1);
+    minimum=Math.min(viewport.clientWidth/mapWidth,viewport.clientHeight/mapHeight,1);
     if(wasFit)fit();else{scale=Math.max(minimum,scale);paint();}
   }).observe(viewport);
   regions.forEach(region=>{
