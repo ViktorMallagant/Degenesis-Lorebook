@@ -1,0 +1,11 @@
+body.pictons-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
+.pictons-page .clan-title-row{flex-wrap:nowrap}.pictons-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.pictons-page .clanner-hierarchy-canvas,.pictons-page .clanner-rank-lines{width:925px}
+.pictons-page .clan-copy h3{margin-top:2rem}.pictons-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.pictons-page blockquote cite{font-size:.85rem}
+.pictons-page .rank-detail{min-width:0}.pictons-page .clan-section{scroll-margin-top:92px}
+@media(max-width:760px){body.pictons-page.sidebar-open .clan-section{width:92vw}.pictons-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
+
+.pictons-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
+
+.pictons-page .clan-title-row img{width:70px;height:110px;object-fit:contain}.pictons-page .entry-card p{line-height:1.8;color:#d0cbc4}
+@media(max-width:760px){.pictons-page .clan-title-row img{width:46px;height:72px}.pictons-page .compact-fields>div{grid-template-columns:100px minmax(0,1fr)}}
