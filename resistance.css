@@ -1,0 +1,11 @@
+body.resistance-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
+.resistance-page .clan-title-row{flex-wrap:nowrap}.resistance-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.resistance-page .clanner-hierarchy-canvas,.resistance-page .clanner-rank-lines{width:925px}
+.resistance-page .clan-copy h3{margin-top:2rem}.resistance-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.resistance-page blockquote cite{font-size:.85rem}
+.resistance-page .rank-detail{min-width:0}.resistance-page .clan-section{scroll-margin-top:92px}
+@media(max-width:760px){body.resistance-page.sidebar-open .clan-section{width:92vw}.resistance-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
+
+.resistance-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
+
+.resistance-page .clan-title-row{gap:1rem}.resistance-page .clan-title-row h1{font-size:clamp(1.8rem,3.25vw,3.3rem);flex-shrink:1}.resistance-page .clan-title-row img{width:70px;height:74px;object-fit:contain;flex-shrink:0}
+@media(max-width:760px){.resistance-page .clan-title-row h1{font-size:clamp(1.8rem,7vw,3.5rem)}.resistance-page .clan-title-row img{width:46px;height:48px}}

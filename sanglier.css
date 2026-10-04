@@ -1,0 +1,11 @@
+body.sanglier-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
+.sanglier-page .clan-title-row{flex-wrap:nowrap}.sanglier-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.sanglier-page .clanner-hierarchy-canvas,.sanglier-page .clanner-rank-lines{width:925px}
+.sanglier-page .clan-copy h3{margin-top:2rem}.sanglier-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.sanglier-page blockquote cite{font-size:.85rem}
+.sanglier-page .rank-detail{min-width:0}.sanglier-page .clan-section{scroll-margin-top:92px}
+@media(max-width:760px){body.sanglier-page.sidebar-open .clan-section{width:92vw}.sanglier-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
+
+.sanglier-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
+
+.sanglier-page .clan-title-row{gap:1rem}.sanglier-page .clan-title-row h1{font-size:clamp(2.25rem,4.5vw,4.5rem);flex-shrink:1}.sanglier-page .clan-title-row img{width:70px;height:74px;object-fit:contain;flex-shrink:0}
+@media(max-width:760px){.sanglier-page .clan-title-row h1{font-size:clamp(1.8rem,8vw,3.5rem)}.sanglier-page .clan-title-row img{width:46px;height:48px}}
