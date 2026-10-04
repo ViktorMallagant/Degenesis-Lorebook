@@ -53,9 +53,7 @@ const ranks={
         "Equipment",
         "Pasiphae’s Stride; Sword engraved with the glyph of Revenge; Type-97 Rifle; Exalter battle armor (Armor rating 3, Enc. 1); Frag Grenades"
       ]
-    ],
-    "image": "assets/exalters-vigil.webp",
-    "alt": "Exalter Vigil"
+    ]
   },
   "shaman": {
     "title": "3 - Ariadne",
@@ -117,6 +115,6 @@ const ranks={
 const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;');
 function renderRank(id){const r=ranks[id],d=document.querySelector('#rank-detail');
 const copy='<p class="rank-kicker">SELECTED RANK</p><h3>'+esc(r.title)+'</h3><dl class="entry-fields"><div><dt>Prerequisite</dt><dd>'+esc(r.fields[0][1])+'</dd></div><div><dt>Effect</dt><dd>'+esc(r.description)+'</dd></div><div><dt>Equipment</dt><dd>'+esc(r.fields[1][1])+'</dd></div></dl>';
-d.innerHTML=r.image?'<div class="exalters-rank-layout"><div>'+copy+'</div><figure class="exalters-rank-art"><img src="'+r.image+'" alt="'+esc(r.alt)+'"><figcaption>VIGIL</figcaption></figure></div>':copy;
+d.innerHTML=copy;
 document.querySelectorAll('.rank-node').forEach(b=>{const s=b.dataset.rank===id;b.classList.toggle('is-selected',s);b.setAttribute('aria-pressed',String(s));});}
 document.querySelectorAll('.rank-node').forEach(b=>b.addEventListener('click',()=>renderRank(b.dataset.rank)));renderRank('scout');

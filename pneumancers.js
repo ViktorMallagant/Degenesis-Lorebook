@@ -39,9 +39,7 @@ const ranks={
         "Equipment",
         "Pneumo Hammer; Free access to coal and bolts for ammunition"
       ]
-    ],
-    "image": "assets/pneumancers-boiler.webp",
-    "alt": "Pneumancer Boiler"
+    ]
   },
   "tribalwarrior": {
     "title": "3 - Assembler",
@@ -117,6 +115,6 @@ const ranks={
 const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;');
 function renderRank(id){const r=ranks[id],d=document.querySelector('#rank-detail');
 const copy='<p class="rank-kicker">SELECTED RANK</p><h3>'+esc(r.title)+'</h3><dl class="entry-fields"><div><dt>Prerequisite</dt><dd>'+esc(r.fields[0][1])+'</dd></div><div><dt>Effect</dt><dd>'+esc(r.description)+'</dd></div><div><dt>Equipment</dt><dd>'+esc(r.fields[1][1])+'</dd></div></dl>';
-d.innerHTML=r.image?'<div class="pneumancers-rank-layout"><div>'+copy+'</div><figure class="pneumancers-rank-art"><img src="'+r.image+'" alt="'+esc(r.alt)+'"><figcaption>BOILER</figcaption></figure></div>':copy;
+d.innerHTML=copy;
 document.querySelectorAll('.rank-node').forEach(b=>{const s=b.dataset.rank===id;b.classList.toggle('is-selected',s);b.setAttribute('aria-pressed',String(s));});}
 document.querySelectorAll('.rank-node').forEach(b=>b.addEventListener('click',()=>renderRank(b.dataset.rank)));renderRank('scout');
