@@ -83,12 +83,26 @@
   zoomIn.addEventListener('click',()=>zoom(scale*1.4));
   zoomOut.addEventListener('click',()=>zoom(scale/1.4));
   document.querySelector('#map-reset').addEventListener('click',fit);
-  if (!document.fullscreenEnabled) fullscreen.hidden = true;
+  function expanded(open) {
+    panel.classList.toggle('map-expanded',open);
+    document.body.classList.toggle('map-expanded-open',open);
+    fullscreen.textContent=open?'Exit fullscreen':'Fullscreen';
+    fullscreen.setAttribute('aria-pressed',String(open));
+  }
   fullscreen.addEventListener('click',async()=>{
-    try {if(document.fullscreenElement===panel)await document.exitFullscreen();else await panel.requestFullscreen();}
-    catch {fullscreen.textContent='Fullscreen unavailable';}
+    if(panel.classList.contains('map-expanded')){expanded(false);return;}
+    try {
+      if(document.fullscreenElement===panel)await document.exitFullscreen();
+      else if(document.fullscreenEnabled)await panel.requestFullscreen();
+      else expanded(true);
+    } catch {expanded(true);}
   });
-  document.addEventListener('fullscreenchange',()=>{fullscreen.textContent=document.fullscreenElement===panel?'Exit fullscreen':'Fullscreen';});
+  document.addEventListener('fullscreenchange',()=>{
+    const open=document.fullscreenElement===panel;
+    fullscreen.textContent=open?'Exit fullscreen':'Fullscreen';
+    fullscreen.setAttribute('aria-pressed',String(open));
+  });
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.classList.contains('map-expanded'))expanded(false);});
   new ResizeObserver(()=>{
     if(!ready)return;
     const wasFit=Math.abs(scale-minimum)<.001;
