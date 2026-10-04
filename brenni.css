@@ -1,0 +1,11 @@
+body.brenni-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
+.brenni-page .clan-title-row{flex-wrap:nowrap}.brenni-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.brenni-page .clanner-hierarchy-canvas,.brenni-page .clanner-rank-lines{width:925px}
+.brenni-page .clan-copy h3{margin-top:2rem}.brenni-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.brenni-page blockquote cite{font-size:.85rem}
+.brenni-page .rank-detail{min-width:0}.brenni-page .clan-section{scroll-margin-top:92px}
+@media(max-width:760px){body.brenni-page.sidebar-open .clan-section{width:92vw}.brenni-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
+
+.brenni-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
+
+.brenni-page .clan-title-row{gap:1rem}.brenni-page .clan-title-row h1{font-size:clamp(2.5rem,5vw,5rem);flex-shrink:1}.brenni-page .clan-title-row img{width:84px;height:84px;object-fit:contain;flex-shrink:0}
+@media(max-width:760px){.brenni-page .clan-title-row h1{font-size:clamp(1.8rem,8vw,3.5rem)}.brenni-page .clan-title-row img{width:55px;height:55px}}

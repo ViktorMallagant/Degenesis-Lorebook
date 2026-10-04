@@ -1,0 +1,11 @@
+body.stukov-page.sidebar-open .clan-section{width:min(1380px,calc(92vw - 270px))}
+.stukov-page .clan-title-row{flex-wrap:nowrap}.stukov-page .clan-title-row h1{flex-shrink:0;font-size:clamp(3rem,6vw,6rem)}
+.stukov-page .clanner-hierarchy-canvas,.stukov-page .clanner-rank-lines{width:925px}
+.stukov-page .clan-copy h3{margin-top:2rem}.stukov-page blockquote{margin:0 0 2.5rem;padding:0 0 0 1.5rem;border-left:2px solid var(--red);color:var(--muted)}.stukov-page blockquote cite{font-size:.85rem}
+.stukov-page .rank-detail{min-width:0}.stukov-page .clan-section{scroll-margin-top:92px}
+@media(max-width:760px){body.stukov-page.sidebar-open .clan-section{width:92vw}.stukov-page .clan-title-row h1{font-size:clamp(2.25rem,10vw,4rem)}}
+
+.stukov-page .clan-hero-copy .clan-callout{margin-top:1.5rem}
+
+.stukov-page .clan-title-row{gap:1rem}.stukov-page .clan-title-row h1{font-size:clamp(2.5rem,5vw,5rem);flex-shrink:1}.stukov-page .clan-title-row img{width:38px;height:98px;object-fit:contain;flex-shrink:0}
+@media(max-width:760px){.stukov-page .clan-title-row h1{font-size:clamp(1.8rem,8vw,3.5rem)}.stukov-page .clan-title-row img{width:25px;height:64px}}
