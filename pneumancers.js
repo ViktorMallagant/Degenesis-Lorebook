@@ -39,7 +39,9 @@ const ranks={
         "Equipment",
         "Pneumo Hammer; Free access to coal and bolts for ammunition"
       ]
-    ]
+    ],
+    "image": "assets/pneumancers-boiler.webp",
+    "alt": "Pneumancer Boiler"
   },
   "tribalwarrior": {
     "title": "3 - Assembler",
