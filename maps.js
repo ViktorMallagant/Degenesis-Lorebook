@@ -10,14 +10,20 @@
   const fullscreen = document.querySelector('#map-fullscreen');
   // Region coordinates use original image pixels. Add entries with x, y, width,
   // height, label, and href when detailed regional or city maps are available.
-  const regions = [];
-  const mapWidth = 9173, mapHeight = 11510;
+  const regions = JSON.parse(document.querySelector("#map-config")?.textContent || "{}").regions || [];
+  const mapWidth = Number(image.getAttribute("width")), mapHeight = Number(image.getAttribute("height"));
+  layer.style.width = `${mapWidth}px`; layer.style.height = `${mapHeight}px`;
+  const mapId = document.body.dataset.map || "world";
+  const stateKey = `degenesis:atlas:${mapId}`;
+  const tilePath = viewport.dataset.tilePath || "assets/maps/world";
+  const divisions = JSON.parse(viewport.dataset.tileDivisions || "[8,4,2,1]");
+  let suppressClick = false, dragOrigin = null;
   const pointers = new Map();
   let scale = 1, minimum = 1, x = 0, y = 0, ready = false;
   const maximum = 4;
   const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
   const tileLayer = document.querySelector('#map-tiles');
-  const levels = [8,4,2,1].map(div => ({width:Math.ceil(mapWidth/div),height:Math.ceil(mapHeight/div)}));
+  const levels = divisions.map(div => ({width:Math.ceil(mapWidth/div),height:Math.ceil(mapHeight/div)}));
   const activeTiles = new Map();
   function renderTiles() {
     if (!ready) return;
@@ -34,7 +40,7 @@
         const key=`${level}-${col}-${row}`;needed.add(key);
         if(activeTiles.has(key))continue;
         const tile=document.createElement('img');tile.alt='';tile.draggable=false;
-        tile.src=`assets/maps/world/${key}.webp`;
+        tile.src=`${tilePath}/${key}.webp`;
         Object.assign(tile.style,{left:`${col*tileSize*ratio}px`,top:`${row*tileSize*mapHeight/info.height}px`,width:`${Math.min(tileSize,info.width-col*tileSize)*ratio}px`,height:`${Math.min(tileSize,info.height-row*tileSize)*mapHeight/info.height}px`});
         tileLayer.append(tile);activeTiles.set(key,tile);
       }
@@ -54,6 +60,10 @@
     constrain();
     layer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
     renderTiles();
+    document.querySelectorAll(".map-region").forEach(link => {
+      link.style.borderWidth = `${2/scale}px`;
+      link.querySelector("span").style.transform = `translate(-50%, 0) scale(${1/scale})`;
+    });
     zoomText.textContent = `${Math.round(scale * 100)}%`;
     zoomIn.disabled = !ready || scale >= maximum;
     zoomOut.disabled = !ready || scale <= minimum;
@@ -86,16 +96,19 @@
   }, {passive:false});
   viewport.addEventListener('dragstart', event => event.preventDefault());
   viewport.addEventListener('pointerdown', event => {
-    if (!ready || (event.pointerType === 'mouse' && event.button !== 0) || event.target.closest('a')) return;
+    if (!ready || (event.pointerType === 'mouse' && event.button !== 0)) return;
     // Stop native image dragging and text selection before they cancel panning.
     event.preventDefault();
     viewport.focus({preventScroll:true});
-    viewport.setPointerCapture(event.pointerId);
+    suppressClick = false; dragOrigin = local(event);
+    // Capture on the region link so a stationary click still activates it.
+    (event.target.closest('.map-region') || viewport).setPointerCapture(event.pointerId);
     pointers.set(event.pointerId, local(event));
     viewport.classList.add('dragging');
   });
   viewport.addEventListener('pointermove', event => {
     if (!pointers.has(event.pointerId)) return;
+    if (dragOrigin && Math.hypot(local(event).x-dragOrigin.x,local(event).y-dragOrigin.y)>6) suppressClick = true;
     const before = [...pointers.values()];
     const old = pointers.get(event.pointerId), next = local(event);
     pointers.set(event.pointerId, next);
@@ -111,6 +124,7 @@
   });
   function release(event) {pointers.delete(event.pointerId);if(!pointers.size)viewport.classList.remove('dragging');}
   ['pointerup','pointercancel','lostpointercapture'].forEach(type => viewport.addEventListener(type,release));
+  viewport.addEventListener('click',event=>{if(suppressClick && event.detail!==0){event.preventDefault();event.stopPropagation();}},true);
   viewport.addEventListener('keydown', event => {
     if (event.target !== viewport) return;
     const actions = {'+':()=>zoom(scale*1.3),'=':()=>zoom(scale*1.3),'-':()=>zoom(scale/1.3),'0':fit,ArrowLeft:()=>{x+=60;paint();},ArrowRight:()=>{x-=60;paint();},ArrowUp:()=>{y+=60;paint();},ArrowDown:()=>{y-=60;paint();}};
@@ -146,11 +160,29 @@
     if(wasFit)fit();else{scale=Math.max(minimum,scale);paint();}
   }).observe(viewport);
   regions.forEach(region=>{
-    const link=document.createElement('a');link.className='map-region';link.href=region.href;link.textContent=region.label;
+    const link=document.createElement('a');link.className='map-region';link.href=region.href;link.setAttribute('aria-label',`Open ${region.label} map`);link.title=`Open ${region.label} map`;
+    const label=document.createElement('span');label.textContent=region.label;link.append(label);
     Object.assign(link.style,{left:`${region.x}px`,top:`${region.y}px`,width:`${region.width}px`,height:`${region.height}px`});
     document.querySelector('#map-regions').append(link);
   });
-  function loaded(){ready=true;loading.hidden=true;fit();}
+  function saveView() {
+    if(!ready)return;
+    try {sessionStorage.setItem(stateKey,JSON.stringify({scale,cx:(viewport.clientWidth/2-x)/scale/mapWidth,cy:(viewport.clientHeight/2-y)/scale/mapHeight}));} catch {}
+  }
+  function restoreView() {
+    if(!ready)return;
+    try {
+      const saved=JSON.parse(sessionStorage.getItem(stateKey));
+      if(!saved || ![saved.scale,saved.cx,saved.cy].every(Number.isFinite))return;
+      scale=clamp(saved.scale,minimum,maximum);
+      x=viewport.clientWidth/2-saved.cx*mapWidth*scale;
+      y=viewport.clientHeight/2-saved.cy*mapHeight*scale;
+      paint();
+    } catch {}
+  }
+  window.addEventListener('pagehide',saveView);
+  window.addEventListener('pageshow',event=>{if(event.persisted)restoreView();});
+  function loaded(){ready=true;loading.hidden=true;fit();restoreView();}
   image.addEventListener('load',loaded);
   image.addEventListener('error',()=>{loading.textContent='The map could not load. Please reload the page.';});
   if(image.complete&&image.naturalWidth)loaded();else{zoomIn.disabled=true;zoomOut.disabled=true;}

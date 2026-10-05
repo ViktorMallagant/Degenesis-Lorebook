@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0b0c">
-  <meta name="description" content="Explore the Degenesis world map of 2598 AD with zoom, pan, and fullscreen controls.">
-  <title>Degenesis: Alpha &amp; Omega — Maps</title>
+  <meta name="description" content="Explore The Protectorate and the Black Lung in high resolution.">
+  <title>Degenesis: Alpha &amp; Omega — The Protectorate Map</title>
   <link rel="icon" type="image/png" href="assets/favicon.png?v=20260927">
   <link rel="stylesheet" href="styles.css?v=20261003-7">
   <link rel="stylesheet" href="maps.css?v=20261005-1">
 </head>
-<body class="maps-page" data-map="world">
+<body class="maps-page" data-map="protectorate">
   <script>
     // Set the layout before the header, sidebar, or page content can paint.
     document.body.classList.toggle('sidebar-open', !document.body.classList.contains('landing-page') && window.matchMedia('(min-width: 761px)').matches);
@@ -18,7 +18,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <button class="brand" id="lorebook-nav-toggle" type="button" aria-expanded="false" aria-controls="lorebook-sidebar"><img class="brand-icon" src="assets/favicon.png" alt=""><span>DEGENESIS: ALPHA &amp; OMEGA - LOREBOOK</span></button>
-    <nav class="section-nav" aria-label="Map sections"><a href="#top">Maps</a><a href="#world-map">World · 2598 AD</a></nav>
+    <nav class="section-nav" aria-label="Map sections"><a href="maps.html">World Map</a><a href="#world-map">The Protectorate</a></nav>
   </header>
 <aside class="lorebook-sidebar" id="lorebook-sidebar" aria-label="Lorebook navigation">
     <div class="sidebar-inner">
@@ -172,7 +172,7 @@
   </nav>
 </details>
 
-<details class="maps-chapter"><summary><a class="maps-heading-link" href="maps.html">Maps</a></summary><nav aria-label="Maps"><a href="maps.html" class="active" aria-current="page">World Map</a><a href="protectorate-map.html">The Protectorate</a></nav></details></div>
+<details class="maps-chapter"><summary><a class="maps-heading-link" href="maps.html">Maps</a></summary><nav aria-label="Maps"><a href="maps.html">World Map</a><a href="protectorate-map.html" class="active" aria-current="page">The Protectorate</a></nav></details></div>
   </aside>
   <script>
     // Restore the trees as soon as their markup exists, before page rendering.
@@ -192,23 +192,23 @@
   </script>
   <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close lorebook navigation"></button>
   <main id="main-content">
-    <section class="map-heading" id="top"><p class="eyebrow">WORLD ATLAS</p><h1>Maps</h1><p>Explore the world of Degenesis.</p></section>
+    <section class="map-heading" id="top"><p class="eyebrow">WORLD ATLAS</p><h1>The Protectorate</h1><p>The Black Lung · Borca · 2598 AD</p><a class="map-back" href="maps.html">← Back to World Map</a></section>
     <section class="map-panel" id="world-map" aria-labelledby="map-title">
-      <div class="map-toolbar"><div><p class="eyebrow">WORLD MAP</p><h2 id="map-title">2598 AD</h2></div><div class="map-controls" aria-label="Map controls">
+      <div class="map-toolbar"><div><p class="eyebrow">REGIONAL MAP</p><h2 id="map-title">2598 AD</h2></div><div class="map-controls" aria-label="Map controls">
         <button type="button" id="zoom-in" aria-label="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out">−</button><button type="button" id="map-reset">Fit map</button><button type="button" id="map-fullscreen">Fullscreen</button>
       </div></div>
-      <div class="map-viewport" id="map-viewport" tabindex="0" role="region" aria-label="Interactive world map. Use plus and minus to zoom, arrow keys to pan, and zero to fit the map." aria-describedby="map-help">
-        <div class="map-layer" id="map-layer"><img id="world-image" src="assets/world-map-2598AD.jpg" width="9173" height="11510" alt="Degenesis world map, 2598 AD: Europe, Africa, and surrounding regions." draggable="false"><div id="map-tiles" aria-hidden="true"></div><div id="map-regions" class="map-regions"></div></div>
-        <p class="map-loading" id="map-loading" role="status">Loading world map…</p>
+      <div class="map-viewport" id="map-viewport" data-tile-path="assets/maps/protectorate" data-tile-divisions="[2,1]" tabindex="0" role="region" aria-label="Interactive Protectorate map. Use plus and minus to zoom, arrow keys to pan, and zero to fit the map." aria-describedby="map-help">
+        <div class="map-layer" id="map-layer"><img id="world-image" src="assets/maps/protectorate/preview.webp" width="3264" height="2320" alt="The Protectorate, 2598 AD: the Black Lung, Justitian, Cathedral City, and surrounding settlements." draggable="false"><div id="map-tiles" aria-hidden="true"></div><div id="map-regions" class="map-regions"></div></div>
+        <p class="map-loading" id="map-loading" role="status">Loading The Protectorate…</p>
       </div>
       <div class="map-bottom"><p id="map-help">Scroll to zoom · Drag to pan · Pinch to zoom on touchscreens<br>Keyboard: + / − to zoom · Arrow keys to pan · 0 to fit</p><output id="map-zoom" aria-label="Map zoom">100%</output></div>
-    <nav class="map-destinations" aria-label="Detailed maps"><span>Detailed Maps</span><a href="protectorate-map.html">The Protectorate ↗</a></nav></section>
+    </section>
   </main>
-  <footer class="map-footer"><img src="assets/favicon.png" alt=""><p>Degenesis: Alpha &amp; Omega — Maps</p>
+  <footer class="map-footer"><img src="assets/favicon.png" alt=""><p>Degenesis: Alpha &amp; Omega — The Protectorate</p>
 <p class="community-disclaimer">This page is a community creation for the tabletop role playing game <a href="https://degenesis.com/">Degenesis®</a>. Degenesis® is a trademark of <a href="https://sixmorevodka.com/">SIXMOREVODKA® Studio GmbH</a>. All rights reserved. This page is not affiliated with SIXMOREVODKA Studio GmbH.</p>
   </footer>
   <script src="cultures.js?v=20260930-1"></script>
   <script src="lorebook-navigation.js?v=20261004-5"></script>
-  <script id="map-config" type="application/json">{"regions": [{"x": 4110, "y": 1360, "width": 820, "height": 570, "label": "The Protectorate", "href": "protectorate-map.html"}]}</script>
+  <script id="map-config" type="application/json">{"regions":[]}</script>
   <script src="maps.js?v=20261005-1"></script>
 </body></html>
