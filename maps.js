@@ -15,7 +15,10 @@
   layer.style.width = `${mapWidth}px`; layer.style.height = `${mapHeight}px`;
   const mapId = document.body.dataset.map || "world";
   const stateKey = `degenesis:atlas:${mapId}`;
-  const tilePath = viewport.dataset.tilePath || "assets/maps/world";
+  let tilePath = viewport.dataset.tilePath || "assets/maps/world";
+  let mapView = 'city';
+  const factionLayer = document.querySelector('#map-faction-tiles');
+  const factionTiles = new Map();
   const divisions = JSON.parse(viewport.dataset.tileDivisions || "[8,4,2,1]");
   let suppressClick = false, dragOrigin = null;
   const pointers = new Map();
@@ -46,6 +49,17 @@
       }
     }
     activeTiles.forEach((tile,key)=>{if(!needed.has(key)){tile.remove();activeTiles.delete(key);}});
+    if(factionLayer) {
+      factionLayer.hidden = mapView !== 'factions';
+      factionTiles.forEach((tile,key)=>{if(mapView !== 'factions' || !needed.has(key)){tile.remove();factionTiles.delete(key);}});
+      if(mapView === 'factions') activeTiles.forEach((base,key)=>{
+        if(factionTiles.has(key))return;
+        const tile=document.createElement('img');tile.alt='';tile.draggable=false;
+        tile.src=`assets/maps/justitian-factions/${key}.webp`;
+        tile.style.cssText=base.style.cssText;
+        factionLayer.append(tile);factionTiles.set(key,tile);
+      });
+    }
   }
   function constrain() {
     const w = viewport.clientWidth, h = viewport.clientHeight;
@@ -61,7 +75,6 @@
     layer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
     renderTiles();
     document.querySelectorAll(".map-region").forEach(link => {
-      link.style.borderWidth = `${2/scale}px`;
       link.querySelector("span").style.transform = `translate(-50%, 0) scale(${1/scale})`;
     });
     zoomText.textContent = `${Math.round(scale * 100)}%`;
@@ -160,10 +173,25 @@
     if(wasFit)fit();else{scale=Math.max(minimum,scale);paint();}
   }).observe(viewport);
   regions.forEach(region=>{
-    const link=document.createElement('a');link.className='map-region';link.href=region.href;link.setAttribute('aria-label',`Open ${region.label} map`);link.title=`Open ${region.label} map`;
-    const label=document.createElement('span');label.textContent=region.label;link.append(label);
+    const link=document.createElement('a');link.className='map-region';link.href=region.href;link.setAttribute('aria-label',`Open ${region.label} map`);
+    const label=document.createElement('span');const name=document.createElement('strong');name.textContent=region.label;
+    const hint=document.createElement('small');hint.textContent='Click to Zoom In';label.append(name,hint);link.append(label);
     Object.assign(link.style,{left:`${region.x}px`,top:`${region.y}px`,width:`${region.width}px`,height:`${region.height}px`});
     document.querySelector('#map-regions').append(link);
+  });
+  document.querySelectorAll('[data-map-view]').forEach(button=>button.addEventListener('click',()=>{
+    mapView=button.dataset.mapView;
+    tilePath=`assets/maps/justitian-${mapView === 'underground' ? 'underground' : 'city'}`;
+    activeTiles.forEach(tile=>tile.remove());activeTiles.clear();
+    image.src=`${tilePath}/preview.webp`;
+    image.alt=`Justitian ${mapView} map, 2598 AD`;
+    document.querySelectorAll('[data-map-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    document.querySelector('.map-opacity').hidden=mapView!=='factions';
+    paint();
+  }));
+  document.querySelector('#faction-opacity')?.addEventListener('input',event=>{
+    factionLayer.style.opacity=Number(event.target.value)/100;
+    document.querySelector('#faction-opacity-value').textContent=`${event.target.value}%`;
   });
   function saveView() {
     if(!ready)return;
@@ -182,7 +210,7 @@
   }
   window.addEventListener('pagehide',saveView);
   window.addEventListener('pageshow',event=>{if(event.persisted)restoreView();});
-  function loaded(){ready=true;loading.hidden=true;fit();restoreView();}
+  function loaded(){if(ready)return;ready=true;loading.hidden=true;fit();restoreView();}
   image.addEventListener('load',loaded);
   image.addEventListener('error',()=>{loading.textContent='The map could not load. Please reload the page.';});
   if(image.complete&&image.naturalWidth)loaded();else{zoomIn.disabled=true;zoomOut.disabled=true;}
