@@ -1184,3 +1184,11 @@ body:not(.landing-page) :is(.hero-figure, .culture-backdrop, .lorebook-hero-art)
 :is(.eyebrow,.rank-kicker,.section-kicker,.variant-label,.special-kicker,.sleeper-kicker,.psych-kicker,.clan-kicker){
   color:var(--red-bright)!important;
 }
+
+/* Cross-project navigation and the history chapter. */
+.character-creator-link span { display: block; line-height: 1.45; }
+.sidebar-timeline { margin-top: .4rem; border-bottom: 1px solid var(--line); }
+.sidebar-timeline a { font-weight: 800; letter-spacing: .16em; padding-top: .9rem; padding-bottom: .9rem; }
+.timeline-shell .timeline-column-head { top: 70px; }
+.timeline-shell .event-detail { top: 86px; }
+.timeline-shell .timeline-header h1 { text-transform: none; }
