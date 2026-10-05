@@ -10,7 +10,7 @@ export default defineConfig({
     transformIndexHtml: {
       enforce: 'post',
       transform(html) {
-        return html.replace('</head>', '<link rel="stylesheet" href="../styles.css?v=20261005-5"></head>')
+        return html.replace('</head>', '<link rel="stylesheet" href="../styles.css?v=20261005-6"></head>')
       }
     }
   }],

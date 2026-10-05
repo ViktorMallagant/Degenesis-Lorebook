@@ -2,6 +2,20 @@
 (() => {
   // Maps uses the same chapter-heading styles as Cults.
   document.querySelectorAll(".maps-heading-link").forEach(heading => heading.classList.add("cult-heading-link"));
+  // Single-page dossiers select the current subsection just like page-based entries.
+  const updateDossierSelection = () => {
+    document.querySelectorAll('.lorebook-sidebar nav[aria-label="AMSUMOS"] a, .lorebook-sidebar nav[aria-label="Sleepers"] a').forEach(link => {
+      const target = new URL(link.href);
+      const onPage = target.pathname === window.location.pathname;
+      const selected = onPage && target.hash === (window.location.hash || '#overview');
+      link.classList.toggle('active', selected);
+      if (selected) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  updateDossierSelection();
+  window.addEventListener('hashchange', updateDossierSelection);
+  window.addEventListener('pageshow', updateDossierSelection);
   const trees = Array.from(document.querySelectorAll('.lorebook-sidebar details')).map((tree) => ({
     tree,
     key: tree.querySelector('summary')?.textContent.trim().toLowerCase()

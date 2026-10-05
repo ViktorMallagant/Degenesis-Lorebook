@@ -856,7 +856,9 @@ body.sidebar-open .lorebook-sidebar { transform: translateX(0); }
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.lorebook-sidebar a.active {
+.lorebook-sidebar a.active,
+.lorebook-sidebar nav a[aria-current="page"],
+.lorebook-sidebar nav a[aria-current="location"] {
   border-left-color: var(--red-bright);
   color: #fff;
   background: rgba(182,42,42,0.12);
@@ -1192,3 +1194,8 @@ body:not(.landing-page) :is(.hero-figure, .culture-backdrop, .lorebook-hero-art)
 .timeline-shell .timeline-column-head { top: 70px; }
 .timeline-shell .event-detail { top: 86px; }
 .timeline-shell .timeline-header h1 { text-transform: none; }
+
+/* Timeline is a chapter heading, with the same spacing and colors as Cultures. */
+.lorebook-sidebar .sidebar-timeline { margin: 0; padding: 0; }
+.lorebook-sidebar .sidebar-timeline a { padding: .9rem .45rem; border-left: 0; color: #fff; font-size: .74rem; font-weight: 800; letter-spacing: .16em; background: transparent; }
+.lorebook-sidebar .sidebar-timeline a:is(.active, [aria-current="page"], :hover, :focus-visible) { color: var(--red-bright); background: transparent; }
