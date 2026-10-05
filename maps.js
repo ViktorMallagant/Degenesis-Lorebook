@@ -20,7 +20,7 @@
   const factionLayer = document.querySelector('#map-faction-tiles');
   const factionTiles = new Map();
   const divisions = JSON.parse(viewport.dataset.tileDivisions || "[8,4,2,1]");
-  let suppressClick = false, dragOrigin = null;
+  let suppressClick = false, dragOrigin = null, pressedRegion = null;
   const pointers = new Map();
   let scale = 1, minimum = 1, x = 0, y = 0, ready = false;
   const maximum = 4;
@@ -114,6 +114,7 @@
     event.preventDefault();
     viewport.focus({preventScroll:true});
     suppressClick = false; dragOrigin = local(event);
+    pressedRegion = event.target.closest('.map-region');
     // Capture on the region link so a stationary click still activates it.
     (event.target.closest('.map-region') || viewport).setPointerCapture(event.pointerId);
     pointers.set(event.pointerId, local(event));
@@ -135,7 +136,13 @@
       x += b.x-a.x; y += b.y-a.y; paint();
     }
   });
-  function release(event) {pointers.delete(event.pointerId);if(!pointers.size)viewport.classList.remove('dragging');}
+  function release(event) {
+    pointers.delete(event.pointerId);
+    if(!pointers.size)viewport.classList.remove('dragging');
+    if(event.type === 'pointerup' && pressedRegion && !suppressClick) {
+      const link=pressedRegion;pressedRegion=null;link.click();
+    } else pressedRegion=null;
+  }
   ['pointerup','pointercancel','lostpointercapture'].forEach(type => viewport.addEventListener(type,release));
   viewport.addEventListener('click',event=>{if(suppressClick && event.detail!==0){event.preventDefault();event.stopPropagation();}},true);
   viewport.addEventListener('keydown', event => {
