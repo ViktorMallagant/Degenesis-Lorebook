@@ -8,7 +8,6 @@
           <p>
             <strong>Note:</strong> Very few people are aware of the history prior to, during, and even after the Eshaton, especially in regards to Recombination Group, Project Tannhäuser and Sleepers. It is best to assume ignorance and ask your Gamemaster if your character knows a particular piece of information.
           </p>
-          <p class="developer-credit">Developer: Mara</p>
         </div>
         <div class="timeline-stat">
           <span>{{ visibleEvents.length }}</span>
@@ -477,10 +476,6 @@ watch(
   color: #e1e1e1;
 }
 
-.timeline-header p.developer-credit {
-  margin-top: 8px;
-  font-size: 0.8rem;
-}
 
 .timeline-stat {
   min-width: 150px;
