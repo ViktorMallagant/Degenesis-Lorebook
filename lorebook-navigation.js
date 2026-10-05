@@ -4,7 +4,7 @@
   document.querySelectorAll(".maps-heading-link").forEach(heading => heading.classList.add("cult-heading-link"));
   // Single-page dossiers select the current subsection just like page-based entries.
   const updateDossierSelection = () => {
-    document.querySelectorAll('.lorebook-sidebar nav[aria-label="AMSUMOS"] a, .lorebook-sidebar nav[aria-label="Sleepers"] a').forEach(link => {
+    document.querySelectorAll('.lorebook-sidebar nav[aria-label="AMSUMOS"] a, .lorebook-sidebar nav[aria-label="Sleepers"] a, .lorebook-sidebar nav[aria-label="Marauders"] a, .lorebook-sidebar nav[aria-label="Psychonauts"] a[href*="#overview"]').forEach(link => {
       const target = new URL(link.href);
       const onPage = target.pathname === window.location.pathname;
       const selected = onPage && target.hash === (window.location.hash || '#overview');
