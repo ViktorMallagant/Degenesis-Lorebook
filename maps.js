@@ -1,4 +1,54 @@
 (() => {
+  let disposeMap;
+  let pending = false;
+  async function transition(url, push = true) {
+    if(pending)return;
+    pending=true;
+    const panel=document.querySelector('.map-panel');
+    panel.setAttribute('aria-busy','true');
+    try {
+      const response=await fetch(url);
+      if(!response.ok)throw new Error('Map unavailable');
+      const page=new DOMParser().parseFromString(await response.text(),'text/html');
+      const next=page.querySelector('.map-panel');
+      if(!next || !page.querySelector('#map-config'))throw new Error('Invalid map');
+      disposeMap();
+      // Keep the fullscreen element itself mounted while replacing its contents.
+      panel.innerHTML=next.innerHTML;
+      document.querySelector('.map-heading').innerHTML=page.querySelector('.map-heading').innerHTML;
+      document.querySelector('.section-nav').innerHTML=page.querySelector('.section-nav').innerHTML;
+      document.querySelector('.map-footer').innerHTML=page.querySelector('.map-footer').innerHTML;
+      document.querySelector('#map-config').textContent=page.querySelector('#map-config').textContent;
+      document.body.dataset.map=page.body.dataset.map;
+      document.title=page.title;
+      const path=new URL(url,location.href).pathname;
+      document.querySelectorAll('.maps-chapter nav a').forEach(link=>{
+        const active=new URL(link.href).pathname===path;
+        link.classList.toggle('active',active);
+        if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
+      });
+      if(push)history.pushState({atlas:true},'',url);
+      initMap();
+      panel.querySelector('#map-viewport').focus({preventScroll:true});
+    } catch {
+      let error=panel.querySelector('.map-navigation-error');
+      if(!error){error=document.createElement('p');error.className='map-navigation-error';error.setAttribute('role','alert');panel.prepend(error);}
+      error.textContent='That map could not load. Please try the link again.';
+    } finally {panel.removeAttribute('aria-busy');pending=false;}
+  }
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('a[href]');
+    if(!link || event.defaultPrevented || event.button!==0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)return;
+    const panel=document.querySelector('.map-panel');
+    if(document.fullscreenElement!==panel && !panel.classList.contains('map-expanded'))return;
+    const url=new URL(link.href,location.href);
+    if(url.origin!==location.origin || !/(?:\/maps|\/[^/]+-map)\.html$/.test(url.pathname))return;
+    event.preventDefault();
+    transition(url.href);
+  });
+  window.addEventListener('popstate',()=>transition(location.href,false));
+  function initMap() {
+  const lifetime = new AbortController();
   const viewport = document.querySelector('#map-viewport');
   const layer = document.querySelector('#map-layer');
   const image = document.querySelector('#world-image');
@@ -168,17 +218,21 @@
     } catch {expanded(true);}
   });
   document.addEventListener('fullscreenchange',()=>{
-    const open=document.fullscreenElement===panel;
+    const open=document.fullscreenElement===panel || panel.classList.contains('map-expanded');
     fullscreen.textContent=open?'Exit fullscreen':'Fullscreen';
     fullscreen.setAttribute('aria-pressed',String(open));
-  });
-  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.classList.contains('map-expanded'))expanded(false);});
-  new ResizeObserver(()=>{
+  }, {signal:lifetime.signal});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.classList.contains('map-expanded'))expanded(false);}, {signal:lifetime.signal});
+  const resizeObserver = new ResizeObserver(()=>{
     if(!ready)return;
     const wasFit=Math.abs(scale-minimum)<.001;
     minimum=Math.min(viewport.clientWidth/mapWidth,viewport.clientHeight/mapHeight,1);
     if(wasFit)fit();else{scale=Math.max(minimum,scale);paint();}
-  }).observe(viewport);
+  });
+  resizeObserver.observe(viewport);
+  const fullscreenOpen=document.fullscreenElement===panel || panel.classList.contains('map-expanded');
+  fullscreen.textContent=fullscreenOpen?'Exit fullscreen':'Fullscreen';
+  fullscreen.setAttribute('aria-pressed',String(fullscreenOpen));
   regions.forEach(region=>{
     const link=document.createElement('a');link.className='map-region';link.href=region.href;link.setAttribute('aria-label',`Open ${region.label} map`);
     const label=document.createElement('span');const name=document.createElement('strong');name.textContent=region.label;
@@ -215,10 +269,13 @@
       paint();
     } catch {}
   }
-  window.addEventListener('pagehide',saveView);
-  window.addEventListener('pageshow',event=>{if(event.persisted)restoreView();});
+  window.addEventListener('pagehide',saveView,{signal:lifetime.signal});
+  window.addEventListener('pageshow',event=>{if(event.persisted)restoreView();},{signal:lifetime.signal});
+  disposeMap=()=>{saveView();lifetime.abort();resizeObserver.disconnect();};
   function loaded(){if(ready)return;ready=true;loading.hidden=true;fit();restoreView();}
   image.addEventListener('load',loaded);
   image.addEventListener('error',()=>{loading.textContent='The map could not load. Please reload the page.';});
   if(image.complete&&image.naturalWidth)loaded();else{zoomIn.disabled=true;zoomOut.disabled=true;}
+  }
+  initMap();
 })();

@@ -27,3 +27,5 @@ body {background:#0b0b0c;background-image:radial-gradient(ellipse at 20% 0%,rgba
 .map-destinations a{color:var(--ink);border:1px solid var(--line);padding:.6rem 1rem;text-decoration:none}
 .map-destinations a:hover{border-color:var(--red-bright)}
 .map-panel:is(:fullscreen,.map-expanded) .map-destinations{padding:.4rem 0}
+
+.map-context{display:none;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.75rem;flex-shrink:0}.map-current-name{font-weight:500;letter-spacing:.08em}.map-parent{color:#eee;border-bottom:1px solid var(--red);padding:.3rem 0}.map-panel:is(:fullscreen,.map-expanded) .map-context{display:flex}.map-navigation-error{color:#f2b7b7}.map-panel[aria-busy="true"]{cursor:progress}
